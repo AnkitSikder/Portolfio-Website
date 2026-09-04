@@ -1,0 +1,559 @@
+MAKHANA FARMING
+Course - DS5003| Ergonomics in Product Design
+
+Group Members - Ankit Sikder, Gautami Vallam, Ashutosh Kumar
+Faculty - Sangeeta Pandit
+
+Contents
+Introduction
+Problem Identification
+Literature Study
+Aim and Objectives
+Methodology
+Insights
+Ideation
+Concept Finalization
+Technical aspects of product
+
+Introduction
+
+Introduction
+1
+Makhana (Euryale ferox), also known as fox nut or gorgon nut, is an aquatic cash crop mostly cultivated in lowland ponds of Bihar, Orissa, Assam and West Bengal. In India, about 80% of total Makhana comes from Darbhanga, Madhubani, Purnia and Katihar district of Bihar and over 85% of global supply, earning it the nickname "Black Gold of Bihar." This superfood is rich in protein, fiber, and antioxidants, gaining rapid international popularity as a healthy snack alternative.
+
+Cycle of Makhana production
+2
+
+Makhana's Journey
+3
+
+Makhana Farming - Timeline
+4
+Makhana grown in agricultural field
+Makhana grown in ponds
+
+Problem Identification
+5
+
+Identifying Opportunity Gap
+6
+Criteria
+Seed Collection
+Other Stages
+Ergonomic Risk
+Extreme: 6-8 hrs submerged, prone positions, repeated sweeping
+Moderate: Heat/repetitive motion
+Health Impact
+Severe: 78% lower back pain, 67% neck pain, 52% wrist pain, daily injuries
+Less severe: Occupational stress only
+Technology Gap
+Vast: Unchanged bamboo tools vs. possible mechanical solutions
+Narrow: Some mechanization attempted
+Economic Impact
+Highest: Bottleneck limiting entire chain productivity
+Secondary impact
+Hand Tool Feasibility
+High: Affordable intermediate solution (Rs 1-5k) possible
+Low: Requires major infrastructure changes
+Workforce Crisis
+Critical: Young workers abandoning job due to physical demands
+Not applicable
+Social Impact
+Highest: Affects specialized Mallah/Sahni communities directly
+Diverse workforce, less cultural significance
+Why Seed Collection?
+
+Production Stage Analysis Matrix
+7
+✓ 30-50% reduction in worker suffering & health risks
+✓ 50-100% productivity improvement (4.0 → 6-8 kg/hr)
+✓ Prevent industry collapse from labor shortage
+✓ Create scalable, affordable solution for all farm sizes
+✓ Cascade benefits through entire production chain
+✓ Enhance global supply of superfood
+Expected Outcomes from Seed Collection Intervention
+
+8
+Workers spend 6-8 hours daily submerged in 4-6 feet murky water
+Prone underwater positions collecting seeds from pond beds
+Traditional bamboo tools unchanged for generations
+Sharp thorns covering plants cause constant injuries
+Problem Overview 
+Current Reality:
+78% suffer chronic lower back pain
+67% experience persistent neck pain
+52% have chronic wrist/hand pain
+Daily thorn punctures leading to infections
+Working heart rate: 112.86 bpm ("heavy to very heavy" workload)
+Health Impact:
+Economic Crisis:
+Productivity stagnant at 3.8-4.0 kg/hour
+15.8% of seeds left uncollected (lost revenue)
+Workers earn only Rs 250-600 daily for extreme labor
+Younger generation abandoning occupation
+Labor shortages threatening Rs 3,000+ crore industry
+
+9
+Current (2024): INR 8.5 Billion
+Projected (2033): INR 19.6 Billion
+CAGR: 9.22%
+Bihar produces 80-90% of India's supply
+Market Opportunities in India
+India Market Size:
+Current (2023): USD 44.4 Million
+Projected (2030): USD 97.5 Million
+India: World's largest producer & exporter (25,130+ shipments)
+Global Market:
+Bihar's Makhana Economy:
+Current Value: Rs 3,000 Crore
+Expected (5 years): Rs 6,000+ Crore
+Government Support: Makhana Board announced (Union Budget 2025)
+Employment: Hundreds of thousands directly/indirectly
+https://www.imarcgroup.com/india-makhana-market
+
+
+Literature Study
+10
+
+11
+1. Manually Operated Makhana Harvester with Optical Device
+Source: Central Agricultural University (2019)
+Features: Semi-mechanized with optical assistance for seed visibility
+Status: Research prototype
+2. Mechanized Popping System (Patent 674/DEL/2013)
+Source: ICAR-CIPHET Ludhiana
+Capacity: 40 kg/hr
+Focus: Post-harvest processing, not collection
+3. Bioactive Compound Patent (July 2025)
+Source: Bihar Agricultural University
+Discovery: N-(2-iodophenyl) methanesulfonamide in makhana
+Significance: First natural source, anti-microbial/anti-cancer potential
+4. Makhana Cultivation Method Patent (Nov 2002)
+Inventor: Purshottam Bhagat
+Focus: Storage-stable edible food preparation
+Makhana-Specific Patents
+https://www.imarcgroup.com/india-makhana-market
+
+
+12
+
+Productivity: 12.6 kg/hr (3x manual)
+Labor Reduction: 15 → 3 workers per hectare
+Seed Recovery: +15.8% over manual
+Cost: Rs 1,00,000-3,00,000 (unaffordable for small farmers)
+Limitation: Requires power source, maintenance, technical expertise
+Mud-Pump Mechanical Harvesters:
+Improved Diving Kits:
+Waterproof clothing, thorn-resistant gloves, diving masks
+Result: Productivity increase to 11.3 kg/hr
+Limitation: Still requires full submersion and awkward postures
+Mechanical Harvesters
+Expensive mechanical harvesters (Rs 1-3 lakh)
+Traditional bamboo tools (no improvements)
+Protective gear (reduces injury but not workload)
+Gap Analysis
+What Exists:
+What's Missing:
+Affordable intermediate solution (Rs 500-5,000 range)
+Ergonomically designed hand tool reducing postural stress
+Protection integrated into tool design
+Mechanical advantage for seed dislodgement
+Built-in sieving during collection
+Reduced submersion time requirement
+https://www.imarcgroup.com/india-makhana-market
+
+
+13
+Length: 2-3 meters
+Function: Anchoring reference point in pond
+Limitations: No collection assistance, requires full submersion
+Existing Products/ Methods
+Kaara (Bamboo Anchor Pole):
+Cone-shaped, 40-60 cm diameter
+Function: Separates seeds from mud by density
+Limitations: No ergonomic handles, causes hand fatigue, requires hundreds of vigorous shaking motions
+Ganjaa (Bamboo Sieve):
+Traditional Tools (Current Use)
+https://www.imarcgroup.com/india-makhana-market
+
+
+14
+Prolonged prone/bent postures cause 78% lower back pain rate
+Repetitive underwater sweeping motions = high musculoskeletal stress
+No mechanical advantage in current tools
+Zero protection from thorns and contaminated water
+Research Based Design Insights
+Ergonomic Findings:
+Manual: 4.0 kg/hr | Improved Diving Kit: 11.3 kg/hr | Mechanical: 12.6 kg/hr
+Opportunity: Hand tool can target 6-8 kg/hr (50-100% improvement)
+Labor reduction potential: 15 workers → 8-10 workers per hectare
+Productivity Analysis:
+Anthropometric Considerations:
+North-Eastern Indian workers have smaller body dimensions
+Tools must fit local population anthropometry
+Grip strength, reach, and postural capabilities vary by region
+https://www.imarcgroup.com/india-makhana-market
+
+
+Aim and Objectives
+15
+
+16
+Design Brief
+To design an affordable, ergonomically optimized hand tool that empowers makhana farmers and workers to collect seeds safely, comfortably, and productively while preserving traditional knowledge and ensuring industry sustainability.
+Our Mission
+Ergonomic: 30-50% reduction in postural stress and submersion time
+Safety: 50% reduction in thorn-related injuries
+Productivity: Increase from 4.0 to 6-8 kg/hr per worker
+Economic: Tool cost under Rs 5,000, payback within 2 seasons
+Usability: Learnable in 1 day, maintainable locally
+Durability: 3-5 years lifespan in aquatic environment
+Specifica Targets:
+Primary Goal:
+Enable underwater seed collection with 50-100% productivity improvement while reducing worker health risks and physical suffering
+Design Principles:
+Build upon existing harvesting knowledge
+Use locally available materials and repair methods
+Design with and for the Mallah/Sahni community
+Enhance both environmental and social sustainability
+Affordable for small-scale farmers 
+https://www.imarcgroup.com/india-makhana-market
+
+
+17
+Target Audiences
+Profile: Cultivating 1-5 acres of makhana ponds
+Challenge: Labor shortage, rising wages, unaffordable mechanization
+Budget: Limited capital (max Rs 1,000-5,000 for tools)
+Needs: Affordable solution improving harvest efficiency
+Small-Scale Farmers (Buyers/Employers)
+Makhana Harvesters (Direct Users)
+Profile: Men age 25-55 from Mallah/Sahni communities
+Experience: Traditional harvesting for 10-35 years
+Location: Mithilanchal region (Darbhanga, Madhubani, Samastipur)
+Pain Points: Chronic musculoskeletal pain, daily thorn injuries, low earnings
+Needs: Reduced physical strain, better safety, higher productivity
+https://www.imarcgroup.com/india-makhana-market
+
+
+Methodology
+18
+
+19
+Interview Questions
+How do you cultivate and manage your makhana crop throughout the year?
+How many harvests do you perform each year? In which months?
+How much seed is collected in first harvest? How much in second harvest?
+Can you describe your seed collection process during both harvests?
+What tools or equipment do you currently use for harvesting?
+What does a typical day look like for you during the makhana harvesting season?
+While working in the pond or field during harvesting, what postures or body movements do you use most frequently? Which of these causes the most pain?
+How many hours do you usually spend submerged in water or bent over while working each day?
+Which part of the seed collection process do you find the most difficult or tiring?
+Have you ever been injured by thorns? How often does this happen?
+What other health problems or injuries occur during seed collection (e.g., cuts, infections, muscle pain)?
+Where do you feel the most muscle pain in your body after the end of the day?
+What precautions or remedies do you take to prevent or treat such injuries?
+How safe do you feel while working in the pond or muddy water during seed collection? What do you consider the biggest risk?
+https://www.imarcgroup.com/india-makhana-market
+
+
+20
+Interview Questions
+Usually, how many laborers are involved in the harvesting process? How is the payment or wage decided?
+Do you experience any seed loss during harvesting? Do you have an estimate of how much is lost?
+If the seed collection process were easier or faster, how would it affect the yield or profit?
+Have you ever tried any new tool or method for seed collection? If yes, which one worked best or worst for you?
+If you were provided with a low-cost and efficient tool for seed collection, would you use it?
+What qualities would be most important for you in a new tool (e.g., safety, simplicity, speed, or cost)?
+In your opinion, what is the most essential thing to make the seed collection process easier or safer?
+If you could change one thing in the seed collection process, what would it be?
+What advice would you give to someone who is designing a new product or tool for makhana harvesting?
+https://www.imarcgroup.com/india-makhana-market
+
+
+21
+Telephonic Interview Recording
+Interview 1
+Interview 2
+Interview 3
+https://www.imarcgroup.com/india-makhana-market
+
+
+22
+Observational Study
+https://www.imarcgroup.com/india-makhana-market
+
+
+Insights
+23
+
+24
+Interview Key Insights
+Research Claim
+Interview Verification
+Additional Detail
+25-30% seed loss
+Confirmed by Multiple Farmers
+Scattering during collection sweeping; small seeds escape
+No viable machine for collection
+Confirmed Explicitly
+"Without hands, cannot harvest"
+Entire body thorn injuries
+Confirmed with Detail
+Removal requires sickle blade scraping; heat application
+6-8 hour submersion
+Confirmed Explicitly
+Workers hold breath during submersion
+72-hour total processing
+Confirmed Explicitly
+Specific timeline: pond extraction → cleaning → drying → grading
+65-70% material loss
+Confirmed in Processing
+30 kg raw → 8-10 kg popped; 73% loss specifically noted
+Water depth criticality
+New Insight
+5-ft better for productivity; 3-ft creates extreme difficulty
+Single annual harvest
+Confirmed
+One sowing (Oct-Nov), one harvest window (Jul-Nov)
+https://www.imarcgroup.com/india-makhana-market
+
+
+25
+Observation Insights
+Research Claim
+Visual Evidence
+Status
+78% lower back pain
+All harvesting images show bent postures
+✓ CONFIRMED
+Daily thorn injuries
+Workers handling thorny plants without gloves
+✓ CONFIRMED
+6-8 hours daily submersion
+Large workforce spread across pond suggests duration
+✓ CONFIRMED
+Murky water conditions
+Brown, opaque water in all pond images
+✓ CONFIRMED
+Pre-industrial tools
+No modern equipment visible in harvesting
+✓ CONFIRMED
+62% women in processing
+Female worker visible in sorting operation
+✓ CONFIRMED
+Technology gap
+Modern storage vs. manual harvesting
+✓ CONFIRMED
+Community-based labor
+Groups working together
+✓ CONFIRMED
+https://www.imarcgroup.com/india-makhana-market
+
+
+26
+Empathy Mapping
+SAYS
+"My hands are covered in thorn marks and my whole body hurts from this work"
+"The pain gets worse each season, and I apply traditional medicines every night to treat wounds"
+"These bamboo tools haven't changed in generations - without hands, we cannot harvest"
+"Young people won't do this work anymore; why would they when they can earn more in cities?"
+"There must be a better way to do this - if someone designed something for this job, I'd use it immediately"
+THINKS
+"This is my family's hereditary occupation for 3 generations, but the suffering and low earnings make me wonder if my children will do this"
+"My back pain, neck pain, and constant thorn injuries are just accepted as 'normal' for this work, but I know it shouldn't have to be this way"
+"I'm earning only 12-25% of the Rs 1,200-2,000/kg retail value of makhana while farmers get rich selling my work"
+"Machines exist but cost Rs 1-3 lakh - we can't afford them, even though mechanization could do this job in 36 hours instead of 360 hours"
+"I don't want to leave farming, but without better tools and conditions, this occupation will disappear completely"
+https://www.imarcgroup.com/india-makhana-market
+
+
+27
+Empathy Mapping
+DOES
+Submerges in murky pond water 6-8 hours daily in bent-over, prone positions to manually sweep mud and collect seeds by touch alone
+Applies thorn removal techniques nightly (sickle blade scraping, heat application) and uses traditional medicinal oils to treat daily puncture wounds
+Uses bamboo sieves to separate seeds from mud through vigorous shaking, repeating this cycle 50-100 times per day across the pond
+Works in groups for safety while coordinating with other harvesters, negotiating for deeper water depths (5 feet preferred) to reduce physical strain
+Teaches younger family members the traditional techniques despite knowing they will likely abandon the work for urban employment
+FEELS
+78% lower back pain, 67% neck pain, 52% wrist pain, daily thorn injuries causing constant suffering while earning only Rs 250-600/day
+Resentment that his destroyed body earns 12-25% of product value (Rs 1,200-2,000/kg retail), with no solution despite decades of trying
+Skilled at difficult ancestral work but ashamed young people view this occupation as low-status and undesirable
+Accepts "this is just how it is" but desperately open to any innovation that could reduce suffering while preserving his occupation
+Fears occupation will disappear entirely as younger generation abandons it, threatening his livelihood and community identity
+https://www.imarcgroup.com/india-makhana-market
+
+
+28
+User Persona
+https://www.imarcgroup.com/india-makhana-market
+
+
+29
+User Journey Mapping
+https://www.imarcgroup.com/india-makhana-market
+
+
+30
+Problem Statement
+Workers in Bihar's makhana industry spend 6-8 hours daily submerged in murky pond water in extreme bent-over positions, using unchanged bamboo tools to manually collect seeds from muddy pond beds through tactile search alone. This pre-industrial harvesting method—the critical bottleneck in a modern high-value supply chain—traps workers in a cycle of severe physical suffering (78% lower back pain, 67% neck pain, 52% wrist pain, daily thorn injuries from thorny plants) while achieving stagnant productivity of just 3.8-4.0 kg/hour with 25% of seeds remaining uncollected.
+Design Opportunity
+Create an affordable (under Rs 5,000), ergonomically optimized hand tool that enables makhana seed collection with 30-50% reduced physical strain, 50% fewer thorn injuries, and 50-100% increased productivity (6-8 kg/hour) while remaining compatible with traditional harvesting knowledge and accessible to small-scale farmers—preserving occupational continuity while eliminating unnecessary suffering.
+https://www.imarcgroup.com/india-makhana-market
+
+
+31
+User Needs
+LEVEL
+NEEDS
+CURRENT STATE
+DESIRED STATE
+PRIMARY
+Reduce pain and musculoskeletal strain
+78% lower back pain, 67% neck pain, 52% wrist pain
+30-50% pain reduction
+Prevent thorn injuries & infections
+Nearly 100% daily puncture wounds
+50% fewer injuries; zero infections
+Increase productivity & earnings
+3.8-4.0 kg/hr; Rs 250-600/day
+6-8 kg/hr; Rs 400-800/day
+Maintain occupational dignity
+Shame, stigma, knowledge disappearing
+Respected occupation; intergenerational continuity
+SECONDARY
+Reduce submersion time & postural stress
+6-8 hrs daily underwater; extreme bending
+4-6 hrs; upright working positions
+Improve seed recovery efficiency
+25% seeds lost; low collection rates
+Recover 5-10% additional seeds
+https://www.imarcgroup.com/india-makhana-market
+
+
+32
+User Needs
+Enable group-based harvesting
+Workers interfere with each other
+Multi-worker coordination without conflict
+Access affordable technology
+Unaffordable machines (Rs 1-3 lakh)
+Tool under Rs 5,000; 2-season payback
+TERTIARY
+Receive formal recognition & training
+Zero occupational support systems
+Industry recognition, mentorship programs
+Preserve cultural identity in innovation
+Technology threatens traditional knowledge
+Innovation builds on tradition
+Access health & safety support
+No insurance, safety provisions, medical aid
+Occupational protections, affordable health services
+Build collective bargaining power
+Individual workers powerless
+Cooperative organization for negotiation
+Achieve fair economic compensation
+12-25% value capture (Rs 250-600 vs Rs 1,200-2,000/kg retail)
+40-50% value capture; transparent pricing
+https://www.imarcgroup.com/india-makhana-market
+
+
+Ideation
+33
+
+34
+https://www.imarcgroup.com/india-makhana-market
+
+
+35
+https://www.imarcgroup.com/india-makhana-market
+
+
+36
+https://www.imarcgroup.com/india-makhana-market
+
+
+37
+https://www.imarcgroup.com/india-makhana-market
+
+
+38
+https://www.imarcgroup.com/india-makhana-market
+
+
+39
+https://www.imarcgroup.com/india-makhana-market
+
+
+Concept Finalization
+40
+
+27
+Reasons for choosing concept
+
+Ease of pulling the product
+Brush that traps plants and debris
+Integration of both collection and first stage of cleaning
+Easy to lift and unload the basket
+Increased efficiency in collection of seeds
+
+41
+https://www.imarcgroup.com/india-makhana-market
+
+
+Technical aspects of product
+42
+
+43
+Materials
+Part
+Material
+Loader bucket
+Stainless steel
+Seed collector basket
+Stainless steel / Bamboo
+Brush
+Silicone
+Handle
+Stainless steel
+Handle grip
+Rubber
+Wheels
+Stainless steel / Iron
+https://www.imarcgroup.com/india-makhana-market
+
+
+44
+Product Specification
+Seed Collection Mesh Chamber
+Ground Intake Scoop Assembly
+Silicone Spike Agitation Roller
+Ergonomic Pull Handle (Expandable
+Traction Wheel Assembly
+Wheel-to-Roller Drive Chain
+
+45
+
+Dimensions
+https://www.imarcgroup.com/india-makhana-market
+
+
+46
+
+Renders
+
+47
+Renders
+
+48
+Renders
+
+49
+
+50
+
+51
+
+Thank You

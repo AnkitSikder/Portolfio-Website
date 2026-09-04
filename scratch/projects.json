@@ -1,0 +1,1141 @@
+[
+  {
+    "id": "03c6cc48-b7d6-40dc-a762-5be2ada03f69",
+    "title": "AuraCharge",
+    "slug": "auracharge",
+    "short_description": "A multi-functional product concept combining device charging with smart home features.",
+    "thumbnail": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/thumbnails/1788349026152-csrdy0cptka.jpg",
+    "hero_image": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/heroes/1788349034149-ykc25d3f0j.jpg",
+    "category": "Product Design",
+    "status": "Published",
+    "featured": true,
+    "display_order": 1,
+    "created_at": "2026-09-02T10:34:07.565396+00:00",
+    "updated_at": "2026-09-02T13:13:23.885+00:00",
+    "logo_icon": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/logos/1788348998868-f4k3jbjiypv.png",
+    "blocks": [
+      {
+        "id": "76d5879b-6787-4141-80b6-8be2880cfa54",
+        "project_id": "03c6cc48-b7d6-40dc-a762-5be2ada03f69",
+        "type": "Hero",
+        "content": {
+          "role": "Product Designer",
+          "title": "AuraCharge",
+          "tools": [
+            "Fusion  ·  KeyShot"
+          ],
+          "summary": "Minimal footprint, maximum efficiency.",
+          "duration": "2 months",
+          "toolsRaw": "Fusion  ·  KeyShot",
+          "heroImage": ""
+        },
+        "order_index": 0,
+        "created_at": "2026-09-02T13:13:25.685025+00:00",
+        "updated_at": "2026-09-02T13:13:25.685025+00:00"
+      },
+      {
+        "id": "bbc4447b-6e58-4fff-9072-27b639f7309b",
+        "project_id": "03c6cc48-b7d6-40dc-a762-5be2ada03f69",
+        "type": "Overview",
+        "content": {
+          "title": "About The Project",
+          "audience": [
+            "Tech-Savvy Homeowners",
+            "Urban Dwellers",
+            "Small Business Owners",
+            "Smart Home Integrators"
+          ],
+          "description": "AuraCharge is a multifunctional charging concept that combines device charging, power backup, and smart home features into one seamless product. Designed to reduce gadget clutter, it creates a calm, efficient experience for powering devices while enhancing the ambient environment through intuitive interactions."
+        },
+        "order_index": 1,
+        "created_at": "2026-09-02T13:13:25.685025+00:00",
+        "updated_at": "2026-09-02T13:13:25.685025+00:00"
+      },
+      {
+        "id": "9a95ac8a-129e-47a0-ac2c-b912540aba61",
+        "project_id": "03c6cc48-b7d6-40dc-a762-5be2ada03f69",
+        "type": "Text",
+        "content": {
+          "body": "Portable & Compact. Provides reliable power backup for devices. Unified Device. Enhances user environment with intuitive design.",
+          "eyebrow": "Design Challenge",
+          "heading": "Minimal footprint, maximum efficiency",
+          "alignment": "left"
+        },
+        "order_index": 2,
+        "created_at": "2026-09-02T13:13:25.685025+00:00",
+        "updated_at": "2026-09-02T13:13:25.685025+00:00"
+      },
+      {
+        "id": "7922691d-c734-442e-b51e-8000b4a969e5",
+        "project_id": "03c6cc48-b7d6-40dc-a762-5be2ada03f69",
+        "type": "ProductClassification",
+        "content": {
+          "items": [
+            {
+              "type": "Power Banks",
+              "weight": "0.2 - 0.6 kgs (avg.)",
+              "capacity": "5,000 mAh - 30,000 mAh",
+              "features": "USB ports, portable, lightweight",
+              "purposes": "Charging smartphones, tablets, small gadgets",
+              "dimensions": "4 x 2 x 1 in (avg.)"
+            },
+            {
+              "type": "Power Houses",
+              "weight": "2 - 6 kgs (avg.)",
+              "capacity": "200W - 500W",
+              "features": "Multiple ports (AC, USB), solar rechargeable",
+              "purposes": "Camping, small home appliances, emergency backup",
+              "dimensions": "8 x 5 x 5 - 11 x 8 x 6 in (avg.)"
+            },
+            {
+              "type": "Power Inverters",
+              "weight": "8 - 12 kgs (avg.)",
+              "capacity": "1000W - 1500W",
+              "features": "Smartphone app control, multiple outlets",
+              "purposes": "Home backup, small business, smart home integration",
+              "dimensions": "12 x 6 x 8 in (avg.)"
+            },
+            {
+              "type": "Power Stations",
+              "weight": "9 - 20 kgs (avg.)",
+              "capacity": "1000W - 2500W",
+              "features": "High wattage output, fast recharge, multiple ports",
+              "purposes": "Extended trips, off-grid living, emergency power supply",
+              "dimensions": "18 x 11 x 9 in (avg.)"
+            }
+          ]
+        },
+        "order_index": 3,
+        "created_at": "2026-09-02T13:13:25.685025+00:00",
+        "updated_at": "2026-09-02T13:13:25.685025+00:00"
+      },
+      {
+        "id": "ad7647f5-327b-4672-9327-1d699f3c210a",
+        "project_id": "03c6cc48-b7d6-40dc-a762-5be2ada03f69",
+        "type": "SWOT",
+        "content": {
+          "threats": [
+            "Lead-Acid batteries",
+            "Pure Sine Wave",
+            "Technology shifts"
+          ],
+          "strengths": [
+            "Innovative smart and solar inverters",
+            "Trusted in traditional power backup",
+            "Intuitive interfaces, mobile apps",
+            "High-quality interfaces, user-centric",
+            "Reputation for innovative products"
+          ],
+          "weaknesses": [
+            "Modern but bulky",
+            "Manual, basic monitoring",
+            "Industrial look, black/grey",
+            "Basic interfaces, limited app support",
+            "Limited integration"
+          ],
+          "marketImage": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788350337171-mgo1tyoss5.jpg",
+          "opportunities": [
+            "Smart Features: Wi-Fi, Bluetooth, voice control",
+            "Remote monitoring",
+            "App-based control in premium models"
+          ]
+        },
+        "order_index": 4,
+        "created_at": "2026-09-02T13:13:25.685025+00:00",
+        "updated_at": "2026-09-02T13:13:25.685025+00:00"
+      },
+      {
+        "id": "0e6b925a-8790-444a-b5a2-7ec4293d5c1b",
+        "project_id": "03c6cc48-b7d6-40dc-a762-5be2ada03f69",
+        "type": "Benchmark",
+        "content": {
+          "items": [
+            {
+              "name": "Anker 521 PowerHouse - 256Wh | 200W",
+              "brand": "Anker",
+              "image": "",
+              "attributes": [
+                "Portable",
+                "256Wh Capacity"
+              ]
+            },
+            {
+              "name": "Anker PowerHouse 767 Portable Power Station with App Connectivity",
+              "brand": "Anker",
+              "image": "",
+              "attributes": [
+                "App Connectivity",
+                "Large Capacity"
+              ]
+            },
+            {
+              "name": "Anker PowerHouse 757-1229Wh | 1500W Portable Power Station",
+              "brand": "Anker",
+              "image": "",
+              "attributes": [
+                "1229Wh",
+                "1500W Output"
+              ]
+            }
+          ]
+        },
+        "order_index": 5,
+        "created_at": "2026-09-02T13:13:25.685025+00:00",
+        "updated_at": "2026-09-02T13:13:25.685025+00:00"
+      },
+      {
+        "id": "7569554e-f24e-43b0-88ac-637e47054b22",
+        "project_id": "03c6cc48-b7d6-40dc-a762-5be2ada03f69",
+        "type": "Image",
+        "content": {
+          "alt": "",
+          "image": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788350276942-dm685o55t95.jpg",
+          "width": "full",
+          "caption": "",
+          "heading": "Mind Map",
+          "navLabel": "Mind Map"
+        },
+        "order_index": 6,
+        "created_at": "2026-09-02T13:13:25.685025+00:00",
+        "updated_at": "2026-09-02T13:13:25.685025+00:00"
+      },
+      {
+        "id": "f490ebac-e098-4320-9a9c-119e4a603751",
+        "project_id": "03c6cc48-b7d6-40dc-a762-5be2ada03f69",
+        "type": "Image",
+        "content": {
+          "alt": "",
+          "image": "",
+          "width": "full",
+          "caption": "",
+          "heading": ""
+        },
+        "order_index": 7,
+        "created_at": "2026-09-02T13:13:25.685025+00:00",
+        "updated_at": "2026-09-02T13:13:25.685025+00:00"
+      }
+    ]
+  },
+  {
+    "id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+    "title": "Immersive Traffic Command",
+    "slug": "vrtraffic",
+    "short_description": "A VR training simulation for Indian traffic police",
+    "thumbnail": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/thumbnails/1788331220380-kgfv3yef4bd.png",
+    "hero_image": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/heroes/1788331223892-qjkosb1rbk.png",
+    "category": "Virtual Reality",
+    "status": "Published",
+    "featured": true,
+    "display_order": 1,
+    "created_at": "2026-09-02T06:40:12.939371+00:00",
+    "updated_at": "2026-09-02T09:45:11.105+00:00",
+    "logo_icon": null,
+    "blocks": [
+      {
+        "id": "894bdf52-e2d4-4422-b2c1-f336492ea2de",
+        "project_id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+        "type": "Hero",
+        "content": {
+          "role": " Interaction Designer",
+          "title": "Immersive Traffic Command",
+          "tools": [
+            "Unity · Blender · Shapr3D · VS Code · Gemini"
+          ],
+          "summary": "A risk-free training environment where traffic personnel can practise hand signals, traffic coordination and high-pressure decision-making before facing real-world intersections.",
+          "category": "",
+          "duration": "1.5 months",
+          "toolsRaw": "Unity · Blender · Shapr3D · VS Code · Gemini",
+          "heroImage": ""
+        },
+        "order_index": 0,
+        "created_at": "2026-09-02T09:45:12.52776+00:00",
+        "updated_at": "2026-09-02T09:45:12.52776+00:00"
+      },
+      {
+        "id": "06835669-d3d3-4a87-9793-d0264e1b2c11",
+        "project_id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+        "type": "GapAnalysis",
+        "content": {
+          "heading": "THE PROBLEM",
+          "gapTitle": "The gap",
+          "leftItems": [
+            "Classroom",
+            "Static / theoretical",
+            "Hazardous"
+          ],
+          "leftTitle": "TRAINING",
+          "rightItems": [
+            "High-speed traffic",
+            "Mixed vehicles",
+            "Noise",
+            "Emergency situations",
+            "Aggressive drivers"
+          ],
+          "rightTitle": "REALITY",
+          "subheading": "Traffic training breaks down where reality begins.",
+          "consequences": [
+            {
+              "title": "Decision-making",
+              "description": "Managing multiple moving priorities under pressure."
+            },
+            {
+              "title": "Safety",
+              "description": "Mistakes can affect both officers and road users."
+            },
+            {
+              "title": "Consistency",
+              "description": "Training does not fully prepare officers for unpredictable intersections."
+            }
+          ],
+          "leftItemsRaw": "Classroom, Static / theoretical, Hazardous",
+          "gapDescription": "Officers are expected to make high-stakes decisions in environments they rarely get to practise safely.",
+          "problemStatement": ""
+        },
+        "order_index": 1,
+        "created_at": "2026-09-02T09:45:12.52776+00:00",
+        "updated_at": "2026-09-02T09:45:12.52776+00:00"
+      },
+      {
+        "id": "68e616c5-0103-4758-a214-2f6e6947621a",
+        "project_id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+        "type": "UserContext",
+        "content": {
+          "intro": "I needed to understand what happens when the intersection stops behaving predictably.",
+          "heading": "UNDERSTANDING THE USER",
+          "navLabel": "",
+          "userType": "Traffic constables working in high-stress, mixed-traffic environments.",
+          "managesList": [
+            "Traffic flow",
+            "Aggressive drivers",
+            "Emergency vehicles",
+            "Pedestrians",
+            "VIP convoys",
+            "Heat",
+            "Noise",
+            "Blind spots"
+          ],
+          "managesImage": "",
+          "managesTitle": "They manage",
+          "investigations": [
+            "training vs real-world traffic",
+            "hand-signal effectiveness",
+            "emergency situations",
+            "attention and prioritisation",
+            "fatigue and environmental stress",
+            "conflict management"
+          ],
+          "researchHeading": "Primary research",
+          "researchSubheading": "3 police officers interviewed"
+        },
+        "order_index": 2,
+        "created_at": "2026-09-02T09:45:12.52776+00:00",
+        "updated_at": "2026-09-02T09:45:12.52776+00:00"
+      },
+      {
+        "id": "bff5da28-d9f5-4b0f-bde7-08607795fca8",
+        "project_id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+        "type": "ResearchInsights",
+        "content": {
+          "intro": "The biggest problem wasn't knowing the rules.\nIt was applying them under pressure.",
+          "heading": "RESEARCH INSIGHTS",
+          "insights": [
+            {
+              "title": "Theory ≠ readiness",
+              "number": "01",
+              "description": "Classroom learning does not adequately prepare recruits for chaotic, real-time road decisions."
+            },
+            {
+              "title": "Confidence collapses under pressure",
+              "number": "02",
+              "description": "New recruits face a confidence gap when multiple events happen simultaneously."
+            },
+            {
+              "title": "Experience is doing the work training should do",
+              "number": "03",
+              "description": "With limited structured practice, critical skills are often learned through inconsistent on-the-job exposure."
+            }
+          ],
+          "navLabel": "RESEARCH INSIGHTS",
+          "opportunityText": "Let officers safely experience the difficult situations before they encounter them on the road.",
+          "opportunityPrefix": "This created an opportunity:"
+        },
+        "order_index": 3,
+        "created_at": "2026-09-02T09:45:12.52776+00:00",
+        "updated_at": "2026-09-02T09:45:12.52776+00:00"
+      },
+      {
+        "id": "d9dc8262-62ab-477a-bfe6-cc3ac5b06df9",
+        "project_id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+        "type": "ReframeProblem",
+        "content": {
+          "heading": "REFRAME THE PROBLEM",
+          "navLabel": "Problem Statement",
+          "statement1": "Novice traffic police recruits are expected to manage complex, high-volume intersections and make rapid, accurate decisions in unpredictable traffic conditions, yet their training is largely classroom-based and lacks realistic, high-fidelity practice. Without exposure to the sensory overload, distractions, noise, and fast-moving risks of real-world traffic, recruits may struggle to coordinate hand signals, prioritise situations, and respond confidently under pressure—creating a critical gap between knowing what to do and being prepared to do it safely.",
+          "statement2": "",
+          "statement3": "",
+          "statement4": "",
+          "challengeText": "How might we create a safe environment where traffic recruits can practise correct signalling and decision-making while experiencing the pressure of a real intersection?",
+          "challengeTitle": "Design challenge"
+        },
+        "order_index": 4,
+        "created_at": "2026-09-02T09:45:12.52776+00:00",
+        "updated_at": "2026-09-02T09:45:12.52776+00:00"
+      },
+      {
+        "id": "0a1ae599-d4c5-42a5-af06-94dd9c6c9666",
+        "project_id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+        "type": "SolutionCapabilities",
+        "content": {
+          "heading": "THE SOLUTION",
+          "navLabel": "THE SOLUTION",
+          "subtitle": "A VR training system built around three capabilities.",
+          "productName": "Immersive Traffic Command",
+          "capabilities": [
+            {
+              "title": "Experience realistic chaos",
+              "number": "01",
+              "listItems": [
+                "mixed vehicles",
+                "rickshaws",
+                "wrong-side driving",
+                "pedestrians",
+                "stray animals",
+                "emergency situations"
+              ],
+              "description": "Simulate Indian traffic conditions:"
+            },
+            {
+              "title": "Learn through physical action",
+              "number": "02",
+              "description": "Instead of selecting answers on a screen, trainees perform the required hand signals and receive real-time feedback."
+            },
+            {
+              "title": "Build confidence under pressure",
+              "number": "03",
+              "description": "Start with guided learning and progressively remove assistance until the trainee can respond independently."
+            }
+          ]
+        },
+        "order_index": 5,
+        "created_at": "2026-09-02T09:45:12.52776+00:00",
+        "updated_at": "2026-09-02T09:45:12.52776+00:00"
+      },
+      {
+        "id": "fd804acc-23a0-4444-97bc-ba3768226944",
+        "project_id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+        "type": "Image",
+        "content": {
+          "alt": "",
+          "image": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332486918-ym8amv1hso.jpg",
+          "width": "full",
+          "caption": "",
+          "heading": "CPM-GOMS (Cognitive-Perceptual-Motor GOMS)",
+          "navLabel": "CPM-GOMS"
+        },
+        "order_index": 6,
+        "created_at": "2026-09-02T09:45:12.52776+00:00",
+        "updated_at": "2026-09-02T09:45:12.52776+00:00"
+      },
+      {
+        "id": "16142f58-3e7f-4b5e-b601-47790c120214",
+        "project_id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+        "type": "Image",
+        "content": {
+          "alt": "",
+          "image": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332008041-ui8wdubu86l.png",
+          "width": "full",
+          "caption": "",
+          "heading": "The 7 Core Hand Signals: Execution & Purpose",
+          "navLabel": "Hand Signals"
+        },
+        "order_index": 7,
+        "created_at": "2026-09-02T09:45:12.52776+00:00",
+        "updated_at": "2026-09-02T09:45:12.52776+00:00"
+      },
+      {
+        "id": "9a416e44-b93c-4e55-94fa-7fb5ab462b20",
+        "project_id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+        "type": "ImageGallery",
+        "content": {
+          "title": "Spatial Design & Environmental Architecture",
+          "images": [
+            {
+              "alt": "",
+              "url": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332290956-4jrvt0dtu9k.png",
+              "caption": ""
+            },
+            {
+              "alt": "",
+              "url": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332810802-kq6s9hev9r.png",
+              "caption": ""
+            },
+            {
+              "alt": "",
+              "url": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332362875-gafyybzpel.png",
+              "caption": ""
+            }
+          ],
+          "layout": "bento",
+          "caption": "",
+          "navLabel": "Spatial Design"
+        },
+        "order_index": 8,
+        "created_at": "2026-09-02T09:45:12.52776+00:00",
+        "updated_at": "2026-09-02T09:45:12.52776+00:00"
+      },
+      {
+        "id": "39abb12c-936f-4c4d-a2d6-d895925bcd97",
+        "project_id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+        "type": "Image",
+        "content": {
+          "alt": "",
+          "image": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332039953-rmda83plgwo.jpg",
+          "width": "contained",
+          "caption": "",
+          "heading": "Instructor Character Design",
+          "navLabel": "Character Design"
+        },
+        "order_index": 9,
+        "created_at": "2026-09-02T09:45:12.52776+00:00",
+        "updated_at": "2026-09-02T09:45:12.52776+00:00"
+      },
+      {
+        "id": "2d693186-15f5-4995-aace-f86a241987dc",
+        "project_id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+        "type": "Image",
+        "content": {
+          "alt": "",
+          "image": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788331706336-oyayhka60p.jpg",
+          "width": "contained",
+          "caption": "",
+          "heading": "MoSCoW Matrix",
+          "navLabel": "MoSCoW Matrix"
+        },
+        "order_index": 10,
+        "created_at": "2026-09-02T09:45:12.52776+00:00",
+        "updated_at": "2026-09-02T09:45:12.52776+00:00"
+      },
+      {
+        "id": "c6c3aac6-0eb6-4bc5-98e5-3cb371c0b10c",
+        "project_id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+        "type": "Image",
+        "content": {
+          "alt": "",
+          "image": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332517992-pzwoemvpfg.jpg",
+          "width": "full",
+          "caption": "",
+          "heading": "Process Flow",
+          "navLabel": "Process Flow"
+        },
+        "order_index": 11,
+        "created_at": "2026-09-02T09:45:12.52776+00:00",
+        "updated_at": "2026-09-02T09:45:12.52776+00:00"
+      },
+      {
+        "id": "5329f7c9-f7bf-4e05-9cae-c5061120d27f",
+        "project_id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+        "type": "VRErgonomics",
+        "content": {
+          "intro": "In VR, UI has to coexist with the real task...",
+          "iaDesc": "Prioritizing what needs attention now.",
+          "heading": "DESIGNING INFORMATION",
+          "iaTitle": "Information Architecture",
+          "vrImage": "",
+          "features": [
+            {
+              "title": "Observe",
+              "description": "See the correct signal."
+            },
+            {
+              "title": "Attempt",
+              "description": "Try it yourself."
+            }
+          ],
+          "heroImage": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332575677-6geh7yhovwk.png",
+          "subheading": "AROUND THE TASK, NOT OVER IT",
+          "systemImage": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332605348-iqnxtz8nidj.png",
+          "featuresTitle": "Four Steps to Mastery",
+          "tutorialImage": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332623490-awdscyqznbo.png",
+          "ergonomicsDesc": "Keeping interactions within the natural field of view.",
+          "ergonomicsTitle": "Ergonomics",
+          "evaluationImage": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332631512-zzd4dzwtqoc.png",
+          "learningLoopDesc": "Watch, copy, receive feedback.",
+          "operationalImage": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332594904-56baz6iyihx.png",
+          "learningLoopTitle": "The Learning Loop"
+        },
+        "order_index": 12,
+        "created_at": "2026-09-02T09:45:12.52776+00:00",
+        "updated_at": "2026-09-02T09:45:12.52776+00:00"
+      },
+      {
+        "id": "d6bd5d6a-041c-4630-8f4e-7d174adf1a70",
+        "project_id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+        "type": "Image",
+        "content": {
+          "alt": "",
+          "image": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332763807-oh5thnxmf5.png",
+          "width": "full",
+          "caption": "",
+          "heading": "Nielsen's 10 Usability Heuristics Implementation",
+          "navLabel": "Usability Test"
+        },
+        "order_index": 13,
+        "created_at": "2026-09-02T09:45:12.52776+00:00",
+        "updated_at": "2026-09-02T09:45:12.52776+00:00"
+      },
+      {
+        "id": "d7da064c-c0f6-49ea-b271-951c6efd0495",
+        "project_id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+        "type": "Image",
+        "content": {
+          "alt": "",
+          "image": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332056407-0ta93osjkqid.png",
+          "width": "full",
+          "caption": "",
+          "heading": "Shneiderman's 8 Golden Rules Implementation",
+          "navLabel": "Shneiderman Analysis"
+        },
+        "order_index": 14,
+        "created_at": "2026-09-02T09:45:12.52776+00:00",
+        "updated_at": "2026-09-02T09:45:12.52776+00:00"
+      },
+      {
+        "id": "b96454a5-3c89-472e-b77b-1d3f1caf0d92",
+        "project_id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+        "type": "Video",
+        "content": {
+          "loop": true,
+          "muted": true,
+          "caption": "",
+          "autoPlay": true,
+          "navLabel": "Demo Video",
+          "videoUrl": "https://drive.google.com/file/d/1aujY3L2cqdjnOWTep-twY0vNEBFH1YQ2/view?usp=sharing",
+          "posterUrl": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332900025-hyhnljfm81p.png"
+        },
+        "order_index": 15,
+        "created_at": "2026-09-02T09:45:12.52776+00:00",
+        "updated_at": "2026-09-02T09:45:12.52776+00:00"
+      },
+      {
+        "id": "bb378ec3-3322-44d9-a5cd-ffee8e78eff8",
+        "project_id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
+        "type": "FormativeTesting",
+        "content": {
+          "image": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332922360-youkscys6jh.png",
+          "title": "Did it actually work?",
+          "heading": "TESTING",
+          "logoUrl": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332925069-353yy7o3kwh.png",
+          "navLabel": "TESTING",
+          "description": "Don't imply statistical significance. This is formative usability testing. Your testing instrument includes NASA-TLX workload measures plus questions around ghost hands, audio, detection accuracy and adaptive difficulty.",
+          "participantCount": "5 participants tested the simulation."
+        },
+        "order_index": 16,
+        "created_at": "2026-09-02T09:45:12.52776+00:00",
+        "updated_at": "2026-09-02T09:45:12.52776+00:00"
+      }
+    ]
+  },
+  {
+    "id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
+    "title": "Makhana Seed Collector",
+    "slug": "makhana-tool",
+    "short_description": "Affordable, ergonomic tool that helps makhana workers collect seeds safely, comfortably, and efficiently.",
+    "thumbnail": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/thumbnails/1788343323821-di1b8asa1ml.png",
+    "hero_image": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/heroes/1788343319893-02930qrlf9yu.png",
+    "category": "Product Design",
+    "status": "Published",
+    "featured": true,
+    "display_order": 2,
+    "created_at": "2026-09-02T09:43:03.11961+00:00",
+    "updated_at": "2026-09-02T13:27:20.001+00:00",
+    "logo_icon": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/logos/1788343221927-866fadt4vm.png",
+    "blocks": [
+      {
+        "id": "18eee9ef-e5be-437b-a3c2-97ac5e69826b",
+        "project_id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
+        "type": "Hero",
+        "content": {
+          "role": "Product Designer",
+          "title": "MAKHANA SEED COLLECTION TOOL",
+          "tools": [
+            "Blender · Shapr3D · Procreate · Notebook LLM"
+          ],
+          "summary": "An ergonomic hand-tool concept for makhana harvesting, designed to reduce awkward postures, thorn exposure and repetitive effort while improving seed collection efficiency.",
+          "category": "",
+          "duration": "2 months",
+          "navLabel": "Hero",
+          "toolsRaw": "Blender · Shapr3D · Procreate · Notebook LLM",
+          "heroImage": ""
+        },
+        "order_index": 0,
+        "created_at": "2026-09-02T13:27:21.881364+00:00",
+        "updated_at": "2026-09-02T13:27:21.881364+00:00"
+      },
+      {
+        "id": "dc61553e-b09e-4935-b7a5-44b795cafa01",
+        "project_id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
+        "type": "GapAnalysis",
+        "content": {
+          "heading": "THE PROBLEM",
+          "gapTitle": "",
+          "leftItems": [
+            "6–8 hrs underwater",
+            "Bent/repetitive work",
+            "Bamboo tools"
+          ],
+          "leftTitle": "CURRENT METHOD",
+          "rightItems": [
+            "78% lower-back pain",
+            "67% neck pain",
+            "52% wrist / hand pain",
+            "112.86 BPM working heart rate during heavy-to-very-heavy workload",
+            "Thorns add another layer of daily injury and infection risk."
+          ],
+          "rightTitle": "THE HUMAN COST",
+          "subheading": "THE TOOL HASN'T EVOLVED. THE WORKER'S BODY PAYS THE PRICE.",
+          "consequences": [],
+          "gapDescription": "The opportunity wasn't to automate the entire harvest. It was to remove the unnecessary physical effort from the task.",
+          "problemStatement": ""
+        },
+        "order_index": 1,
+        "created_at": "2026-09-02T13:27:21.881364+00:00",
+        "updated_at": "2026-09-02T13:27:21.881364+00:00"
+      },
+      {
+        "id": "2957e9eb-4acb-4b14-8388-f796951efcb3",
+        "project_id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
+        "type": "Statistic",
+        "content": {
+          "stats": [
+            {
+              "label": "INR Current Market",
+              "number": "8.5B",
+              "description": "Projected to hit 19.6B by 2033"
+            },
+            {
+              "label": "Global Supply",
+              "number": "85%",
+              "description": "Grown primarily in the wetlands of Bihar"
+            },
+            {
+              "label": "Crore Industry",
+              "number": "3,000+",
+              "description": "Severely threatened by a mounting labor crisis"
+            }
+          ]
+        },
+        "order_index": 2,
+        "created_at": "2026-09-02T13:27:21.881364+00:00",
+        "updated_at": "2026-09-02T13:27:21.881364+00:00"
+      },
+      {
+        "id": "f71d6c6b-ff31-4df0-9563-6569c68adeb6",
+        "project_id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
+        "type": "ImageGallery",
+        "content": {
+          "images": [
+            {
+              "alt": "",
+              "url": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788351907186-yihdvpdjh5i.jpg",
+              "caption": ""
+            },
+            {
+              "alt": "",
+              "url": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788351915043-acyb8qfde6.png",
+              "caption": ""
+            },
+            {
+              "alt": "",
+              "url": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788351922973-qua6tv9cgp.png",
+              "caption": ""
+            },
+            {
+              "alt": "",
+              "url": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788351936148-ij827wkuxnf.png",
+              "caption": ""
+            },
+            {
+              "alt": "",
+              "url": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788351945097-p85vr754d5k.png",
+              "caption": ""
+            },
+            {
+              "alt": "",
+              "url": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788351956322-j9jsix4pujk.jpg",
+              "caption": ""
+            },
+            {
+              "alt": "",
+              "url": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788351965354-dfbfle4zfhb.png",
+              "caption": ""
+            },
+            {
+              "alt": "",
+              "url": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788351977074-4czggtk86sl.png",
+              "caption": ""
+            },
+            {
+              "alt": "",
+              "url": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788351985365-fh8m9qk0xst.png",
+              "caption": ""
+            },
+            {
+              "alt": "",
+              "url": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788351992753-adahqxvtlvc.png",
+              "caption": ""
+            }
+          ],
+          "layout": "carousel",
+          "caption": ""
+        },
+        "order_index": 3,
+        "created_at": "2026-09-02T13:27:21.881364+00:00",
+        "updated_at": "2026-09-02T13:27:21.881364+00:00"
+      },
+      {
+        "id": "cef12b0f-8097-4038-a892-0fcddc4c6b70",
+        "project_id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
+        "type": "Image",
+        "content": {
+          "alt": "",
+          "image": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788352524111-6ekn0a2ldqt.jpg",
+          "width": "narrow",
+          "caption": "",
+          "heading": "Cycle of Makhana Production"
+        },
+        "order_index": 4,
+        "created_at": "2026-09-02T13:27:21.881364+00:00",
+        "updated_at": "2026-09-02T13:27:21.881364+00:00"
+      },
+      {
+        "id": "0b9620fc-66fb-4630-b81a-511e79248a80",
+        "project_id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
+        "type": "Comparison",
+        "content": {
+          "items": [
+            {
+              "name": "Kaara (Anchor Pole)",
+              "attributes": [
+                "2-3 meter bamboo pole",
+                "Anchoring reference only",
+                "Requires full submersion",
+                "Zero collection assistance"
+              ]
+            },
+            {
+              "name": "Ganjaa (Bamboo Sieve)",
+              "attributes": [
+                "40-60 cm woven basket",
+                "Used to separate seeds from mud",
+                "No ergonomic handles",
+                "Causes severe hand fatigue"
+              ]
+            }
+          ],
+          "insight": "For generations, the only tools available have been unchanged bamboo implements that offer zero mechanical advantage."
+        },
+        "order_index": 5,
+        "created_at": "2026-09-02T13:27:21.881364+00:00",
+        "updated_at": "2026-09-02T13:27:21.881364+00:00"
+      },
+      {
+        "id": "6b9f9091-1d4c-40c8-b1bb-91733cbbf93c",
+        "project_id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
+        "type": "ResearchInsights",
+        "content": {
+          "intro": "To understand the reality of the harvest, we analyzed the physical toll of traditional methods in Mithilanchal.",
+          "heading": "05. OBSERVATIONAL RESEARCH",
+          "insights": [
+            {
+              "title": "Ergonomic Hazard",
+              "number": "01",
+              "description": "Prolonged prone and bent postures result in a 78% rate of chronic lower back pain among harvesters."
+            },
+            {
+              "title": "Zero Protection",
+              "number": "02",
+              "description": "Workers handle the thorny aquatic plants bare-handed, suffering daily puncture wounds and infections."
+            },
+            {
+              "title": "Extreme Inefficiency",
+              "number": "03",
+              "description": "Despite the grueling physical effort, productivity stagnates at 3.8-4.0 kg/hour, leaving nearly 25% of seeds uncollected."
+            }
+          ],
+          "opportunityText": "We cannot automate this entirely for small-scale farmers—but we can completely eliminate the postural stress and manual sweeping.",
+          "opportunityPrefix": "The insight:"
+        },
+        "order_index": 6,
+        "created_at": "2026-09-02T13:27:21.881364+00:00",
+        "updated_at": "2026-09-02T13:27:21.881364+00:00"
+      },
+      {
+        "id": "dcf6a30d-8056-4565-92d8-ecd1c387cc45",
+        "project_id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
+        "type": "Persona",
+        "content": {
+          "personas": [
+            {
+              "bio": "38 years old • 22 years experience • Mallah Community",
+              "name": "Rajesh",
+              "role": "Makhana Seed Harvester",
+              "goals": [
+                "Reduced physical strain and back pain",
+                "Better safety from thorns and infections",
+                "Higher hourly productivity to boost earnings"
+              ],
+              "quote": "I'm proud of what I do, but my body hurts. I want my children educated, but I hope they can stay in this work with better tools.",
+              "frustrations": [
+                "Chronic pain in lower back, neck, and wrists",
+                "Economic exploitation by intermediaries",
+                "Fear of permanent disability from daily injuries"
+              ]
+            }
+          ]
+        },
+        "order_index": 7,
+        "created_at": "2026-09-02T13:27:21.881364+00:00",
+        "updated_at": "2026-09-02T13:27:21.881364+00:00"
+      },
+      {
+        "id": "ccfba138-b0f2-4331-a83c-afe695292cd3",
+        "project_id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
+        "type": "SWOT",
+        "content": {
+          "threats": [
+            "Resentment that his destroyed body earns so little of the product value.",
+            "Skilled at difficult ancestral work but ashamed young people view this as low-status.",
+            "Fears occupation will disappear entirely as younger generation abandons it."
+          ],
+          "strengths": [
+            "“My hands are covered in thorn marks and my whole body hurts.”",
+            "“These tools haven't changed in generations - without hands, we cannot harvest.”",
+            "“There must be a better way to do this - if someone designed something, I'd use it.”"
+          ],
+          "weaknesses": [
+            "“This is my family's occupation, but the suffering makes me wonder if my children will do this.”",
+            "“I'm earning only 12-25% of the retail value while farmers get rich.”",
+            "“Machines exist but cost Rs 1-3 lakh - we can't afford them.”"
+          ],
+          "opportunities": [
+            "Submerges in murky pond water 6-8 hours daily in bent-over, prone positions.",
+            "Uses bamboo sieves to separate seeds from mud through vigorous shaking, repeating 50-100 times.",
+            "Applies traditional medicinal oils nightly to treat daily puncture wounds."
+          ]
+        },
+        "order_index": 8,
+        "created_at": "2026-09-02T13:27:21.881364+00:00",
+        "updated_at": "2026-09-02T13:27:21.881364+00:00"
+      },
+      {
+        "id": "386cd036-0229-4dd8-8888-9c31a697acf2",
+        "project_id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
+        "type": "Text",
+        "content": {
+          "body": "To design an affordable (under Rs 5,000), ergonomically optimized hand tool that enables makhana farmers to collect seeds safely and productively. The goal is to reduce physical strain by 50%, minimize thorn injuries, and increase productivity to 6-8 kg/hour—all while remaining accessible to small-scale farmers and preserving occupational continuity.",
+          "eyebrow": "The Mission",
+          "heading": "Empower Harvesters, Preserve Tradition",
+          "alignment": "left"
+        },
+        "order_index": 9,
+        "created_at": "2026-09-02T13:27:21.881364+00:00",
+        "updated_at": "2026-09-02T13:27:21.881364+00:00"
+      },
+      {
+        "id": "81304556-af54-48b9-8a62-fcb94d46bf16",
+        "project_id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
+        "type": "Table",
+        "content": {
+          "rows": [
+            [
+              "Reduce musculoskeletal strain",
+              "78% lower back pain, extreme bending",
+              "30-50% pain reduction, upright posture"
+            ],
+            [
+              "Prevent thorn injuries",
+              "Nearly 100% daily puncture wounds",
+              "50% fewer injuries, integrated protection"
+            ],
+            [
+              "Increase productivity",
+              "3.8-4.0 kg/hr; Rs 250-600/day",
+              "6-8 kg/hr; Rs 400-800/day earnings"
+            ],
+            [
+              "Improve seed recovery",
+              "25% of seeds lost during collection",
+              "Recover 5-10% additional seeds"
+            ],
+            [
+              "Maintain dignity",
+              "Shame, disappearing knowledge",
+              "Respected occupation, youth retention"
+            ]
+          ],
+          "columns": [
+            "Need",
+            "Current Reality",
+            "Target Outcome"
+          ],
+          "heading": "Defining Success (User Needs)"
+        },
+        "order_index": 10,
+        "created_at": "2026-09-02T13:27:21.881364+00:00",
+        "updated_at": "2026-09-02T13:27:21.881364+00:00"
+      },
+      {
+        "id": "0cfd7e01-cda9-4be5-a3d2-5c6988d8cf99",
+        "project_id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
+        "type": "ImageGallery",
+        "content": {
+          "title": "Exploring Form & Function",
+          "images": [
+            {
+              "url": "",
+              "caption": "Roller concepts"
+            },
+            {
+              "url": "",
+              "caption": "Scoop and sieve mechanisms"
+            },
+            {
+              "url": "",
+              "caption": "Finalizing the push-pull architecture"
+            }
+          ],
+          "layout": "bento"
+        },
+        "order_index": 11,
+        "created_at": "2026-09-02T13:27:21.881364+00:00",
+        "updated_at": "2026-09-02T13:27:21.881364+00:00"
+      },
+      {
+        "id": "a14c8fc8-3f98-41b3-8623-a75ec08d0a8f",
+        "project_id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
+        "type": "SolutionCapabilities",
+        "content": {
+          "heading": "THE SOLUTION",
+          "subtitle": "An ergonomic intervention that transforms harvesting from a prone, tactile search into an upright, mechanical sweep.",
+          "productName": "Makhana Seed Collector",
+          "capabilities": [
+            {
+              "title": "Ergonomic Pull Handle",
+              "number": "01",
+              "description": "Allows the user to operate the tool while standing, entirely eliminating the need for 6-8 hours of submerged, bent-over labor."
+            },
+            {
+              "title": "Silicone Spike Agitation",
+              "number": "02",
+              "description": "A rolling brush safely dislodges seeds from the muddy pond bed, trapping plant debris and preventing thorn injuries."
+            },
+            {
+              "title": "Integrated Mesh Sieve",
+              "number": "03",
+              "description": "Separates the mud and water on the go, catching the seeds directly in a stainless steel basket for easy lifting."
+            }
+          ]
+        },
+        "order_index": 12,
+        "created_at": "2026-09-02T13:27:21.881364+00:00",
+        "updated_at": "2026-09-02T13:27:21.881364+00:00"
+      },
+      {
+        "id": "58748455-5d44-4708-8bd6-90364d42d87a",
+        "project_id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
+        "type": "Table",
+        "content": {
+          "rows": [
+            [
+              "Loader Bucket & Basket",
+              "Stainless Steel",
+              "Corrosion resistance in aquatic environments; highly durable."
+            ],
+            [
+              "Agitation Brush",
+              "Silicone",
+              "Flexible enough to navigate mud without damaging the delicate seeds."
+            ],
+            [
+              "Handle Grip",
+              "Rubber",
+              "Ensures a secure, non-slip grip during hours of water-based labor."
+            ],
+            [
+              "Wheels & Chain",
+              "Stainless Steel / Iron",
+              "Provides heavy-duty traction across uneven, muddy pond beds."
+            ]
+          ],
+          "columns": [
+            "Component",
+            "Material",
+            "Rationale"
+          ],
+          "heading": "Materials & Manufacturing"
+        },
+        "order_index": 13,
+        "created_at": "2026-09-02T13:27:21.881364+00:00",
+        "updated_at": "2026-09-02T13:27:21.881364+00:00"
+      },
+      {
+        "id": "32151478-6821-4814-a5dd-264e9b8dba1c",
+        "project_id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
+        "type": "ProductRender",
+        "content": {
+          "renders": [
+            {
+              "image": "",
+              "layout": "full",
+              "caption": "The fully assembled Makhana Seed Collector"
+            },
+            {
+              "image": "",
+              "layout": "half",
+              "caption": "Mesh Chamber Details"
+            },
+            {
+              "image": "",
+              "layout": "half",
+              "caption": "Traction Wheel Assembly"
+            }
+          ]
+        },
+        "order_index": 14,
+        "created_at": "2026-09-02T13:27:21.881364+00:00",
+        "updated_at": "2026-09-02T13:27:21.881364+00:00"
+      },
+      {
+        "id": "a5d51b1a-88d5-4356-b3b3-70bfebfcdd08",
+        "project_id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
+        "type": "ResearchInsights",
+        "content": {
+          "intro": "The biggest problem wasn't knowing the rules.\nIt was applying them under pressure.",
+          "heading": "SECTION 04 — RESEARCH INSIGHTS",
+          "insights": [
+            {
+              "title": "Theory ≠ readiness",
+              "number": "01",
+              "description": "Classroom learning does not adequately prepare recruits for chaotic, real-time road decisions."
+            },
+            {
+              "title": "Confidence collapses under pressure",
+              "number": "02",
+              "description": "New recruits face a confidence gap when multiple events happen simultaneously."
+            },
+            {
+              "title": "Experience is doing the work training should do",
+              "number": "03",
+              "description": "With limited structured practice, critical skills are often learned through inconsistent on-the-job exposure."
+            }
+          ],
+          "opportunityText": "Let officers safely experience the difficult situations before they encounter them on the road.",
+          "opportunityPrefix": "This created an opportunity:"
+        },
+        "order_index": 15,
+        "created_at": "2026-09-02T13:27:21.881364+00:00",
+        "updated_at": "2026-09-02T13:27:21.881364+00:00"
+      }
+    ]
+  }
+]

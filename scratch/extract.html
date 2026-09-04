@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+  <h1>Extracting PDF Pages...</h1>
+  <div id="status">Loading...</div>
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+    async function extract() {
+      try {
+        const pdf = await pdfjsLib.getDocument('pdf.pdf').promise;
+        const status = document.getElementById('status');
+        for (let i = 1; i <= pdf.numPages; i++) {
+          status.innerText = `Processing page ${i} of ${pdf.numPages}...`;
+          const page = await pdf.getPage(i);
+          // Scale to 3.0 for very high quality so we can crop effectively later
+          const viewport = page.getViewport({ scale: 3.0 });
+          const canvas = document.createElement('canvas');
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+          const ctx = canvas.getContext('2d');
+          await page.render({ canvasContext: ctx, viewport: viewport }).promise;
+          
+          const base64 = canvas.toDataURL('image/png');
+          await fetch('/upload', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ filename: `page_${i}.png`, base64 })
+          });
+          console.log(`Sent page ${i}`);
+        }
+        status.innerText = 'All pages extracted successfully!';
+        document.body.innerHTML += '<h2 style="color: green;">Done! You can close this window.</h2>';
+      } catch (e) {
+        document.getElementById('status').innerText = 'Error: ' + e.message;
+        console.error(e);
+      }
+    }
+    extract();
+  </script>
+</body>
+</html>
