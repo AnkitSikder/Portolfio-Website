@@ -91,7 +91,7 @@ export default function AuraChargeBrandBlock({ content, sectionId, isAlternate }
               
               <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 w-full items-stretch">
                 {marginSpacing.items.map((item, idx) => (
-                  <div key={idx} className={`flex flex-col gap-6 w-full ${idx === 0 ? 'lg:w-[75%]' : 'lg:w-[25%]'}`}>
+                  <div key={idx} className={`flex flex-col gap-6 w-full ${idx === 0 ? 'lg:w-[70%]' : 'lg:w-[30%]'}`}>
                     
                     {/* Stats */}
                     <div className="flex flex-row flex-wrap justify-between items-center w-full px-2 text-foreground/90 gap-4">

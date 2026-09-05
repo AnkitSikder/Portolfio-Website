@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import ProjectHero from '../../components/case-study/ProjectHero';
 import ProjectRenderer, { getSectionList } from '../../components/case-study/ProjectRenderer';
 import SectionProgressNav from '../../components/case-study/SectionProgressNav';
+import NextProjectNav from '../../components/case-study/NextProjectNav';
 import { getHeroProps, getBodyBlocks } from '../../utils/projectUtils';
 
 export default function AuraCharge() {
@@ -458,6 +459,7 @@ export default function AuraCharge() {
         <ProjectHero {...heroProps} />
       </div>
       <ProjectRenderer blocks={bodyBlocks} />
+      <NextProjectNav currentPath="/work/auracharge" />
     </article>
   );
 }
