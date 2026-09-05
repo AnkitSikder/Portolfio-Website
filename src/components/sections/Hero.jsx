@@ -97,10 +97,10 @@ export default function Hero({ setIsSplineLoaded }) {
         </div>
       </div>
 
-      {/* 3D Spline Character — pointer-events-none on all devices to disable interactions (character, id card) */}
+      {/* 3D Spline Character — pointer-events-none on mobile/tablet, auto on desktop to restore look-at effect */}
       <div 
         ref={splineWrapperRef}
-        className="absolute inset-0 z-20 pointer-events-none overflow-hidden"
+        className="absolute inset-0 z-20 pointer-events-none lg:pointer-events-auto overflow-hidden"
       >
         <div 
           className="absolute"
