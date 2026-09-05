@@ -48,8 +48,8 @@
 }
 
 .ios-26-glass {
-  backdrop-filter: url(#liquid-glass) blur(16px) saturate(150%);
-  -webkit-backdrop-filter: url(#liquid-glass) blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
 }
 
 .text-3d-orange {

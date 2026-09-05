@@ -35,7 +35,7 @@ export const Card = ({
           scale,
           top: `calc(${i * 25}px)`,
         }}
-        className={`flex flex-col relative aspect-[2/3] h-auto md:aspect-auto md:h-[520px] w-full origin-top shadow-2xl`}
+        className={`flex flex-col relative h-[75vh] md:h-[520px] w-full origin-top shadow-2xl`}
       >
         {/* Top Header Section */}
         <div 

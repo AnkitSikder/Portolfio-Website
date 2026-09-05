@@ -72,13 +72,6 @@ export default function Layout() {
     <ReactLenis root options={{ lerp: 0.07, duration: 1.5, smoothTouch: true }}>
       <CustomCursor />
       
-      {/* iOS 26 Liquid Glass SVG Filter */}
-      <svg style={{ display: 'none' }}>
-        <filter id="liquid-glass">
-          <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" result="noise" />
-          <feDisplacementMap in="SourceGraphic" in2="noise" scale="25" xChannelSelector="R" yChannelSelector="G" />
-        </filter>
-      </svg>
 
       {/* Loading screen — only visible on home page while Spline loads */}
       {isHomePage && <LoadingScreen isLoaded={isSplineLoaded} />}

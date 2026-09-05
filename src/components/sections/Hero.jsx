@@ -122,12 +122,12 @@ export default function Hero({ setIsSplineLoaded }) {
 
             scene="https://prod.spline.design/AtW72O4zfSpbuuvx/scene.splinecode?v=fresh7" 
             onLoad={(splineApp) => {
-              // Delay removing the loader to ensure Spline finishes painting the 3D canvas
+              // Delay removing the loader slightly to ensure Spline finishes painting the 3D canvas
               setTimeout(() => {
                 setIsSplineLoaded(true);
                 // Refresh ScrollTrigger to recalculate layout after loading screen disappears
                 setTimeout(() => ScrollTrigger.refresh(), 500);
-              }, 1500);
+              }, 300);
               
               // Aggressively hunt down and DESTROY the Spline logo DOM element
               const destroyLogo = () => {
