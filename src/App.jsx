@@ -14,8 +14,6 @@ import MakhanaProject from './pages/projects/MakhanaProject';
 import ProtectedRoute from './components/admin/ProtectedRoute';
 const AdminLayout = lazy(() => import('./components/admin/AdminLayout'));
 const AdminDashboard = lazy(() => import('./pages/admin/AdminDashboard'));
-const ProjectEditor = lazy(() => import('./pages/admin/ProjectEditor'));
-const MediaLibrary = lazy(() => import('./pages/admin/MediaLibrary'));
 
 function AdminFallback() {
   return (
@@ -65,9 +63,6 @@ function App() {
         >
           <Route index element={<AdminDashboard />} />
           <Route path="projects" element={<AdminDashboard />} />
-          <Route path="projects/new" element={<ProjectEditor />} />
-          <Route path="projects/:id/edit" element={<ProjectEditor />} />
-          <Route path="media" element={<MediaLibrary />} />
         </Route>
       </Routes>
     </AuthProvider>
@@ -75,3 +70,4 @@ function App() {
 }
 
 export default App;
+

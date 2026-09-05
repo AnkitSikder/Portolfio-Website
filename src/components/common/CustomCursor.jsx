@@ -1,10 +1,17 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 
 export default function CustomCursor() {
   const cursorRef = useRef(null);
-  
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
   useEffect(() => {
+    // Check if the device supports hover (if false, it's a touch device like a phone/tablet)
+    if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
+      setIsTouchDevice(true);
+      return;
+    }
+
     const cursor = cursorRef.current;
     if (!cursor) return;
     
@@ -80,6 +87,9 @@ export default function CustomCursor() {
     };
   }, []);
 
+  // Return nothing on mobile/touch devices
+  if (isTouchDevice) return null;
+
   return (
     <>
       <style>{`
@@ -114,3 +124,4 @@ export default function CustomCursor() {
     </>
   );
 }
+

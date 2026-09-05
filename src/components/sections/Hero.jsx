@@ -14,7 +14,7 @@ export default function Hero({ setIsSplineLoaded }) {
     let rafId;
     // Parallax mouse effect for the giant hero text
     const handleMouseMove = (e) => {
-      if (!heroTextRef.current) return;
+      if (!heroTextRef.current || window.innerWidth < 768) return;
       if (rafId) cancelAnimationFrame(rafId);
       
       rafId = requestAnimationFrame(() => {
@@ -90,13 +90,15 @@ export default function Hero({ setIsSplineLoaded }) {
         </div>
       </div>
 
-      {/* 3D Spline Character — pointer-events: auto so cursor tracking works.
+      {/* 3D Spline Character — pointer-events: auto on md+ so cursor tracking works.
+          On mobile (pointer-events-none), interactions are fully disabled.
           Scroll zoom is blocked separately via a non-passive wheel listener in useEffect. */}
       <div 
         ref={splineWrapperRef}
-        className="absolute inset-0 z-20 pointer-events-auto overflow-hidden"
+        className="absolute inset-0 z-20 pointer-events-none md:pointer-events-auto overflow-hidden"
       >
         <div 
+
           className="absolute"
           // We use CSS scale to actually shrink the character because Spline's camera auto-fits
           style={{ 
