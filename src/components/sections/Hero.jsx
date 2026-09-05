@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Spline from '@splinetool/react-spline';
 import { TypeAnimation } from 'react-type-animation';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -10,7 +10,13 @@ export default function Hero({ setIsSplineLoaded }) {
   const heroTextRef = useRef(null);
   const splineWrapperRef = useRef(null);
 
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+
     let rafId;
     // Parallax mouse effect for the giant hero text
     const handleMouseMove = (e) => {
@@ -50,6 +56,7 @@ export default function Hero({ setIsSplineLoaded }) {
     document.addEventListener('wheel', blockSplineZoom, { passive: false, capture: true });
 
     return () => {
+      window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseleave', handleMouseLeave);
       document.removeEventListener('wheel', blockSplineZoom, { capture: true });
@@ -98,13 +105,13 @@ export default function Hero({ setIsSplineLoaded }) {
         className="absolute inset-0 z-20 pointer-events-none md:pointer-events-auto overflow-hidden"
       >
         <div 
-
           className="absolute"
           // We use CSS scale to actually shrink the character because Spline's camera auto-fits
           style={{ 
             width: '200vw', 
             height: '200vh',
-            left: '-50vw', // Centered horizontally
+            // On mobile, the character natively leans a bit left in the scene, so we shift it right to center it
+            left: isMobile ? '-40vw' : '-50vw',
             top: 'calc(-45vh + 45px)', // Shifted down 45px total
             transform: 'scale(0.85)', // Shrink the visual size of the character!
             transformOrigin: 'center center',
@@ -112,6 +119,7 @@ export default function Hero({ setIsSplineLoaded }) {
           }}
         >
           <Spline 
+
             scene="https://prod.spline.design/AtW72O4zfSpbuuvx/scene.splinecode?v=fresh7" 
             onLoad={(splineApp) => {
               // Delay removing the loader to ensure Spline finishes painting the 3D canvas
