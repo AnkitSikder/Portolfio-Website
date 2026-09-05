@@ -240,7 +240,7 @@ function Band({
 
   return (
     <>
-      <group position={[0, 4.5, 0]}>
+      <group position={[0, isMobile ? 6 : 4.5, 0]}>
         <RigidBody ref={fixed} {...segmentProps} type="fixed" />
         <RigidBody position={[0.4, 0, 0]} ref={j1} {...segmentProps}>
           <BallCollider args={[0.1]} />
@@ -256,10 +256,10 @@ function Band({
           <group
             scale={3} 
             position={[0, -1.2, -0.05]}
-            onPointerOver={() => hover(true)}
-            onPointerOut={() => hover(false)}
-            onPointerUp={e => (e.target.releasePointerCapture(e.pointerId), drag(false))}
-            onPointerDown={e => (
+            onPointerOver={isMobile ? undefined : () => hover(true)}
+            onPointerOut={isMobile ? undefined : () => hover(false)}
+            onPointerUp={isMobile ? undefined : e => (e.target.releasePointerCapture(e.pointerId), drag(false))}
+            onPointerDown={isMobile ? undefined : e => (
               e.target.setPointerCapture(e.pointerId),
               drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation())))
             )}

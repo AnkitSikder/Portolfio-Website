@@ -23,27 +23,28 @@ export default function HoverButton({ text, href, className, icon, onClick, ...p
 
   if (href) {
     const isAnchor = href.startsWith('#');
-    const isExternal = href.startsWith('http') || href.endsWith('.pdf');
+    const isExternal = href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:') || href.endsWith('.pdf');
 
-    if (isAnchor || href.startsWith('/')) {
-      const to = isAnchor ? `/${href}` : href;
+    if (isExternal) {
       return (
-        <Link to={to} className={mergedClasses} {...props}>
+        <a 
+          href={href} 
+          className={mergedClasses} 
+          target="_blank"
+          rel="noopener noreferrer"
+          {...props}
+        >
           {content}
-        </Link>
+        </a>
       );
     }
 
+    // All internal links (anchors, absolute paths like /work/..., relative paths like work/...)
+    const to = isAnchor ? `/${href}` : href.startsWith('/') ? href : `/${href}`;
     return (
-      <a 
-        href={href} 
-        className={mergedClasses} 
-        target={isExternal ? "_blank" : undefined}
-        rel={isExternal ? "noopener noreferrer" : undefined}
-        {...props}
-      >
+      <Link to={to} className={mergedClasses} {...props}>
         {content}
-      </a>
+      </Link>
     );
   }
 

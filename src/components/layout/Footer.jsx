@@ -50,7 +50,24 @@ export default function Footer() {
             <div className="flex justify-center md:justify-start gap-8 md:gap-16 text-[5vw] md:text-[32px] text-[#171621] font-medium tracking-tight mb-2 md:mb-0">
               <HoverButton text="Work" href="#work" className="hover:text-[#F76300] w-fit" />
               <HoverButton text="About" href="#about" className="hover:text-[#F76300] w-fit" />
-              <HoverButton text="Resume" href="/resume.pdf" className="hover:text-[#F76300] w-fit" />
+              <HoverButton text="Resume" href="https://drive.google.com/file/d/1RfFByeKvDICGWapt51O5PgBdOqusrpjO/view?usp=sharing" target="_blank" className="hover:text-[#F76300] w-fit" icon={
+                <svg 
+                  aria-hidden="true" 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="14" 
+                  height="14" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="3" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                  className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                >
+                  <path d="M7 7h10v10"/>
+                  <path d="M7 17 17 7"/>
+                </svg>
+              } />
             </div>
           </ScrollReveal>
         </div>
@@ -97,12 +114,34 @@ export default function Footer() {
 
       {/* Bottom Copyright */}
       <div className="absolute w-full md:w-auto left-0 md:left-[12%] bottom-[4%] md:bottom-[4%] flex items-center justify-center pointer-events-auto z-10">
-        <ScrollReveal delay={0.6} direction="up">
-          <p className="font-clash font-medium text-[#171621] text-[3.5vw] md:text-[22px] select-text">
-            Copyright © Anki Designs, 2026
-          </p>
-        </ScrollReveal>
+        <p className="font-clash font-medium text-[#171621] text-[3.5vw] md:text-[22px] select-text">
+          Copyright © Anki Designs, 2026
+        </p>
       </div>
+
+      {/* Back to Top — Arch Button */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        aria-label="Back to top"
+        className="absolute right-[5%] md:right-[5%] bottom-0 z-10 pointer-events-auto group w-[72px] h-[60px] md:w-[90px] md:h-[72px] bg-[#171621] hover:bg-[#F76300] transition-colors duration-300 flex items-center justify-center"
+        style={{ borderRadius: '9999px 9999px 0 0' }}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="transition-transform duration-300 group-hover:-translate-y-1"
+        >
+          <path d="M12 19V5" />
+          <path d="M5 12l7-7 7 7" />
+        </svg>
+      </button>
 
     </footer>
   );

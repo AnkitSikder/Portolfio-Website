@@ -28,14 +28,14 @@ export const Card = ({
   return (
     <div
       ref={container}
-      className='h-screen flex items-center justify-center sticky top-0'
+      className='h-[calc(100vh-80px)] md:h-[calc(100vh-112px)] flex items-start justify-center sticky top-20 md:top-28'
     >
       <motion.div
         style={{
           scale,
-          top: `calc(-5vh + ${i * 25}px)`,
+          top: `calc(${i * 25}px)`,
         }}
-        className={`flex flex-col relative -top-[15%] aspect-[2/3] h-auto md:aspect-auto md:h-[600px] w-full origin-top shadow-2xl`}
+        className={`flex flex-col relative aspect-[2/3] h-auto md:aspect-auto md:h-[520px] w-full origin-top shadow-2xl`}
       >
         {/* Top Header Section */}
         <div 
@@ -65,7 +65,7 @@ export const Card = ({
               style={{ scale: imageScale }}
             >
               <img src={url} alt={title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60 transition-colors duration-500 group-hover:bg-black/70 pointer-events-none" />
+              <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/70 pointer-events-none" />
             </motion.div>
 
             {/* Hover Overlay */}
@@ -85,7 +85,7 @@ export const Card = ({
                   <HoverButton 
                     text="Explore Case Study" 
                     href={pageLink}
-                    className="bg-primary !text-white px-10 py-4 text-lg md:text-xl font-semibold hover:bg-white transition-colors duration-500 !rounded-full hover:!text-black shadow-xl" 
+                    className="bg-primary !text-white px-6 py-2.5 md:px-8 md:py-3 text-lg md:text-xl font-semibold hover:bg-white transition-colors duration-500 !rounded-full hover:!text-black shadow-xl" 
                   />
                 </div>
               </div>

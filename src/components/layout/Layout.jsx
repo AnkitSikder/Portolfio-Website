@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis';
 import { gsap } from 'gsap';
@@ -7,20 +7,24 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import CustomCursor from '../common/CustomCursor';
 import Header from './Header';
 import Footer from './Footer';
+import LoadingScreen from '../common/LoadingScreen';
+
+export const SplineContext = createContext(null);
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Layout() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isNavVisible, setIsNavVisible] = useState(true);
+  const [isSplineLoaded, setIsSplineLoaded] = useState(false);
   const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   const lenis = useLenis(ScrollTrigger.update);
 
-  // Scroll to top or hash on route change
+  // Scroll to top on route change
   useEffect(() => {
     if (location.hash) {
-      // Need a small timeout to ensure the DOM has rendered the elements
       setTimeout(() => {
         const element = document.getElementById(location.hash.substring(1));
         if (element) {
@@ -32,13 +36,13 @@ export default function Layout() {
         }
       }, 100);
     } else {
+      window.scrollTo(0, 0);
       if (lenis) {
         lenis.scrollTo(0, { immediate: true });
-      } else {
-        window.scrollTo(0, 0);
       }
+      setTimeout(() => ScrollTrigger.refresh(), 150);
     }
-  }, [location, lenis]);
+  }, [location.pathname, location.hash]);
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -76,11 +80,16 @@ export default function Layout() {
         </filter>
       </svg>
 
+      {/* Loading screen — only visible on home page while Spline loads */}
+      {isHomePage && <LoadingScreen isLoaded={isSplineLoaded} />}
+
       <main className="bg-background text-foreground flex flex-col min-h-screen">
         <Header isNavVisible={isNavVisible} isScrolled={isScrolled} />
         
         <div className="flex-1">
-          <Outlet />
+          <SplineContext.Provider value={setIsSplineLoaded}>
+            <Outlet />
+          </SplineContext.Provider>
         </div>
         
         <div className="relative z-30 bg-background">

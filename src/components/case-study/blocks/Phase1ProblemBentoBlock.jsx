@@ -75,8 +75,11 @@ export default function Phase1ProblemBentoBlock({ content, sectionId }) {
             <div className="h-full p-6 rounded-3xl bg-[#fce8e8] dark:bg-red-900/20 border border-red-500/20 flex flex-col justify-between">
               <div>
                 <div className="text-5xl font-franchise text-red-600 dark:text-red-400 leading-none">15.8%</div>
-                <div className="text-xs font-clash font-semibold uppercase text-red-600/80 dark:text-red-400/80 tracking-wider">LEFT UNCOLLECTED</div>
+                <div className="text-xs font-clash font-semibold uppercase text-red-600/80 dark:text-red-400/80 tracking-wider mt-1">LEFT UNCOLLECTED</div>
               </div>
+              <p className="text-sm font-clash font-medium text-red-600/90 dark:text-red-400/90 my-auto leading-relaxed">
+                Inefficient manual harvesting in murky water leads to permanent crop loss.
+              </p>
               <p className="text-xs font-clash font-medium text-red-600/60 dark:text-red-400/60 mt-4">— project problem overview</p>
             </div>
           </ScrollReveal>

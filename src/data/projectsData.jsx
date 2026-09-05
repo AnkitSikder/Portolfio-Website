@@ -1,70 +1,44 @@
-import { Activity, ShieldCheck, Layers, Sparkles, Globe } from 'lucide-react';
 import React from 'react';
+import { Activity, Cpu, Leaf } from 'lucide-react';
 
 export const projects = [
   {
-    title: 'Visist.ai',
-    description: 'Creating a seamless digital ecosystem for Visist.ai by designing an intuitive service that guides users from video upload to personalized performance feedback.',
+    title: 'Immersive Traffic Command',
+    description: 'A VR training system for smarter, safer traffic decisions.',
     pointers: [
-      'Improved brand recall by ~35%',
-      'Led the soft launch of AI feedback reports',
-      'Designed intuitive end-to-end user flows'
+      'Immersive VR training environment',
+      'Real-time traffic scenario simulation',
+      'Designed for police & traffic officers',
     ],
-    link: '/projects/visist-thumbnail.jpg',
-    pageLink: '/work/visist-ai',
-    color: '#ffb366', // Lightest Orange
-    icon: <Activity className="w-6 h-6" />
+    link: 'https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/thumbnails/1788331220380-kgfv3yef4bd.png',
+    pageLink: '/work/vrtraffic',
+    color: '#1a1a2e',
+    icon: <Cpu className="w-6 h-6" />,
   },
   {
-    title: 'Reliable',
-    description: 'A revolutionary UX/UI framework designed to maximize user engagement through intuitive micro-interactions and seamless navigation.',
+    title: 'Makhana Seed Collector',
+    description: 'Affordable, ergonomic tool that helps makhana workers collect seeds safely, comfortably, and efficiently.',
     pointers: [
-      '99.9% uptime architecture',
-      'Reduced bounce rate by 25%',
-      'Seamless cross-platform support'
+      'Ergonomic handle reduces hand fatigue',
+      'Improves harvest speed by 40%',
+      'Low-cost manufacturing design',
     ],
-    link: 'https://images.unsplash.com/photo-1541462608143-67571c6738dd?q=80&w=2940&auto=format&fit=crop',
-    pageLink: '/#work',
-    color: '#ff9933', // Lighter Orange
-    icon: <ShieldCheck className="w-6 h-6" />
+    link: 'https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/thumbnails/1788343323821-di1b8asa1ml.png',
+    pageLink: '/work/makhana-tool',
+    color: '#2a1a0a',
+    icon: <Leaf className="w-6 h-6" />,
   },
   {
-    title: 'Scalable',
-    description: 'A high-performance web application built for data analysis, leveraging scalable infrastructure and real-time processing.',
+    title: 'Aura Charge',
+    description: 'Redefining power backup into a unified, smart energy experience for the modern home.',
     pointers: [
-      'Handles 1M+ daily active users',
-      'Real-time data processing <50ms',
-      'Auto-scaling cloud infrastructure'
+      'Multi-device charging hub',
+      'Smart home integration',
+      'Reduces gadget clutter by design',
     ],
-    link: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop',
-    pageLink: '/#work',
-    color: '#ff8000', // Solid Orange
-    icon: <Layers className="w-6 h-6" />
-  },
-  {
-    title: 'Innovative',
-    description: 'An experimental creative development project combining WebGL and advanced animation techniques for an immersive experience.',
-    pointers: [
-      'Award-winning WebGL animations',
-      'Interactive 3D storytelling',
-      'Optimized 60 FPS performance'
-    ],
-    link: 'https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=2940&auto=format&fit=crop',
-    pageLink: '/#work',
-    color: '#e66000', // Darker Orange
-    icon: <Sparkles className="w-6 h-6" />
-  },
-  {
-    title: 'Accessible',
-    description: 'A cutting-edge mobile application providing seamless connectivity and an elegant, modern interface for everyday users.',
-    pointers: [
-      'WCAG 2.1 AA Compliant',
-      '100% Screen reader support',
-      'High-contrast mode capabilities'
-    ],
-    link: 'https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=2940&auto=format&fit=crop',
-    pageLink: '/#work',
-    color: '#cc5200', // Darkest Orange
-    icon: <Globe className="w-6 h-6" />
+    link: 'https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/thumbnails/1788349026152-csrdy0cptka.jpg',
+    pageLink: '/work/auracharge',
+    color: '#1a0a2a',
+    icon: <Activity className="w-6 h-6" />,
   },
 ];

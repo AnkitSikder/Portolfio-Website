@@ -111,7 +111,7 @@ export default function Hero({ setIsSplineLoaded }) {
             width: '200vw', 
             height: '200vh',
             // On mobile, the character natively leans a bit left in the scene, so we shift it right to center it
-            left: isMobile ? '-40vw' : '-50vw',
+            left: isMobile ? '-45vw' : '-50vw',
             top: 'calc(-45vh + 45px)', // Shifted down 45px total
             transform: 'scale(0.85)', // Shrink the visual size of the character!
             transformOrigin: 'center center',

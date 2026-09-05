@@ -13,17 +13,22 @@ function mapCmsProject(p, index) {
   const colors = ['#ffb366', '#ff9933', '#ff8000', '#e66000', '#cc5200'];
   let icon = p.logo_icon || <Activity className="w-6 h-6" />;
   let description = p.short_description || '';
+  let link = p.thumbnail || '';
 
   if (p.title === 'Immersive Traffic Command') {
     icon = "/AURACHARGE_PORTFOLIO_ASSETS/icon.png";
     description = "A VR training system for smarter, safer traffic decisions.";
   }
 
+  if (p.title === 'AuraCharge' || p.title === 'Aura Charge') {
+    link = "/AURACHARGE_PORTFOLIO_ASSETS/10_final_renders/context_render_07.jpg";
+  }
+
   return {
     title: p.title,
     description,
     pointers: [],
-    link: p.thumbnail || '',
+    link,
     pageLink: `/work/${p.slug}`,
     color: colors[index % colors.length],
     icon,
@@ -62,16 +67,26 @@ export default function Projects() {
   }, []);
 
   return (
-    <section id="work" className="w-full bg-background pt-24 pb-0">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-24">
-        <div className="sticky top-24 z-0 md:relative md:top-auto">
-          <ScrollReveal>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-franchise uppercase tracking-wide text-primary mb-6 leading-[1.1]">
-              Featured Work
-            </h2>
-          </ScrollReveal>
+    <section id="work" className="w-full bg-background pt-8 md:pt-12 pb-0">
+      <div className="max-w-[1400px] mx-auto relative px-6 md:px-12 lg:px-24">
+        {/* 
+          We stick the title container at exactly the same top offset AND with the exact same height 
+          as the cards container (h-[calc...]). This guarantees their bottom edges match the parent's bottom edge, 
+          so they are pushed up by the section's bottom edge at the exact same pixel of scroll.
+          We use an absolute wrapper so it doesn't take up space in the document flow.
+        */}
+        <div className="absolute inset-0 z-20 pointer-events-none px-6 md:px-12 lg:px-24">
+          <div className="sticky top-0 h-screen w-full">
+            <div className="pointer-events-auto pt-2 md:pt-4">
+              <ScrollReveal>
+                <h2 className="text-4xl md:text-6xl lg:text-7xl font-franchise uppercase tracking-wide text-primary leading-[1.1] m-0 drop-shadow-sm">
+                  Featured Work
+                </h2>
+              </ScrollReveal>
+            </div>
+          </div>
         </div>
-        <div className="w-full relative z-10">
+        <div className="w-full relative z-10 pt-20 md:pt-28">
           <StackingCards projects={projects ?? []} />
         </div>
       </div>

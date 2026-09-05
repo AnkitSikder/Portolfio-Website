@@ -166,20 +166,21 @@ export default function SectionProgressNav({ sections = [] }) {
       >
         {/* Bottom Drawer — slides up from the pill */}
         <div
-          className="w-[88vw] max-w-sm mb-3 rounded-2xl overflow-hidden transition-all duration-400 ease-out"
+          className="w-[88vw] max-w-sm mb-3 rounded-2xl transition-all duration-400 ease-out flex flex-col"
           style={{
             background: 'rgba(12, 10, 22, 0.88)',
             backdropFilter: 'blur(24px) saturate(160%)',
             WebkitBackdropFilter: 'blur(24px) saturate(160%)',
             border: '1px solid rgba(255,255,255,0.08)',
             boxShadow: '0 -8px 40px rgba(0,0,0,0.5)',
-            maxHeight: drawerOpen ? `${sections.length * 48 + 24}px` : '0px',
+            maxHeight: drawerOpen ? '60vh' : '0px',
             opacity: drawerOpen ? 1 : 0,
             transform: drawerOpen ? 'translateY(0) scale(1)' : 'translateY(12px) scale(0.97)',
             pointerEvents: drawerOpen ? 'auto' : 'none',
+            overflow: 'hidden',
           }}
         >
-          <div className="px-3 py-3 flex flex-col gap-0.5">
+          <div className="px-3 py-3 flex flex-col gap-0.5 overflow-y-auto" style={{ maxHeight: '60vh', WebkitOverflowScrolling: 'touch' }}>
             {sections.map(({ id, label }, i) => {
               const isActive = activeId === id;
               return (

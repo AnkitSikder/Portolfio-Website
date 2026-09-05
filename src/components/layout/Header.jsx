@@ -35,7 +35,8 @@ export default function Header({ isNavVisible, isScrolled }) {
                 <HoverButton href="#work" text="Work" className="hover:text-[#ff5a00]" />
                 <HoverButton href="#about" text="About" className="hover:text-[#ff5a00]" />
                 <HoverButton 
-                  href="/resume.pdf" 
+                  href="https://drive.google.com/file/d/1RfFByeKvDICGWapt51O5PgBdOqusrpjO/view?usp=sharing" 
+                  target="_blank"
                   text="Resume" 
                   className="hover:text-[#ff5a00]" 
                   icon={
@@ -112,7 +113,7 @@ export default function Header({ isNavVisible, isScrolled }) {
         <nav className="flex flex-col gap-8 text-4xl font-franchise uppercase tracking-wider text-white">
           <Link to="/#work" onClick={() => setIsMenuOpen(false)} className="hover:text-primary transition-colors">Work</Link>
           <Link to="/#about" onClick={() => setIsMenuOpen(false)} className="hover:text-primary transition-colors">About</Link>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="hover:text-primary transition-colors flex items-center gap-3">
+          <a href="https://drive.google.com/file/d/1RfFByeKvDICGWapt51O5PgBdOqusrpjO/view?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="hover:text-primary transition-colors flex items-center gap-3">
             Resume
             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <path d="M7 7h10v10"/>
@@ -125,13 +126,19 @@ export default function Header({ isNavVisible, isScrolled }) {
           <p className="text-white/50 text-sm font-clash tracking-widest uppercase mb-6">Let's Connect</p>
           <div className="flex items-center gap-6">
             <a href={siteConfig.socials.linkedin} target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 48 48" width="32" height="32"><rect width="48" height="48" rx="12" fill="#2867B2"></rect><path fill="#fff" d="M14 19h5v15h-5V19zm2.5-8a2.9 2.9 0 1 1 0 5.8 2.9 2.9 0 0 1 0-5.8zM22 19h4.8v2.05h.07c.67-1.2 2.3-2.46 4.73-2.46 5.06 0 6 3.2 6 7.36V34h-5v-6.6c0-1.57-.03-3.6-2.3-3.6-2.3 0-2.66 1.72-2.66 3.49V34h-5V19z"></path></svg>
+              <svg viewBox="0 0 48 48" width="48" height="48"><rect width="48" height="48" rx="12" fill="#2867B2"></rect><path fill="#fff" d="M14 19h5v15h-5V19zm2.5-8a2.9 2.9 0 1 1 0 5.8 2.9 2.9 0 0 1 0-5.8zM22 19h4.8v2.05h.07c.67-1.2 2.3-2.46 4.73-2.46 5.06 0 6 3.2 6 7.36V34h-5v-6.6c0-1.57-.03-3.6-2.3-3.6-2.3 0-2.66 1.72-2.66 3.49V34h-5V19z"></path></svg>
             </a>
             <a href={siteConfig.socials.behance} target="_blank" rel="noopener noreferrer">
-              <img src="/behance.png" alt="Behance" className="h-8 w-8 rounded-[8px] object-cover" />
+              <img src="/behance.png" alt="Behance" className="h-12 w-12 rounded-[12px] object-cover" />
             </a>
             <a href={siteConfig.socials.email}>
-              <svg viewBox="0 0 48 48" width="32" height="32"><path fill="#4caf50" d="M45 16.2l-5 2.75-5 4.75L35 40h7a3 3 0 0 0 3-3V16.2z"></path><path fill="#1e88e5" d="M3 16.2l3.614 1.71L13 23.7V40H6a3 3 0 0 1-3-3V16.2z"></path><path fill="#e53935" d="M35 11.2L24 19.45 13 11.2 12 17l1 6.7 11 8.25 11-8.25 1-6.7z"></path><path fill="#c62828" d="M3 12.298V16.2l10 7.5V11.2L9.876 8.859A4.298 4.298 0 0 0 3 12.298z"></path><path fill="#fbc02d" d="M45 12.298V16.2l-10 7.5V11.2l3.124-2.341A4.298 4.298 0 0 1 45 12.298z"></path></svg>
+              <svg viewBox="0 0 48 48" width="48" height="48"><path fill="#4caf50" d="M45 16.2l-5 2.75-5 4.75L35 40h7a3 3 0 0 0 3-3V16.2z"></path><path fill="#1e88e5" d="M3 16.2l3.614 1.71L13 23.7V40H6a3 3 0 0 1-3-3V16.2z"></path><path fill="#e53935" d="M35 11.2L24 19.45 13 11.2 12 17l1 6.7 11 8.25 11-8.25 1-6.7z"></path><path fill="#c62828" d="M3 12.298V16.2l10 7.5V11.2L9.876 8.859A4.298 4.298 0 0 0 3 12.298z"></path><path fill="#fbc02d" d="M45 12.298V16.2l-10 7.5V11.2l3.124-2.341A4.298 4.298 0 0 1 45 12.298z"></path></svg>
+            </a>
+            <a href={siteConfig.socials.phone} aria-label="Phone">
+              <svg viewBox="0 0 48 48" width="48" height="48">
+                <rect width="48" height="48" rx="12" fill="#4caf50"></rect>
+                <path fill="#fff" transform="scale(1.2) translate(8, 8)" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path>
+              </svg>
             </a>
           </div>
         </div>
