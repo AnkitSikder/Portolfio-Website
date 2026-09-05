@@ -20,7 +20,7 @@ export default function AuraChargeCompetitorBlock({ content, sectionId, isAltern
         {/* Matrix Table */}
         {columns.length > 0 && rows.length > 0 && (
           <ScrollReveal delay={0.1}>
-            <div className="w-full overflow-x-auto pb-4 scrollbar-hide mt-4">
+            <div className="w-full overflow-x-auto pb-6 -mx-5 px-5 md:mx-0 md:px-0 scrollbar-hide mt-4">
               <table className="w-full min-w-[900px] text-left border-separate border-spacing-y-3">
                 <thead>
                   <tr>

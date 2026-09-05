@@ -21,9 +21,6 @@
   body {
     @apply bg-background text-foreground font-clash overflow-x-hidden;
   }
-  * {
-    cursor: none !important;
-  }
   /* ── Admin area: restore normal cursor ── */
   body.admin-mode,
   body.admin-mode * {
@@ -235,4 +232,13 @@ html.lenis, html.lenis body {
 }
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+/* Hide scrollbars but allow scrolling */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

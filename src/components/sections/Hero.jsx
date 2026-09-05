@@ -97,12 +97,10 @@ export default function Hero({ setIsSplineLoaded }) {
         </div>
       </div>
 
-      {/* 3D Spline Character — pointer-events: auto on md+ so cursor tracking works.
-          On mobile (pointer-events-none), interactions are fully disabled.
-          Scroll zoom is blocked separately via a non-passive wheel listener in useEffect. */}
+      {/* 3D Spline Character — pointer-events-none on all devices to disable interactions (character, id card) */}
       <div 
         ref={splineWrapperRef}
-        className="absolute inset-0 z-20 pointer-events-none md:pointer-events-auto overflow-hidden"
+        className="absolute inset-0 z-20 pointer-events-none overflow-hidden"
       >
         <div 
           className="absolute"

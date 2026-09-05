@@ -459,40 +459,42 @@ export function ProjectProductClassification({ items }) {
         </ScrollReveal>
         
         <ScrollReveal delay={0.1}>
-          <div className="w-full flex flex-col gap-2">
-            {/* Header Row */}
-            <div className="grid grid-cols-[1.2fr_1fr_1.2fr_1fr_1.5fr_1.5fr] gap-2">
-              <div className="p-3 md:p-4 bg-primary/10 border border-primary/20 text-primary font-clash uppercase tracking-wider text-xs md:text-sm rounded-xl">Product Type</div>
-              <div className="p-3 md:p-4 bg-foreground/5 border border-foreground/10 text-foreground/70 font-clash uppercase tracking-wider text-xs md:text-sm rounded-xl">Capacity</div>
-              <div className="p-3 md:p-4 bg-foreground/5 border border-foreground/10 text-foreground/70 font-clash uppercase tracking-wider text-xs md:text-sm rounded-xl">Dimensions</div>
-              <div className="p-3 md:p-4 bg-foreground/5 border border-foreground/10 text-foreground/70 font-clash uppercase tracking-wider text-xs md:text-sm rounded-xl">Weight</div>
-              <div className="p-3 md:p-4 bg-foreground/5 border border-foreground/10 text-foreground/70 font-clash uppercase tracking-wider text-xs md:text-sm rounded-xl">Purposes</div>
-              <div className="p-3 md:p-4 bg-foreground/5 border border-foreground/10 text-foreground/70 font-clash uppercase tracking-wider text-xs md:text-sm rounded-xl">Features</div>
-            </div>
+          <div className="w-full overflow-x-auto pb-6 -mx-5 px-5 md:mx-0 md:px-0 scrollbar-hide">
+            <div className="flex flex-col gap-2 min-w-[900px]">
+              {/* Header Row */}
+              <div className="grid grid-cols-[1.2fr_1fr_1.2fr_1fr_1.5fr_1.5fr] gap-2">
+                <div className="p-3 md:p-4 bg-primary/10 border border-primary/20 text-primary font-clash uppercase tracking-wider text-xs md:text-sm rounded-xl">Product Type</div>
+                <div className="p-3 md:p-4 bg-foreground/5 border border-foreground/10 text-foreground/70 font-clash uppercase tracking-wider text-xs md:text-sm rounded-xl">Capacity</div>
+                <div className="p-3 md:p-4 bg-foreground/5 border border-foreground/10 text-foreground/70 font-clash uppercase tracking-wider text-xs md:text-sm rounded-xl">Dimensions</div>
+                <div className="p-3 md:p-4 bg-foreground/5 border border-foreground/10 text-foreground/70 font-clash uppercase tracking-wider text-xs md:text-sm rounded-xl">Weight</div>
+                <div className="p-3 md:p-4 bg-foreground/5 border border-foreground/10 text-foreground/70 font-clash uppercase tracking-wider text-xs md:text-sm rounded-xl">Purposes</div>
+                <div className="p-3 md:p-4 bg-foreground/5 border border-foreground/10 text-foreground/70 font-clash uppercase tracking-wider text-xs md:text-sm rounded-xl">Features</div>
+              </div>
 
-            {/* Data Rows */}
-            {items.map((item, idx) => {
-              const isHighlighted = item.type.toLowerCase().includes('inverter');
-              
-              return (
-                <div key={idx} className="relative group">
-                  {/* Outline Border for Highlighted Row */}
-                  {isHighlighted && (
-                    <div className="absolute inset-0 rounded-xl border-[2px] border-primary/80 shadow-[0_0_15px_rgba(255,95,31,0.2)] z-10 pointer-events-none" style={{ top: '-2px', bottom: '-2px', left: '-2px', right: '-2px' }}></div>
-                  )}
-                  
-                  {/* Row Content */}
-                  <div className="grid grid-cols-[1.2fr_1fr_1.2fr_1fr_1.5fr_1.5fr] gap-2 relative z-0">
-                    <div className={`p-3 md:p-4 flex items-center bg-primary/5 text-foreground font-clash font-bold text-xs md:text-sm lg:text-base rounded-xl border border-primary/10 transition-all group-hover:bg-primary/20 group-hover:border-primary/30 ${isHighlighted ? 'bg-primary/10 border-primary/30' : ''}`}>{item.type}</div>
-                    <div className={`p-3 md:p-4 flex items-center bg-foreground/5 text-foreground/80 font-clash font-medium tracking-wide text-xs md:text-sm rounded-xl border border-foreground/5 transition-all group-hover:bg-foreground/10 group-hover:border-foreground/20 ${isHighlighted ? 'bg-primary/5' : ''}`}>{item.capacity}</div>
-                    <div className={`p-3 md:p-4 flex items-center bg-foreground/5 text-foreground/80 font-clash font-medium tracking-wide text-xs md:text-sm rounded-xl border border-foreground/5 transition-all group-hover:bg-foreground/10 group-hover:border-foreground/20 ${isHighlighted ? 'bg-primary/5' : ''}`}>{item.dimensions}</div>
-                    <div className={`p-3 md:p-4 flex items-center bg-foreground/5 text-foreground/80 font-clash font-medium tracking-wide text-xs md:text-sm rounded-xl border border-foreground/5 transition-all group-hover:bg-foreground/10 group-hover:border-foreground/20 ${isHighlighted ? 'bg-primary/5' : ''}`}>{item.weight}</div>
-                    <div className={`p-3 md:p-4 flex items-center bg-foreground/5 text-foreground/80 font-clash font-medium tracking-wide text-xs md:text-sm rounded-xl border border-foreground/5 transition-all group-hover:bg-foreground/10 group-hover:border-foreground/20 ${isHighlighted ? 'bg-primary/5' : ''}`}>{item.purposes}</div>
-                    <div className={`p-3 md:p-4 flex items-center bg-foreground/5 text-foreground/80 font-clash font-medium tracking-wide text-xs md:text-sm rounded-xl border border-foreground/5 transition-all group-hover:bg-foreground/10 group-hover:border-foreground/20 ${isHighlighted ? 'bg-primary/5' : ''}`}>{item.features}</div>
+              {/* Data Rows */}
+              {items.map((item, idx) => {
+                const isHighlighted = item.type.toLowerCase().includes('inverter');
+                
+                return (
+                  <div key={idx} className="relative group">
+                    {/* Outline Border for Highlighted Row */}
+                    {isHighlighted && (
+                      <div className="absolute inset-0 rounded-xl border-[2px] border-primary/80 shadow-[0_0_15px_rgba(255,95,31,0.2)] z-10 pointer-events-none" style={{ top: '-2px', bottom: '-2px', left: '-2px', right: '-2px' }}></div>
+                    )}
+                    
+                    {/* Row Content */}
+                    <div className="grid grid-cols-[1.2fr_1fr_1.2fr_1fr_1.5fr_1.5fr] gap-2 relative z-0">
+                      <div className={`p-3 md:p-4 flex items-center bg-primary/5 text-foreground font-clash font-bold text-xs md:text-sm lg:text-base rounded-xl border border-primary/10 transition-all group-hover:bg-primary/20 group-hover:border-primary/30 ${isHighlighted ? 'bg-primary/10 border-primary/30' : ''}`}>{item.type}</div>
+                      <div className={`p-3 md:p-4 flex items-center bg-foreground/5 text-foreground/80 font-clash font-medium tracking-wide text-xs md:text-sm rounded-xl border border-foreground/5 transition-all group-hover:bg-foreground/10 group-hover:border-foreground/20 ${isHighlighted ? 'bg-primary/5' : ''}`}>{item.capacity}</div>
+                      <div className={`p-3 md:p-4 flex items-center bg-foreground/5 text-foreground/80 font-clash font-medium tracking-wide text-xs md:text-sm rounded-xl border border-foreground/5 transition-all group-hover:bg-foreground/10 group-hover:border-foreground/20 ${isHighlighted ? 'bg-primary/5' : ''}`}>{item.dimensions}</div>
+                      <div className={`p-3 md:p-4 flex items-center bg-foreground/5 text-foreground/80 font-clash font-medium tracking-wide text-xs md:text-sm rounded-xl border border-foreground/5 transition-all group-hover:bg-foreground/10 group-hover:border-foreground/20 ${isHighlighted ? 'bg-primary/5' : ''}`}>{item.weight}</div>
+                      <div className={`p-3 md:p-4 flex items-center bg-foreground/5 text-foreground/80 font-clash font-medium tracking-wide text-xs md:text-sm rounded-xl border border-foreground/5 transition-all group-hover:bg-foreground/10 group-hover:border-foreground/20 ${isHighlighted ? 'bg-primary/5' : ''}`}>{item.purposes}</div>
+                      <div className={`p-3 md:p-4 flex items-center bg-foreground/5 text-foreground/80 font-clash font-medium tracking-wide text-xs md:text-sm rounded-xl border border-foreground/5 transition-all group-hover:bg-foreground/10 group-hover:border-foreground/20 ${isHighlighted ? 'bg-primary/5' : ''}`}>{item.features}</div>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </ScrollReveal>
       </div>

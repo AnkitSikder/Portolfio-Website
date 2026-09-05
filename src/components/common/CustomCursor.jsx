@@ -93,9 +93,18 @@ export default function CustomCursor() {
   return (
     <>
       <style>{`
-        /* Hide the default system cursor globally — except in admin */
-        body:not(.admin-mode) * {
-          cursor: none !important;
+        /* Hide the default system cursor globally — except in admin and on tablet/mobile */
+        @media (min-width: 1025px) {
+          body:not(.admin-mode) * {
+            cursor: none !important;
+          }
+        }
+
+        /* Hide the custom cursor completely on tablet/mobile viewports */
+        @media (max-width: 1024px) {
+          #custom-cursor-container {
+            display: none !important;
+          }
         }
 
         /* Hover state animations for the custom cursor inner dot */
@@ -106,6 +115,7 @@ export default function CustomCursor() {
       `}</style>
       
       <div 
+        id="custom-cursor-container"
         ref={cursorRef}
         className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference flex items-center justify-center will-change-transform"
         style={{
