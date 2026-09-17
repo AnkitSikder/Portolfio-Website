@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function ProjectHero({ category, title, summary, role, duration, heroImage, tools }) {
+export default function ProjectHero({ category, title, summary, role, duration, heroImage, tools, imageClassName = "object-center" }) {
   const imgRef = useRef(null);
 
   // Subtle parallax on scroll
@@ -28,7 +28,7 @@ export default function ProjectHero({ category, title, summary, role, duration, 
           <img
             src={heroImage}
             alt={title}
-            className="w-full h-full object-cover object-center"
+            className={`w-full h-full object-cover ${imageClassName}`}
             style={{ filter: 'brightness(0.55)' }}
           />
         </div>

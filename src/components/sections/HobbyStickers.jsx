@@ -25,6 +25,8 @@ export default function HobbyStickers() {
     const stickerData = stickerElements.map(el => ({ el }));
 
     const handleMouseMove = (e) => {
+      if (window.innerWidth < 768) return;
+
       const mouseX = e.clientX;
       const mouseY = e.clientY;
 
@@ -74,7 +76,7 @@ export default function HobbyStickers() {
 
   // z-[5] guarantees they sit BEHIND the text (z-10) and the 3D Spline character (z-20)
   return (
-    <div ref={containerRef} className="absolute inset-0 z-[5] overflow-hidden pointer-events-none">
+    <div ref={containerRef} className="hidden md:block absolute inset-0 z-[5] overflow-hidden pointer-events-none">
       {stickers.map((s) => (
         <div
           key={s.id}

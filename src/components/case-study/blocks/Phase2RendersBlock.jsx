@@ -99,10 +99,10 @@ export default function Phase2RendersBlock({ content, sectionId, isAlternate }) 
         </div>
 
         <div className="w-full px-5 md:px-12 lg:px-24 max-w-[1600px] mx-auto">
-          {/* Mobile Horizontal Scroll, Desktop Grid */}
-          <div className="flex overflow-x-auto md:grid md:grid-cols-3 gap-6 pb-8 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          {/* Mobile Stack, Desktop Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-8">
             {contexts.map((ctx, idx) => (
-              <ScrollReveal key={idx} delay={0.1 * idx} className="shrink-0 w-[85vw] md:w-auto snap-center group">
+              <ScrollReveal key={idx} delay={0.1 * idx} className="w-full group">
                 <div className="rounded-2xl md:rounded-[2rem] overflow-hidden bg-foreground/5 border border-foreground/10 shadow-xl aspect-[4/3] relative">
                   <img 
                     src={ctx.url} 

@@ -368,7 +368,7 @@ export default function JioBPProject() {
             </div>
 
             {/* New Timeline Flow */}
-            <div className="relative mb-20 bg-foreground/[0.02] border border-foreground/10 rounded-[2rem] p-8 md:p-12 backdrop-blur-sm">
+            <div className="relative mb-8 bg-foreground/[0.02] border border-foreground/10 rounded-[2rem] p-8 md:p-12 backdrop-blur-sm">
               <div className="flex flex-wrap justify-center items-center gap-3 md:gap-4 text-[10px] md:text-xs font-clash font-semibold tracking-wider">
                 {[
                   { label: "Report", type: "start" },
@@ -480,7 +480,7 @@ export default function JioBPProject() {
       <section id="design-system" className="py-10 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 bg-background">
         <ScrollReveal>
           <div className="max-w-[1400px] mx-auto">
-            <div className="mb-16">
+            <div className="mb-12">
               <SectionHeader 
                 title="Design System"
                 heading="A cohesive ecosystem of reusable components."
@@ -539,7 +539,7 @@ export default function JioBPProject() {
                   />
                 </div>
                 
-                <div className="space-y-4 mb-12">
+                <div className="space-y-4">
                   {/* Feature 1 */}
                   <div className="group p-5 rounded-3xl bg-foreground/5 border border-foreground/10 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-transparent transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5">
                     <div className="flex gap-5">
@@ -590,7 +590,7 @@ export default function JioBPProject() {
               </div>
 
               {/* Right Side: Video */}
-              <div className="lg:col-span-7 flex flex-col items-center justify-center mt-12 lg:mt-0 gap-6 md:gap-8">
+              <div className="lg:col-span-7 flex flex-col items-center justify-center gap-6 md:gap-8">
                 
                 <div className="inline-flex items-center gap-4 p-4 rounded-3xl bg-background border border-foreground/10 shadow-sm group">
                   <div className="flex flex-col items-center">

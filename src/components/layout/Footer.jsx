@@ -98,7 +98,7 @@ export default function Footer() {
                   <path fill="#fff" transform="scale(1.2) translate(8, 8)" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path>
                 </svg>
               </a>
-              <a href="https://linkedin.com/in/ankitsikder" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="transition-transform duration-300 ease-out hover:-translate-y-1 hover:rotate-6 hover:scale-110">
+              <a href="https://www.linkedin.com/in/ankit-sikder-531388187" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="transition-transform duration-300 ease-out hover:-translate-y-1 hover:rotate-6 hover:scale-110">
                 <svg viewBox="0 0 48 48" className="w-14 h-14 md:w-[72px] md:h-[72px] drop-shadow-sm">
                   <rect width="48" height="48" rx="12" fill="#2867B2"></rect>
                   <path fill="#fff" d="M14 19h5v15h-5V19zm2.5-8a2.9 2.9 0 1 1 0 5.8 2.9 2.9 0 0 1 0-5.8zM22 19h4.8v2.05h.07c.67-1.2 2.3-2.46 4.73-2.46 5.06 0 6 3.2 6 7.36V34h-5v-6.6c0-1.57-.03-3.6-2.3-3.6-2.3 0-2.66 1.72-2.66 3.49V34h-5V19z"></path>

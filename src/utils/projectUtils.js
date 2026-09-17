@@ -11,6 +11,7 @@ export function getHeroProps(project, blocks) {
       duration: heroBlock.content.duration,
       tools: heroBlock.content.tools,
       heroImage: project.hero_image || heroBlock.content.heroImage,
+      imageClassName: project.imageClassName || (heroBlock.content && heroBlock.content.imageClassName),
     };
   }
   // Fallback to project metadata
@@ -22,6 +23,7 @@ export function getHeroProps(project, blocks) {
     duration: null,
     tools: null,
     heroImage: project.hero_image || project.thumbnail,
+    imageClassName: project.imageClassName,
   };
 }
 

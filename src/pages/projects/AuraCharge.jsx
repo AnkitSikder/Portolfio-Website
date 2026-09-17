@@ -20,6 +20,7 @@ export default function AuraCharge() {
   "created_at": "2026-09-02T10:34:07.565396+00:00",
   "updated_at": "2026-09-02T13:13:23.885+00:00",
   "logo_icon": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/logos/1788348998868-f4k3jbjiypv.png",
+  "imageClassName": "object-[80%_center] md:object-center",
   "blocks": [
     {
       "id": "76d5879b-6787-4141-80b6-8be2880cfa54",
