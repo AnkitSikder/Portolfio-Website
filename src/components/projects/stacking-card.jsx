@@ -77,7 +77,7 @@ export const Card = ({
                 
                 <div className="w-24 h-[3px] bg-primary rounded-full shadow-[0_0_15px_rgba(255,179,102,0.5)]" />
                 
-                <p className="text-white/90 text-xl md:text-3xl font-hanken font-light leading-relaxed max-w-3xl drop-shadow-sm">
+                <p className="text-white/90 text-lg md:text-2xl font-clash font-medium leading-relaxed max-w-3xl drop-shadow-sm">
                   {description}
                 </p>
                 

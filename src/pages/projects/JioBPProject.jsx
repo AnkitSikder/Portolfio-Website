@@ -7,6 +7,7 @@ import SectionProgressNav from '../../components/case-study/SectionProgressNav';
 import CompetitorAnalysis from '../../components/case-study/jio-bp/CompetitorAnalysis';
 import KeyOpportunities from '../../components/case-study/jio-bp/KeyOpportunities';
 import HeuristicAnalysis from '../../components/case-study/jio-bp/HeuristicAnalysis';
+import NextProjectNav from '../../components/case-study/NextProjectNav';
 
 export default function JioBPProject() {
   const navSections = [
@@ -18,6 +19,7 @@ export default function JioBPProject() {
     { id: 'key-opportunities', label: 'Opportunities' },
     { id: 'research', label: 'Research Questions' },
     { id: 'stakeholders', label: 'Stakeholders' },
+    { id: 'pillars', label: 'Eight Pillars' },
     { id: 'architecture', label: 'Architecture' },
     { id: 'lifecycle', label: 'Lifecycle' },
     { id: 'wireframes', label: 'Wireframes' },
@@ -193,14 +195,14 @@ export default function JioBPProject() {
       {/* =========================================
           04.5 — HEURISTIC ANALYSIS
       ========================================= */}
-      <section id="heuristic-analysis" className="py-10 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 bg-background">
+      <section id="heuristic-analysis" className="py-10 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 bg-foreground/5">
         <HeuristicAnalysis />
       </section>
 
       {/* =========================================
           05 — COMPETITIVE ANALYSIS
       ========================================= */}
-      <div id="competitor-analysis" className="py-10 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 bg-foreground/5">
+      <div id="competitor-analysis" className="py-10 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 bg-background">
         <CompetitorAnalysis />
 
       </div>
@@ -208,7 +210,7 @@ export default function JioBPProject() {
       {/* =========================================
           06 — OPPORTUNITIES & SCOPE OF REDESIGN
       ========================================= */}
-      <div id="key-opportunities" className="py-10 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 bg-background">
+      <div id="key-opportunities" className="py-10 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 bg-foreground/5">
         <KeyOpportunities />
 
       </div>
@@ -216,7 +218,7 @@ export default function JioBPProject() {
       {/* =========================================
           07 — RESEARCH QUESTIONS
       ========================================= */}
-      <section id="research" className="py-10 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 bg-foreground/5">
+      <section id="research" className="py-10 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 bg-background">
         <ScrollReveal>
           <div className="max-w-[1200px] mx-auto">
             <SectionHeader 
@@ -295,7 +297,7 @@ export default function JioBPProject() {
       {/* =========================================
           09 — THE EIGHT PILLARS OF THE REDESIGN
       ========================================= */}
-      <section className="py-10 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 bg-foreground/5">
+      <section id="pillars" className="py-10 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 bg-background">
         <div className="max-w-[1400px] mx-auto">
           <ScrollReveal>
             <div className="mb-10">
@@ -322,7 +324,7 @@ export default function JioBPProject() {
       {/* =========================================
           10 — INFORMATION ARCHITECTURE
       ========================================= */}
-      <section id="architecture" className="py-10 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 bg-background">
+      <section id="architecture" className="py-10 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 bg-foreground/5">
         <ScrollReveal>
           <div className="max-w-[1400px] mx-auto">
             <div className="mb-10">
@@ -759,6 +761,7 @@ export default function JioBPProject() {
         </ScrollReveal>
       </section>
 
+      <NextProjectNav currentPath="/work/jio-bp" />
     </article>
   );
 }
