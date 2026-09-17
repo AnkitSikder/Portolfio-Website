@@ -7,7 +7,8 @@ export default function Phase1ExistingMethodsBlock({ content, sectionId }) {
       <div className="max-w-[1400px] mx-auto">
         <ScrollReveal>
           <div className="mb-12 text-center md:text-left">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-franchise uppercase tracking-wide text-foreground max-w-4xl leading-tight">
+            <p className="font-clash text-sm uppercase tracking-[0.2em] text-primary mb-3">Existing Methods</p>
+            <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight max-w-4xl">
               Before designing something new, I looked at what workers already had.
             </h2>
           </div>
@@ -23,25 +24,25 @@ export default function Phase1ExistingMethodsBlock({ content, sectionId }) {
               </div>
               <div className="p-8 flex flex-col flex-1">
                 <div className="mb-6">
-                  <h3 className="text-4xl font-franchise text-foreground mb-1">Kaara</h3>
-                  <p className="text-sm font-clash font-semibold text-primary uppercase tracking-wider">Traditional bamboo anchor pole</p>
+                  <h3 className="font-clash text-[20px] md:text-[22px] font-medium text-foreground mb-1">Kaara</h3>
+                  <p className="text-sm font-clash font-medium text-primary tracking-wide">Traditional bamboo anchor pole</p>
                 </div>
-                <ul className="space-y-4 font-clash font-medium text-sm text-foreground/70 flex-1">
+                <ul className="space-y-3 flex-1">
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>
-                    <span><strong className="text-foreground">Length:</strong> 2–3 m</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+                    <span className="font-clash text-sm md:text-[15px] font-medium tracking-wide text-foreground/60 leading-relaxed"><strong className="text-foreground font-medium">Length:</strong> 2–3 m</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>
-                    <span><strong className="text-foreground">Function:</strong> anchoring reference point in pond</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+                    <span className="font-clash text-sm md:text-[15px] font-medium tracking-wide text-foreground/60 leading-relaxed"><strong className="text-foreground font-medium">Function:</strong> anchoring reference point in pond</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>
-                    <span><strong className="text-foreground">Limitation:</strong> provides no collection assistance</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+                    <span className="font-clash text-sm md:text-[15px] font-medium tracking-wide text-foreground/60 leading-relaxed"><strong className="text-foreground font-medium">Limitation:</strong> provides no collection assistance</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>
-                    <span>Still requires full submersion</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+                    <span className="font-clash text-sm md:text-[15px] font-medium tracking-wide text-foreground/60 leading-relaxed">Still requires full submersion</span>
                   </li>
                 </ul>
               </div>
@@ -56,25 +57,25 @@ export default function Phase1ExistingMethodsBlock({ content, sectionId }) {
               </div>
               <div className="p-8 flex flex-col flex-1">
                 <div className="mb-6">
-                  <h3 className="text-4xl font-franchise text-foreground mb-1">Ganjaa</h3>
-                  <p className="text-sm font-clash font-semibold text-primary uppercase tracking-wider">Traditional bamboo sieve</p>
+                  <h3 className="font-clash text-[20px] md:text-[22px] font-medium text-foreground mb-1">Ganjaa</h3>
+                  <p className="text-sm font-clash font-medium text-primary tracking-wide">Traditional bamboo sieve</p>
                 </div>
-                <ul className="space-y-4 font-clash font-medium text-sm text-foreground/70 flex-1">
+                <ul className="space-y-3 flex-1">
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>
-                    <span>Cone-shaped form, approximately 40–60 cm diameter</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+                    <span className="font-clash text-sm md:text-[15px] font-medium tracking-wide text-foreground/60 leading-relaxed">Cone-shaped form, approximately 40–60 cm diameter</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>
-                    <span>Separates seeds from mud by density</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+                    <span className="font-clash text-sm md:text-[15px] font-medium tracking-wide text-foreground/60 leading-relaxed">Separates seeds from mud by density</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>
-                    <span>Requires vigorous shaking</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+                    <span className="font-clash text-sm md:text-[15px] font-medium tracking-wide text-foreground/60 leading-relaxed">Requires vigorous shaking</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>
-                    <span>No ergonomic handle; can cause hand fatigue after repeated use</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+                    <span className="font-clash text-sm md:text-[15px] font-medium tracking-wide text-foreground/60 leading-relaxed">No ergonomic handle; can cause hand fatigue after repeated use</span>
                   </li>
                 </ul>
               </div>

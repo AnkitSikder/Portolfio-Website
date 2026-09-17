@@ -6,10 +6,10 @@ export default function AuraChargeRendersBlock({ content, sectionId, isAlternate
 
   return (
     <section id={sectionId} className={`py-12 md:py-20 lg:py-24 px-5 md:px-12 lg:px-24 ${isAlternate ? 'bg-foreground/5' : 'bg-background'} text-foreground w-full overflow-hidden`}>
-      <div className="max-w-[1400px] mx-auto flex flex-col gap-16 lg:gap-24">
+      <div className="max-w-[1400px] mx-auto flex flex-col gap-8 md:gap-12">
         
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-franchise uppercase tracking-wide leading-tight text-foreground text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-franchise uppercase tracking-wide text-foreground leading-tight">
             {heading}
           </h2>
         </ScrollReveal>
@@ -50,7 +50,7 @@ export default function AuraChargeRendersBlock({ content, sectionId, isAlternate
         {colorVariants.length > 0 && (
           <div className="flex flex-col gap-8">
             <ScrollReveal>
-              <h3 className="font-franchise text-3xl md:text-4xl uppercase tracking-widest text-primary text-center">
+              <h3 className="typo-h3">
                 Color Variants
               </h3>
             </ScrollReveal>
@@ -66,7 +66,7 @@ export default function AuraChargeRendersBlock({ content, sectionId, isAlternate
                         loading="lazy"
                       />
                     </div>
-                    <span className="text-center font-clash text-sm font-medium tracking-widest uppercase text-foreground/80">
+                    <span className="text-center font-clash text-sm font-medium tracking-widest uppercase text-white/60 leading-relaxed">
                       {variant.name}
                     </span>
                   </div>
@@ -78,13 +78,13 @@ export default function AuraChargeRendersBlock({ content, sectionId, isAlternate
 
         {/* Contextual Renders */}
         {contextualRenders.length > 0 && (
-          <div className="flex flex-col gap-12 pt-16 border-t border-foreground/10">
+          <div className="flex flex-col gap-8 md:gap-12 pt-16 border-t border-foreground/10">
             <ScrollReveal>
               <div className="flex flex-col items-center gap-2">
-                <h3 className="font-franchise text-3xl md:text-4xl uppercase tracking-widest text-primary text-center">
+                <h3 className="typo-h3">
                   In The Environment
                 </h3>
-                <span className="text-xs font-clash font-medium text-foreground/40 uppercase tracking-widest bg-foreground/5 px-3 py-1 rounded-full border border-foreground/10">
+                <span className="text-xs font-clash font-medium text-white/60 uppercase tracking-widest bg-foreground/5 px-3 py-1 rounded-full border border-foreground/10 leading-relaxed">
                   Concept visualization
                 </span>
               </div>

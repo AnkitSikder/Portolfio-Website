@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ScrollReveal from '../../../common/ScrollReveal';
+import SectionHeader from '../../common/SectionHeader';
 import { ZoomIn, X } from 'lucide-react';
 
 export default function AuraChargeFeaturesBlock({ content, sectionId, isAlternate }) {
@@ -8,12 +9,10 @@ export default function AuraChargeFeaturesBlock({ content, sectionId, isAlternat
 
   return (
     <section id={sectionId} className={`py-12 md:py-20 lg:py-24 px-5 md:px-12 lg:px-24 ${isAlternate ? 'bg-foreground/5' : 'bg-background'} text-foreground w-full overflow-hidden`}>
-      <div className="max-w-[1400px] mx-auto flex flex-col gap-12 lg:gap-16">
+      <div className="max-w-[1400px] mx-auto flex flex-col gap-8 md:gap-12">
         
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-franchise uppercase tracking-wide leading-tight text-foreground text-center max-w-4xl mx-auto">
-            {heading}
-          </h2>
+          <SectionHeader heading={heading} className="!mb-0" />
         </ScrollReveal>
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
@@ -42,7 +41,7 @@ export default function AuraChargeFeaturesBlock({ content, sectionId, isAlternat
           {labels.length > 0 && (
             <div className="w-full lg:w-1/4 flex flex-col gap-4">
               <ScrollReveal delay={0.2}>
-                <h4 className="font-clash text-lg font-medium tracking-wide text-primary uppercase mb-4 border-b border-foreground/10 pb-4">
+                <h4 className="typo-eyebrow text-lg mb-4 border-b border-foreground/10 pb-4">
                   System Elements
                 </h4>
               </ScrollReveal>
@@ -50,7 +49,7 @@ export default function AuraChargeFeaturesBlock({ content, sectionId, isAlternat
                 <ScrollReveal key={idx} delay={0.3 + (idx * 0.05)}>
                   <div className="flex items-center gap-3 py-2 border-b border-foreground/5">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary/70 shrink-0" />
-                    <span className="font-clash font-medium text-sm text-foreground/80">{label}</span>
+                    <span className="typo-body-small">{label}</span>
                   </div>
                 </ScrollReveal>
               ))}

@@ -24,10 +24,11 @@ export default function Phase2ProductSpecBlock({ content, sectionId, isAlternate
 
   return (
     <section id={sectionId} className={`py-12 md:py-20 lg:py-24 px-5 md:px-12 lg:px-24 ${bgClass}`}>
-      <div className="max-w-[1400px] mx-auto flex flex-col gap-10 md:gap-14">
+      <div className="max-w-[1400px] mx-auto flex flex-col gap-8 md:gap-12">
 
         {/* Heading */}
         <ScrollReveal>
+          <span className="font-clash text-sm uppercase tracking-[0.2em] text-primary block mb-3">Technical Aspects</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-franchise uppercase tracking-wide text-foreground leading-tight">
             Every part has a job.
           </h2>

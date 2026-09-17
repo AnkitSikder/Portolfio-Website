@@ -1,0 +1,13 @@
+graph TD
+    A[ASR Dashboard] --> B[Assigned Action Queue]
+    B --> C[Select Incident]
+    C --> D[Incident Detail]
+    D --> E[Review Evidence / Context]
+    E --> F{Decision / Action}
+    F -->|Escalate| G[Update Status to Escalated]
+    F -->|Resolve| H[Update Status to Resolved]
+    F -->|Request Info| I[Add Remarks]
+    
+    G --> J[Updated Dashboard State]
+    H --> J
+    I --> J

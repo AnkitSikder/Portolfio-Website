@@ -3,36 +3,9 @@ import ScrollReveal from '../../common/ScrollReveal';
 
 export default function Phase1UserNeedsBlock({ content, sectionId }) {
   const priorities = [
-    {
-      level: "PRIMARY",
-      color: "bg-primary text-primary-foreground",
-      items: [
-        "Reduce musculoskeletal strain",
-        "Prevent thorn injuries",
-        "Increase productivity and earnings",
-        "Maintain occupational dignity"
-      ]
-    },
-    {
-      level: "SECONDARY",
-      color: "bg-foreground/10 text-foreground",
-      items: [
-        "Reduce submersion time",
-        "Improve posture",
-        "Improve seed recovery",
-        "Enable group-based harvesting"
-      ]
-    },
-    {
-      level: "TERTIARY",
-      color: "bg-foreground/5 text-foreground/70",
-      items: [
-        "Access affordable technology",
-        "Preserve cultural knowledge",
-        "Improve health/safety support",
-        "Improve economic agency"
-      ]
-    }
+    { level: "Primary", color: "bg-primary text-primary-foreground", items: ["Reduce musculoskeletal strain", "Prevent thorn injuries", "Increase productivity and earnings", "Maintain occupational dignity"] },
+    { level: "Secondary", color: "bg-foreground/10 text-foreground", items: ["Reduce submersion time", "Improve posture", "Improve seed recovery", "Enable group-based harvesting"] },
+    { level: "Tertiary", color: "bg-foreground/5 text-foreground/70", items: ["Access affordable technology", "Preserve cultural knowledge", "Improve health/safety support", "Improve economic agency"] }
   ];
 
   const comparisons = [
@@ -51,18 +24,19 @@ export default function Phase1UserNeedsBlock({ content, sectionId }) {
         
         <ScrollReveal>
           <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-franchise uppercase tracking-wide text-foreground leading-tight max-w-4xl">
-              What the solution has to do.
-            </h2>
+            <p className="font-clash text-sm uppercase tracking-[0.2em] text-primary mb-3">User Needs</p>
+          <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight max-w-4xl">
+            What the solution has to do.
+          </h2>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
           
           {/* PRIORITY FRAMEWORK */}
           <div className="lg:col-span-5">
             <ScrollReveal delay={0.1}>
-              <h3 className="font-clash font-semibold text-sm uppercase tracking-wider text-foreground/50 mb-6">Priority Framework</h3>
+              <h3 className="font-clash font-medium text-xs uppercase tracking-widest text-foreground/50 mb-6">Priority Framework</h3>
               <div className="flex flex-col gap-4">
                 {priorities.map((group, idx) => (
                   <div key={idx} className="flex flex-col md:flex-row md:items-stretch gap-0 md:gap-4 bg-background rounded-2xl border border-foreground/10 overflow-hidden">
@@ -74,9 +48,9 @@ export default function Phase1UserNeedsBlock({ content, sectionId }) {
                     <div className="p-5 flex-1">
                       <ul className="space-y-2">
                         {group.items.map((item, i) => (
-                          <li key={i} className="text-sm font-clash font-medium text-foreground/80 flex items-start gap-2">
+                          <li key={i} className="flex items-start gap-2">
                             <span className="text-primary mt-1.5 w-1 h-1 rounded-full shrink-0"></span>
-                            {item}
+                            <span className="font-clash text-sm md:text-[15px] font-medium tracking-wide text-foreground/60 leading-relaxed">{item}</span>
                           </li>
                         ))}
                       </ul>
@@ -91,7 +65,7 @@ export default function Phase1UserNeedsBlock({ content, sectionId }) {
           <div className="lg:col-span-7">
             <ScrollReveal delay={0.2}>
               <div className="flex items-center justify-between mb-6">
-                <h3 className="font-clash font-semibold text-sm uppercase tracking-wider text-foreground/50">Current vs Desired</h3>
+                <h3 className="font-clash font-medium text-xs uppercase tracking-widest text-foreground/50">Current vs Desired</h3>
                 <span className="inline-block bg-primary/10 text-primary border border-primary/20 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">
                   TARGET / DESIRED STATE
                 </span>
@@ -111,7 +85,7 @@ export default function Phase1UserNeedsBlock({ content, sectionId }) {
                       
                       {/* Metric name */}
                       <div className="col-span-1 md:p-4 mb-2 md:mb-0 flex items-center">
-                        <span className="text-sm font-clash font-semibold text-foreground uppercase tracking-wider">
+                        <span className="font-clash text-sm md:text-[15px] font-medium tracking-wide text-foreground">
                           {row.metric}
                         </span>
                       </div>
@@ -140,7 +114,7 @@ export default function Phase1UserNeedsBlock({ content, sectionId }) {
         {/* End Transition */}
         <ScrollReveal delay={0.3}>
           <div className="mt-20 max-w-2xl mx-auto text-center">
-            <p className="text-xl md:text-2xl font-clash font-semibold text-foreground/80 leading-relaxed italic">
+            <p className="font-clash text-base md:text-lg font-medium tracking-wide text-foreground/70 leading-relaxed italic">
               "These needs became the criteria against which concepts would be explored next."
             </p>
           </div>

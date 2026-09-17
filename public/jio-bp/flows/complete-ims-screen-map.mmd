@@ -1,0 +1,20 @@
+graph TD
+    A[LOGIN] --> B{ROLE-BASED DASHBOARD}
+    
+    B -->|RO| C[RO DASHBOARD]
+    B -->|ASR| D[ASR DASHBOARD]
+    B -->|HO| E[HO DASHBOARD]
+    
+    C -->|Report| F[INCIDENT REPORTING]
+    C -->|View| G[INCIDENT DETAIL]
+    
+    D -->|Review| H[INCIDENT REVIEW & ACTION]
+    H -->|Escalate| I[ESCALATE INCIDENT]
+    
+    E -->|Analyze| J[ENTERPRISE ANALYTICS]
+    J -->|Drill Down| G
+    
+    F --> K((INCIDENT LIFECYCLE))
+    G --> K
+    H --> K
+    I --> K

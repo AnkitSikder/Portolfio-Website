@@ -12,7 +12,7 @@ export default function Phase2TakeawayBlock({ content, sectionId, isAlternate })
 
   return (
     <section id={sectionId} className={`py-16 md:py-24 lg:py-32 px-5 md:px-12 lg:px-24 ${bgClass}`}>
-      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row gap-12 lg:gap-20">
+      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row gap-8 md:gap-12">
         
         {/* Left: Heading & Body */}
         <div className="w-full md:w-[45%] flex flex-col gap-6">

@@ -86,13 +86,13 @@ export default function Phase2RendersBlock({ content, sectionId, isAlternate }) 
       </div>
 
       {/* Context Visuals */}
-      <div className="w-full mt-32">
+      <div className="w-full mt-12 md:mt-16 lg:mt-20">
         <div className="max-w-[1400px] mx-auto px-5 md:px-12 lg:px-24 mb-12 md:mb-16">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-franchise uppercase tracking-wide text-foreground leading-tight text-center md:text-left">
               From CAD to the pond.
             </h2>
-            <p className="mt-4 text-sm md:text-base font-clash text-foreground/60 max-w-2xl text-center md:text-left">
+            <p className="mt-4 font-clash text-sm md:text-[15px] font-medium tracking-wide text-foreground/60 leading-relaxed max-w-2xl text-center md:text-left">
               Visualizing the product in its intended environment to evaluate scale, ergonomics, and interaction with the pond bed.
             </p>
           </ScrollReveal>

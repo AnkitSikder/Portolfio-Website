@@ -1,5 +1,6 @@
 import React from 'react';
 import ScrollReveal from '../../common/ScrollReveal';
+import SectionHeader from '../common/SectionHeader';
 import { ArrowRight, ArrowDown } from 'lucide-react';
 
 export default function Phase1CycleBlock({ content, sectionId }) {
@@ -10,8 +11,8 @@ export default function Phase1CycleBlock({ content, sectionId }) {
     { num: "04", title: "Harvesting", desc: "Traditional tools such as Kara & Ganjaa are used", highlight: true },
     { num: "05", title: "Processing of raw makhana", desc: "Seeds are graded by size and moved into processing" },
     { num: "06", title: "Puffed makhana", desc: "Post-processing produces puffed makhana" },
-    { num: "07", title: "Polishing, cleaning, grading & packaging", desc: "" },
-    { num: "08", title: "Packaging & marketing", desc: "" }
+    { num: "07", title: "Polishing, cleaning, grading & packaging", desc: "Cleaned and sorted according to quality and size" },
+    { num: "08", title: "Packaging & marketing", desc: "Sealed and distributed for commercial sale" }
   ];
 
   const postHarvestSteps = [
@@ -23,9 +24,7 @@ export default function Phase1CycleBlock({ content, sectionId }) {
       <div className="max-w-[1400px] mx-auto">
         <ScrollReveal>
           <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-franchise uppercase tracking-wide text-foreground mb-4">
-              Before the tool, understand the cycle.
-            </h2>
+            <SectionHeader heading="Before the tool, understand the cycle." className="!mb-4" />
             <p className="text-foreground/70 font-clash font-medium text-base md:text-lg max-w-3xl">
               Makhana moves through a long seasonal chain — from pond cultivation and seed collection to drying, processing, popping and finally packaging. The collection stage sits at the transition between cultivation and everything that follows.
             </p>
@@ -60,7 +59,7 @@ export default function Phase1CycleBlock({ content, sectionId }) {
 
           {/* Post-harvest branch */}
           <ScrollReveal delay={0.4}>
-            <div className="mt-16 bg-background rounded-2xl p-6 md:p-8 border border-foreground/10 border-l-4 border-l-primary/50">
+            <div className="mt-4 lg:mt-6 bg-background rounded-2xl p-6 md:p-8 border border-foreground/10 border-l-4 border-l-primary/50">
               <h4 className="font-clash font-semibold text-sm uppercase tracking-wider text-foreground/70 mb-6">
                 Post-Harvest Processing Branch
               </h4>

@@ -200,9 +200,9 @@ export const BLOCK_TYPES = {
       heading: 'SECTION 02 - THE PROBLEM',
       subheading: 'Traffic training breaks down where reality begins.',
       problemStatement: 'Novice traffic police recruits are expected to manage complex, high-volume intersections and make rapid, accurate decisions in unpredictable traffic conditions, yet their training is largely classroom-based and lacks realistic, high-fidelity practice. Without exposure to the sensory overload, distractions, noise, and fast-moving risks of real-world traffic, recruits may struggle to coordinate hand signals, prioritise situations, and respond confidently under pressure—creating a critical gap between knowing what to do and being prepared to do it safely.',
-      leftTitle: 'TRAINING',
+      leftTitle: 'Training',
       leftItems: ['Classroom', 'Static / theoretical'],
-      rightTitle: 'REALITY',
+      rightTitle: 'Reality',
       rightItems: ['High-speed traffic', 'Mixed vehicles', 'Noise', 'Emergency situations', 'Aggressive drivers'],
       gapTitle: 'The gap',
       gapDescription: 'Officers are expected to make high-stakes decisions in environments they rarely get to practise safely.',
@@ -246,7 +246,7 @@ export const BLOCK_TYPES = {
       insights: [
         { number: '01', title: 'Theory ≠ readiness', description: 'Classroom learning does not adequately prepare recruits for chaotic, real-time road decisions.' },
         { number: '02', title: 'Confidence collapses under pressure', description: 'New recruits face a confidence gap when multiple events happen simultaneously.' },
-        { number: '03', title: 'Experience is doing the work training should do', description: 'With limited structured practice, critical skills are often learned through inconsistent on-the-job exposure.' }
+        { number: '03', title: 'The street becomes the classroom', description: 'With limited structured practice, critical skills are often learned through inconsistent on-the-job exposure.' }
       ],
       opportunityPrefix: 'This created an opportunity:',
       opportunityText: 'Let officers safely experience the difficult situations before they encounter them on the road.'

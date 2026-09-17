@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import AuraCharge from './pages/projects/AuraCharge';
 import ImmersiveTraffic from './pages/projects/ImmersiveTraffic';
 import MakhanaProject from './pages/projects/MakhanaProject';
+import JioBPProject from './pages/projects/JioBPProject';
 
 // Admin (lazy loaded so it never ships to public visitors unless they visit /admin)
 import ProtectedRoute from './components/admin/ProtectedRoute';
@@ -48,6 +49,7 @@ function App() {
           <Route path="work/auracharge" element={<AuraCharge />} />
           <Route path="work/vrtraffic" element={<ImmersiveTraffic />} />
           <Route path="work/makhana-tool" element={<MakhanaProject />} />
+          <Route path="work/jio-bp" element={<JioBPProject />} />
         </Route>
 
         {/* ── Admin CMS (lazy + protected) ── */}

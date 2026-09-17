@@ -1,5 +1,6 @@
 import React from 'react';
 import ScrollReveal from '../../common/ScrollReveal';
+import SectionHeader from '../common/SectionHeader';
 
 export default function TableBlock({ content }) {
   const { heading, columns = [], rows = [] } = content;
@@ -11,9 +12,7 @@ export default function TableBlock({ content }) {
       <div className="max-w-[1400px] mx-auto">
         {heading && (
           <ScrollReveal>
-            <h2 className="text-3xl md:text-5xl font-franchise uppercase tracking-wide text-foreground mb-8">
-              {heading}
-            </h2>
+            <SectionHeader heading={heading} className="!mb-8" />
           </ScrollReveal>
         )}
         

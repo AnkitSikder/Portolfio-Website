@@ -12,10 +12,11 @@ export default function Phase2DimensionsBlock({ content, sectionId, isAlternate 
   ];
 
   return (
-    <section id={sectionId} className={`py-12 md:py-20 lg:py-24 ${bgClass}`}>
+    <section id={sectionId} className={`py-12 md:py-20 lg:py-24 ${bgClass} border-b border-foreground/10`}>
       <div className="max-w-[1400px] mx-auto px-5 md:px-12 lg:px-24 mb-10">
         <ScrollReveal>
           <div className="max-w-4xl">
+            <span className="font-clash text-sm uppercase tracking-[0.2em] text-primary block mb-3">Product Dimensions</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-franchise uppercase tracking-wide text-foreground leading-tight">
               Sized for the real working environment.
             </h2>

@@ -3,11 +3,11 @@ import ScrollReveal from '../../common/ScrollReveal';
 
 export default function Phase1ProblemBentoBlock({ content, sectionId }) {
   return (
-    <section id={sectionId} className="py-10 md:py-16 lg:py-24 px-6 md:px-12 lg:px-24 bg-background">
+    <section id={sectionId} className="py-10 md:py-16 lg:py-24 px-6 md:px-12 lg:px-24 bg-foreground/5 border-y border-foreground/10">
       <div className="max-w-[1400px] mx-auto">
         
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-franchise uppercase tracking-wide text-foreground mb-12 max-w-4xl leading-tight">
+          <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight max-w-4xl mb-12">
             The bottleneck is not growing the crop.<br />
             It is collecting it.
           </h2>
@@ -140,27 +140,27 @@ export default function Phase1ProblemBentoBlock({ content, sectionId }) {
 
           {/* MARKET STATS ROW (Smaller bento cards) */}
           <ScrollReveal className="md:col-span-3 lg:col-span-4 mt-8">
-            <h3 className="font-clash font-semibold text-foreground text-sm uppercase tracking-wider mb-6 pb-2 border-b border-foreground/10">Market & System Context</h3>
+            <h3 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white mb-6 pb-2 border-b border-foreground/10">Market & System Context</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4">
               <div className="p-4 rounded-2xl bg-foreground/3 border border-foreground/5 flex flex-col justify-center">
                 <div className="text-3xl font-franchise text-foreground">₹8.5B</div>
-                <div className="text-xs md:text-sm font-clash font-semibold uppercase text-foreground/60 mt-1">INDIA MAKHANA MARKET 2024</div>
+                <div className="text-xs md:text-sm font-clash font-medium tracking-wide text-foreground/60 mt-1">India Makhana Market 2024</div>
               </div>
               <div className="p-4 rounded-2xl bg-foreground/3 border border-foreground/5 flex flex-col justify-center">
                 <div className="text-3xl font-franchise text-foreground">₹19.6B</div>
-                <div className="text-xs md:text-sm font-clash font-semibold uppercase text-foreground/60 mt-1">PROJECTED 2033</div>
+                <div className="text-xs md:text-sm font-clash font-medium tracking-wide text-foreground/60 mt-1">Projected 2033</div>
               </div>
               <div className="p-4 rounded-2xl bg-foreground/3 border border-foreground/5 flex flex-col justify-center">
                 <div className="text-3xl font-franchise text-foreground">9.22%</div>
-                <div className="text-xs md:text-sm font-clash font-semibold uppercase text-foreground/60 mt-1">CAGR</div>
+                <div className="text-xs md:text-sm font-clash font-medium tracking-wide text-foreground/60 mt-1">CAGR</div>
               </div>
               <div className="p-4 rounded-2xl bg-foreground/3 border border-foreground/5 flex flex-col justify-center">
                 <div className="text-3xl font-franchise text-foreground">80–90%</div>
-                <div className="text-xs md:text-sm font-clash font-semibold uppercase text-foreground/60 mt-1">SUPPLY FROM BIHAR</div>
+                <div className="text-xs md:text-sm font-clash font-medium tracking-wide text-foreground/60 mt-1">Supply from Bihar</div>
               </div>
               <div className="p-4 rounded-2xl bg-foreground/3 border border-foreground/5 flex flex-col justify-center">
                 <div className="text-3xl font-franchise text-foreground">25,130+</div>
-                <div className="text-xs md:text-sm font-clash font-semibold uppercase text-foreground/60 mt-1">EXPORT SHIPMENTS</div>
+                <div className="text-xs md:text-sm font-clash font-medium tracking-wide text-foreground/60 mt-1">Export shipments</div>
               </div>
             </div>
           </ScrollReveal>

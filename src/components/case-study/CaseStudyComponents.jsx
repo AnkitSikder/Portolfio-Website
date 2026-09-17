@@ -1,13 +1,14 @@
 import React from 'react';
 import ScrollReveal from '../common/ScrollReveal';
+import SectionHeader from './common/SectionHeader';
 
 export function ProjectOverview({ title, description, audience }) {
   return (
-    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-background">
+    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-transparent">
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8">
         <div className="lg:col-span-4">
           <ScrollReveal>
-            <h2 className="text-xs font-clash uppercase tracking-[0.2em] text-primary">{title}</h2>
+            <h2 className="font-clash text-sm uppercase tracking-[0.2em] text-primary">{title}</h2>
           </ScrollReveal>
         </div>
         <div className="lg:col-span-8 flex flex-col gap-8 md:gap-12">
@@ -40,12 +41,12 @@ export function ProjectOverview({ title, description, audience }) {
 export function ProjectResearch({ interviews }) {
   if (!interviews) return null;
   return (
-    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-background">
+    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-transparent">
       <div className="max-w-[1400px] mx-auto">
         <ScrollReveal>
           <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12 mb-8 md:mb-16">
             <div className="flex flex-col gap-3 md:gap-4 flex-1">
-              <h2 className="text-4xl md:text-5xl font-franchise uppercase tracking-wide text-primary">
+              <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight">
                 {interviews.heading || "User Interviews"}
               </h2>
               {(interviews.subheading || interviews.participants) && (
@@ -83,7 +84,7 @@ export function ProjectResearch({ interviews }) {
 export function ProjectCombinedResearch({ content }) {
   if (!content) return null;
   return (
-    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-background">
+    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-transparent">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
           
@@ -91,7 +92,7 @@ export function ProjectCombinedResearch({ content }) {
           <ScrollReveal>
             <div className="flex flex-col gap-6">
               <div className="flex flex-col gap-3 md:gap-4">
-                <h2 className="text-4xl md:text-5xl font-franchise uppercase tracking-wide text-foreground">
+                <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight">
                   {content.heading || "User Interviews"}
                 </h2>
                 {(content.subheading || content.participants) && (
@@ -112,7 +113,7 @@ export function ProjectCombinedResearch({ content }) {
           <ScrollReveal delay={0.2}>
             <div className="flex flex-col gap-6">
               <div className="flex flex-col gap-3 md:gap-4">
-                <h2 className="text-4xl md:text-5xl font-franchise uppercase tracking-wide text-foreground">
+                <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight">
                   {content.heading2 || "Survey Insights"}
                 </h2>
                 {(content.subheading2 || content.participants2) && (
@@ -138,11 +139,11 @@ export function ProjectCombinedResearch({ content }) {
 export function ProjectSurveys({ surveys }) {
   if (!surveys) return null;
   return (
-    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-background">
+    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-transparent">
       <div className="max-w-[1400px] mx-auto">
         <ScrollReveal>
           <div className="flex flex-col gap-3 md:gap-4 mb-8 md:mb-16">
-            <h2 className="text-4xl md:text-5xl font-franchise uppercase tracking-wide text-foreground">Survey Insights</h2>
+            <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight">Survey Insights</h2>
             <p className="text-sm md:text-base text-foreground/70 max-w-3xl font-clash font-medium tracking-wide">{surveys.method}</p>
           </div>
         </ScrollReveal>
@@ -166,10 +167,10 @@ export function ProjectSurveys({ surveys }) {
 export function ProjectPersona({ personas }) {
   if (!personas) return null;
   return (
-    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-background">
+    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-transparent">
       <div className="max-w-[1400px] mx-auto">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-franchise uppercase tracking-wide text-foreground mb-8 md:mb-16">User Personas</h2>
+          <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight mb-8 md:mb-16">User Personas</h2>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
@@ -252,11 +253,11 @@ export function ProjectPersona({ personas }) {
 export function ProjectComparison({ insight, competitors }) {
   if (!competitors) return null;
   return (
-    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-background">
+    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-transparent">
       <div className="max-w-[1400px] mx-auto">
         <ScrollReveal>
           <div className="max-w-4xl mb-8 md:mb-16">
-            <h2 className="text-xs font-clash uppercase tracking-[0.2em] text-primary mb-4 md:mb-6">Competitive Analysis</h2>
+            <h2 className="font-clash text-sm uppercase tracking-[0.2em] text-primary mb-4 md:mb-6">Competitive Analysis</h2>
             <p className="text-lg md:text-2xl text-foreground font-clash font-medium tracking-wide leading-snug">
               {insight}
             </p>
@@ -303,11 +304,11 @@ export function ProjectComparison({ insight, competitors }) {
 export function ProjectDesignSystem({ designSystem }) {
   if (!designSystem) return null;
   return (
-    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-background">
+    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-transparent">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-10 md:gap-24">
         <ScrollReveal>
           <div className="flex flex-col gap-3 md:gap-4">
-            <h2 className="text-4xl md:text-5xl font-franchise uppercase tracking-wide text-foreground">Style Guide</h2>
+            <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight">Style Guide</h2>
             <p className="text-sm md:text-base text-foreground/70 font-clash font-medium tracking-wide">The visual foundation balancing athletic energy with data-driven precision.</p>
           </div>
         </ScrollReveal>
@@ -359,10 +360,10 @@ export function ProjectDesignSystem({ designSystem }) {
 export function ProjectTesting({ testing }) {
   if (!testing) return null;
   return (
-    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-background">
+    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-transparent">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-10 md:gap-16">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-franchise uppercase tracking-wide text-primary">User Testing Insights</h2>
+          <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight">User Testing Insights</h2>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
@@ -408,7 +409,7 @@ export function ProjectScreenShowcase({ screens }) {
   if (!screens || screens.length === 0) return null;
   
   return (
-    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-background">
+    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-transparent">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-10 md:gap-24">
         {screens.map((screen, idx) => {
           if (screen.type === 'hero' || screen.type === 'full') {
@@ -449,13 +450,17 @@ export function ProjectScreenShowcase({ screens }) {
   );
 }
 
-export function ProjectProductClassification({ items }) {
+export function ProjectProductClassification({ title, heading, items }) {
   if (!items || items.length === 0) return null;
   return (
-    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-background">
+    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-transparent">
       <div className="max-w-[1400px] mx-auto">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-franchise uppercase tracking-wide text-foreground mb-8 md:mb-12">Product Classification</h2>
+          <SectionHeader 
+            title={title || "Product Classification"} 
+            heading={heading || "Product Classification"} 
+            className="!mb-8 lg:!mb-12" 
+          />
         </ScrollReveal>
         
         <ScrollReveal delay={0.1}>
@@ -511,11 +516,11 @@ export function ProjectSWOT({ strengths, weaknesses, opportunities, threats, mar
   ];
 
   return (
-    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-background">
+    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-transparent">
       <div className="max-w-[1400px] mx-auto">
         <ScrollReveal>
-          <div className="flex flex-col gap-3 md:gap-4 mb-8 md:mb-16">
-            <h2 className="text-4xl md:text-5xl font-franchise uppercase tracking-wide text-foreground">SWOT & Market Analysis</h2>
+          <div className="flex flex-col gap-3 md:gap-4 mb-8 lg:mb-12">
+            <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight">SWOT & Market Analysis</h2>
           </div>
         </ScrollReveal>
         
@@ -558,10 +563,10 @@ export function ProjectSWOT({ strengths, weaknesses, opportunities, threats, mar
 export function ProjectMindMap({ topic, branches }) {
   if (!branches || branches.length === 0) return null;
   return (
-    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-background">
+    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-transparent">
       <div className="max-w-[1400px] mx-auto">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-franchise uppercase tracking-wide text-foreground mb-12 text-center">{topic || 'Mind Map'}</h2>
+          <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight mb-12 text-center">{topic || 'Mind Map'}</h2>
         </ScrollReveal>
         <div className="flex flex-wrap justify-center gap-8 md:gap-16 relative">
           {branches.map((branch, idx) => (
@@ -591,10 +596,10 @@ export function ProjectMindMap({ topic, branches }) {
 export function ProjectBenchmark({ items }) {
   if (!items || items.length === 0) return null;
   return (
-    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-background">
+    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-transparent">
       <div className="max-w-[1400px] mx-auto">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-franchise uppercase tracking-wide text-foreground mb-8 md:mb-16">Benchmark Products</h2>
+          <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight mb-8 md:mb-16">Benchmark Products</h2>
         </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {items.map((item, idx) => (
@@ -629,7 +634,7 @@ export function ProjectBenchmark({ items }) {
 export function ProjectRenderShowcase({ renders }) {
   if (!renders || renders.length === 0) return null;
   return (
-    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-background">
+    <section className="py-12 md:py-16 px-5 md:px-12 lg:px-24 bg-transparent">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-8 md:gap-16">
         {renders.map((render, idx) => {
           if (render.layout === 'full') {

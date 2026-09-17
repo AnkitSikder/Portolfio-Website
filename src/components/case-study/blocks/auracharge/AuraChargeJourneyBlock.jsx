@@ -1,25 +1,24 @@
 import React from 'react';
 import ScrollReveal from '../../../common/ScrollReveal';
+import SectionHeader from '../../common/SectionHeader';
 
 export default function AuraChargeJourneyBlock({ content, sectionId, isAlternate }) {
   const { heading, narrative, stages = [], image } = content || {};
 
   return (
     <section id={sectionId} className={`py-12 md:py-20 lg:py-24 px-5 md:px-12 lg:px-24 ${isAlternate ? 'bg-foreground/5' : 'bg-background'} text-foreground w-full overflow-hidden`}>
-      <div className="max-w-[1400px] mx-auto flex flex-col gap-12">
+      <div className="max-w-[1400px] mx-auto flex flex-col gap-8 md:gap-12">
         
         {/* Header & Narrative */}
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
           <div className="w-full md:w-1/2">
             <ScrollReveal>
-              <h2 className="text-4xl md:text-5xl font-franchise uppercase tracking-wide leading-tight text-foreground">
-                {heading}
-              </h2>
+            <SectionHeader heading={heading} className="!mb-0" />
             </ScrollReveal>
           </div>
           <div className="w-full md:w-1/2">
             <ScrollReveal delay={0.1}>
-              <p className="text-base md:text-lg text-foreground/70 font-clash font-medium leading-relaxed border-l-2 border-primary/30 pl-6">
+              <p className="text-sm md:text-[15px] text-white/60 font-clash font-medium leading-relaxed border-l-2 border-primary/30 pl-6 tracking-wide">
                 {narrative}
               </p>
             </ScrollReveal>
@@ -32,7 +31,7 @@ export default function AuraChargeJourneyBlock({ content, sectionId, isAlternate
             <div className="flex flex-wrap items-center gap-2 md:gap-4 py-4 md:py-6 px-6 md:px-8 bg-foreground/5 border border-foreground/10 rounded-2xl">
               {stages.map((stage, idx) => (
                 <React.Fragment key={idx}>
-                  <span className="text-xs md:text-sm font-clash font-medium tracking-widest uppercase text-foreground/90">
+                  <span className="text-xs md:text-sm font-clash font-medium tracking-widest uppercase text-white/60 leading-relaxed">
                     {stage}
                   </span>
                   {idx < stages.length - 1 && (

@@ -53,7 +53,7 @@ export default function ImmersiveTraffic() {
           "Static / theoretical",
           "Hazardous"
         ],
-        "leftTitle": "TRAINING",
+        "leftTitle": "Training",
         "rightItems": [
           "High-speed traffic",
           "Mixed vehicles",
@@ -61,7 +61,7 @@ export default function ImmersiveTraffic() {
           "Emergency situations",
           "Aggressive drivers"
         ],
-        "rightTitle": "REALITY",
+        "rightTitle": "Reality",
         "subheading": "Traffic training breaks down where reality begins.",
         "consequences": [
           {
@@ -116,7 +116,7 @@ export default function ImmersiveTraffic() {
         ],
         "researchHeading": "Primary research",
         "researchSubheading": "3 police officers interviewed",
-        "researchImage": "/interview.jpg"
+        "researchImage": "/_archive/interview.jpg"
       },
       "order_index": 2,
       "created_at": "2026-09-02T09:45:12.52776+00:00",
@@ -141,7 +141,7 @@ export default function ImmersiveTraffic() {
             "description": "New recruits face a confidence gap when multiple events happen simultaneously."
           },
           {
-            "title": "Experience is doing the work training should do",
+            "title": "The street becomes the classroom",
             "number": "03",
             "description": "With limited structured practice, critical skills are often learned through inconsistent on-the-job exposure."
           }
@@ -379,11 +379,12 @@ export default function ImmersiveTraffic() {
       "type": "Video",
       "content": {
         "loop": true,
-        "muted": true,
+        "muted": false,
+        "controls": true,
         "caption": "",
         "autoPlay": true,
         "navLabel": "Demo Video",
-        "videoUrl": "https://drive.google.com/file/d/1aujY3L2cqdjnOWTep-twY0vNEBFH1YQ2/view?usp=sharing",
+        "videoUrl": "https://drive.google.com/file/d/1cQ-Qp8dzvvmMt7L-uKUn_Bw9B7miHcuv/view?usp=sharing",
         "posterUrl": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788332900025-hyhnljfm81p.png"
       },
       "order_index": 15,
@@ -420,7 +421,7 @@ export default function ImmersiveTraffic() {
 
   const bodySections = getSectionList(bodyBlocks);
   const navSections = [
-    { id: 'project-hero', label: 'Intro' },
+    { id: 'project-hero', label: 'Overview' },
     ...bodySections,
   ];
 

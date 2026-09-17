@@ -147,8 +147,8 @@ export default function AboutMe() {
           <Lanyard 
             position={[0, 0, 20]} 
             gravity={[0, -40, 0]} 
-            frontImage="/20230306_122745.jpg" 
-            backImage="/logo-card.svg" 
+            frontImage="/global/20230306_122745.jpg" 
+            backImage="/logos/logo-card.svg" 
             imageFit="cover" 
             lanyardWidth={1}
           />
@@ -158,3 +158,4 @@ export default function AboutMe() {
     </section>
   );
 }
+

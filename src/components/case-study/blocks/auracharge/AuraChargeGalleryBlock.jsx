@@ -1,25 +1,24 @@
 import React from 'react';
 import ScrollReveal from '../../../common/ScrollReveal';
+import SectionHeader from '../../common/SectionHeader';
 
 export default function AuraChargeGalleryBlock({ content, sectionId, isAlternate }) {
-  const { heading, narrative, images = [], layout = "masonry" } = content || {};
+  const { title, heading, narrative, images = [], layout = "masonry", noBorder } = content || {};
 
   return (
     <section id={sectionId} className={`py-12 md:py-20 lg:py-24 px-5 md:px-12 lg:px-24 ${isAlternate ? 'bg-foreground/5' : 'bg-background'} text-foreground w-full overflow-hidden`}>
-      <div className="max-w-[1400px] mx-auto flex flex-col gap-12 lg:gap-16">
+      <div className="max-w-[1400px] mx-auto flex flex-col gap-8 md:gap-12">
         
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
           <div className="w-full md:w-1/2">
             <ScrollReveal>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-franchise uppercase tracking-wide leading-tight text-foreground">
-                {heading}
-              </h2>
+            <SectionHeader title={title} heading={heading} className="!mb-0" />
             </ScrollReveal>
           </div>
           {narrative && (
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 md:pt-2">
               <ScrollReveal delay={0.1}>
-                <p className="text-base md:text-lg text-foreground/70 font-clash font-medium leading-relaxed border-l-2 border-primary/30 pl-6">
+                <p className="font-clash text-base md:text-lg font-medium tracking-wide text-white/70 leading-relaxed border-l-2 border-primary/50 pl-6">
                   {narrative}
                 </p>
               </ScrollReveal>
@@ -33,7 +32,7 @@ export default function AuraChargeGalleryBlock({ content, sectionId, isAlternate
             <div className="flex flex-col gap-8 md:gap-12 w-full">
               {images.map((img, idx) => (
                 <ScrollReveal key={idx} delay={0.2} className="w-full">
-                  <div className="rounded-[2rem] overflow-hidden bg-white/5 border border-white/10 shadow-2xl group w-full">
+                  <div className={`rounded-[2rem] overflow-hidden shadow-2xl group w-full ${noBorder ? '' : 'bg-white/5 border border-white/10'}`}>
                     <img 
                       src={img} 
                       alt={`Gallery Full ${idx}`} 

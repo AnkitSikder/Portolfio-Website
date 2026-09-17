@@ -1,5 +1,6 @@
 import React from 'react';
 import ScrollReveal from '../../../common/ScrollReveal';
+import SectionHeader from '../../common/SectionHeader';
 
 export default function AuraChargeCompetitorBlock({ content, sectionId, isAlternate }) {
   const { heading, interpretation, matrix = {}, features = [] } = content || {};
@@ -7,34 +8,39 @@ export default function AuraChargeCompetitorBlock({ content, sectionId, isAltern
 
   return (
     <section id={sectionId} className={`py-12 md:py-20 lg:py-24 px-5 md:px-12 lg:px-24 ${isAlternate ? 'bg-foreground/5' : 'bg-background'} text-foreground w-full overflow-hidden`}>
-      <div className="max-w-[1400px] mx-auto flex flex-col gap-8">
+      <div className="max-w-[1400px] mx-auto flex flex-col gap-8 md:gap-12">
         
         <ScrollReveal>
-          <div className="max-w-4xl">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-franchise uppercase tracking-wide leading-tight text-foreground">
-              {heading}
-            </h2>
-          </div>
+          <SectionHeader title="Competitor Analysis" heading={heading} className="!mb-0" />
         </ScrollReveal>
 
         {/* Matrix Table */}
         {columns.length > 0 && rows.length > 0 && (
           <ScrollReveal delay={0.1}>
-            <div className="w-full overflow-x-auto pb-6 -mx-5 px-5 md:mx-0 md:px-0 scrollbar-hide mt-4">
+            <div className="w-full overflow-x-auto pb-6 -mx-5 px-5 md:mx-0 md:px-0 scrollbar-hide">
               <table className="w-full min-w-[900px] text-left border-separate border-spacing-y-3">
                 <thead>
                   <tr>
-                    <th className="p-5 text-sm font-clash font-bold uppercase tracking-[0.2em] text-foreground/60 w-1/4 align-middle">
+                    <th className="p-5 text-sm font-clash font-medium font-bold uppercase tracking-[0.2em] text-white/60 w-1/4 align-middle tracking-wide leading-relaxed">
                       Features
                     </th>
                     {columns.map((col, idx) => (
                       <th key={idx} className="p-5 text-center align-middle w-1/4">
                         {col.logo ? (
-                          <div className="h-10 flex items-center justify-center">
-                             <img src={col.logo} alt={col.name} className="max-h-full max-w-[140px] object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                          <div className="h-10 md:h-12 flex items-center justify-center overflow-hidden w-full max-w-[160px] mx-auto">
+                             <img 
+                               src={col.logo} 
+                               alt={col.name} 
+                               className={`
+                                 opacity-80 hover:opacity-100 transition-all duration-300
+                                 ${col.name === 'Luminous' ? 'scale-[1.3] md:scale-[1.5] object-contain w-full h-full' : ''}
+                                 ${col.name === 'V-Guard' ? 'max-h-[140px] max-w-[140px] object-contain' : ''}
+                                 ${col.name !== 'Luminous' && col.name !== 'V-Guard' ? 'max-h-full max-w-[140px] object-contain' : ''}
+                               `} 
+                             />
                           </div>
                         ) : (
-                          <span className="font-franchise text-2xl uppercase tracking-widest text-foreground/80">{col.name}</span>
+                          <span className="typo-h5">{col.name}</span>
                         )}
                       </th>
                     ))}
@@ -62,13 +68,13 @@ export default function AuraChargeCompetitorBlock({ content, sectionId, isAltern
         {/* Features List */}
         {features && features.length > 0 && (
           <ScrollReveal delay={0.2}>
-            <div className="mt-8 p-8 md:p-12 rounded-[2rem] bg-foreground/5 border border-foreground/10 shadow-xl">
-              <h3 className="font-franchise text-3xl md:text-4xl uppercase tracking-widest text-primary mb-8">
+            <div className="p-8 md:p-12 rounded-[2rem] bg-foreground/5 border border-foreground/10 shadow-xl -mt-2 md:-mt-6">
+              <h3 className="font-clash text-[20px] md:text-[22px] font-medium text-white/90 mb-6 md:mb-8">
                 Features that will make AuraCharge stand out
               </h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-8">
                 {features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-3 text-sm font-clash text-foreground/80 font-medium tracking-wide">
+                  <li key={idx} className="flex items-center gap-3 font-clash text-sm md:text-[15px] font-medium tracking-wide text-white/60 leading-relaxed">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 shadow-[0_0_8px_rgba(255,95,31,0.5)]" />
                     {feature}
                   </li>

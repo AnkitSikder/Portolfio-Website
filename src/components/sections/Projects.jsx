@@ -16,16 +16,29 @@ function mapCmsProject(p, index) {
   let link = p.thumbnail || '';
 
   if (p.title === 'Immersive Traffic Command') {
-    icon = "/AURACHARGE_PORTFOLIO_ASSETS/icon.png";
+    icon = "/auracharge/icon.png";
     description = "A VR training system for smarter, safer traffic decisions.";
   }
 
+  if (p.title === 'Makhana Seed Collector') {
+    icon = "/makhana/Makhana logo.png";
+  }
+
   if (p.title === 'AuraCharge' || p.title === 'Aura Charge') {
-    link = "/AURACHARGE_PORTFOLIO_ASSETS/10_final_renders/context_render_07.jpg";
+    link = "/auracharge/10_final_renders/context_render_07.jpg";
+  }
+
+  if (p.title === 'Jio-bp Incident Management System') {
+    link = "/jio-bp/Mockup_JioBP_3.jpg";
+  }
+
+  let finalTitle = p.title;
+  if (finalTitle === 'AuraCharge' || finalTitle === 'Aura Charge') {
+    finalTitle = 'Aura Charge Smart Inverter';
   }
 
   return {
-    title: p.title,
+    title: finalTitle,
     description,
     pointers: [],
     link,
@@ -45,11 +58,25 @@ export default function Projects() {
         // CMS responded — use exactly what it says (could be empty if all hidden)
         let mapped = data ? data.map(mapCmsProject) : [];
 
+        // Inject Jio-bp project if it doesn't exist
+        if (!mapped.some(p => p.title === 'Jio-bp Incident Management System')) {
+          mapped.push({
+            title: 'Jio-bp Incident Management System',
+            description: 'One incident. Different decisions. One connected lifecycle.',
+            pointers: [],
+            link: '/jio-bp/Mockup_JioBP_3.jpg', // Updated image
+            pageLink: '/work/jio-bp',
+            color: '#3b2f2f', // Distinctive color for the card
+            icon: <img src="/jio-bp/Dashboard.png" alt="Dashboard Icon" className="w-6 h-6 object-contain" />
+          });
+        }
+
         // Enforce specific order requested by user
         const order = {
           "Immersive Traffic Command": 1,
-          "Makhana Seed Collector": 2,
-          "Aura Charge": 3
+          "Jio-bp Incident Management System": 2,
+          "Makhana Seed Collector": 3,
+          "Aura Charge Smart Inverter": 4
         };
 
         mapped.sort((a, b) => {
@@ -93,3 +120,4 @@ export default function Projects() {
     </section>
   );
 }
+

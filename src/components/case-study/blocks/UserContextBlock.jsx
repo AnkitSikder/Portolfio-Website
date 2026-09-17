@@ -1,4 +1,5 @@
 import React from 'react';
+import SectionHeader from '../common/SectionHeader';
 
 export default function UserContextBlock({ content, isAlternate }) {
   const {
@@ -16,27 +17,20 @@ export default function UserContextBlock({ content, isAlternate }) {
 
   return (
     <section className={`py-10 md:py-16 lg:py-20 px-5 md:px-12 lg:px-24 ${isAlternate ? 'bg-foreground/5' : 'bg-background'} text-white w-full overflow-hidden`}>
-      <div className="max-w-[1200px] mx-auto flex flex-col gap-12 md:gap-16 lg:gap-20">
+      <div className="max-w-[1200px] mx-auto flex flex-col gap-8 md:gap-12">
         
         {/* Intro Section */}
-        <div className="flex flex-col gap-3 md:gap-4 max-w-3xl">
-          {heading && (
-            <h2 className="font-clash text-sm uppercase tracking-[0.2em] text-primary">
-              {heading}
-            </h2>
-          )}
-          {intro && (
-            <p className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight">
-              {intro}
-            </p>
-          )}
-        </div>
+        <SectionHeader 
+          title={heading}
+          heading={intro}
+          className="max-w-3xl"
+        />
 
         {/* User Type & Manages Panel */}
         <div className="flex flex-col gap-8">
           {userType && (
-            <div className="font-clash text-sm md:text-[15px] font-medium tracking-wide text-white/60 leading-relaxed border-l-4 border-primary pl-6 py-2">
-              <span className="opacity-50 block text-xs md:text-sm uppercase tracking-widest mb-2 font-clash font-medium">Primary User</span>
+            <div className="font-clash text-[20px] md:text-[22px] font-medium tracking-wide text-white/80 leading-relaxed border-l-4 border-primary pl-6 py-2">
+              <span className="opacity-50 block text-xs uppercase tracking-widest mb-2 font-clash font-medium">Primary User</span>
               {userType}
             </div>
           )}
@@ -56,7 +50,7 @@ export default function UserContextBlock({ content, isAlternate }) {
               
               <div className="relative z-10">
                 {managesTitle && (
-                  <h3 className="font-clash text-xl md:text-2xl font-medium text-white/90 mb-6 flex items-center gap-4">
+                  <h3 className="font-clash text-[20px] md:text-[22px] font-medium text-white/90 mb-6 flex items-center gap-4">
                     {managesTitle}
                     <div className="flex-1 h-px bg-white/20" />
                   </h3>
@@ -78,7 +72,7 @@ export default function UserContextBlock({ content, isAlternate }) {
               <div className={`flex flex-col flex-1 relative z-10 ${researchImage ? 'w-full lg:w-1/2' : ''}`}>
                 <div className="flex flex-col gap-2 mb-8">
                   {researchHeading && (
-                    <h3 className="font-clash text-xl md:text-2xl font-medium text-primary leading-snug">
+                    <h3 className="font-clash text-[20px] md:text-[22px] font-medium text-primary leading-snug">
                       {researchHeading}
                     </h3>
                   )}

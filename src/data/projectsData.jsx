@@ -16,6 +16,15 @@ export const projects = [
     icon: <Cpu className="w-6 h-6" />,
   },
   {
+    title: 'Jio-bp Incident Management System',
+    description: 'One incident. Different decisions. One connected lifecycle.',
+    pointers: [],
+    link: '/jio-bp/Mockup_JioBP_3.jpg',
+    pageLink: '/work/jio-bp',
+    color: '#3b2f2f',
+    icon: <img src="/jio-bp/Dashboard.png" alt="Dashboard Icon" className="w-6 h-6 object-contain" />,
+  },
+  {
     title: 'Makhana Seed Collector',
     description: 'Affordable, ergonomic tool that helps makhana workers collect seeds safely, comfortably, and efficiently.',
     pointers: [
@@ -26,10 +35,10 @@ export const projects = [
     link: 'https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/thumbnails/1788343323821-di1b8asa1ml.png',
     pageLink: '/work/makhana-tool',
     color: '#2a1a0a',
-    icon: <Leaf className="w-6 h-6" />,
+    icon: <img src="/makhana/Makhana logo.png" alt="Makhana Logo" className="w-6 h-6 object-contain" />,
   },
   {
-    title: 'Aura Charge',
+    title: 'Aura Charge Smart Inverter',
     description: 'Redefining power backup into a unified, smart energy experience for the modern home.',
     pointers: [
       'Multi-device charging hub',
@@ -42,3 +51,4 @@ export const projects = [
     icon: <Activity className="w-6 h-6" />,
   },
 ];
+

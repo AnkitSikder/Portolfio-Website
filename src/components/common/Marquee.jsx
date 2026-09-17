@@ -33,7 +33,7 @@ export default function Marquee() {
   return (
     <section className="w-full bg-gradient-to-b from-[#ff7300] to-[#d04000] py-6 md:py-8 overflow-hidden flex items-center z-10 relative">
       <div className="marquee-container">
-        <div className="marquee-content flex items-center">
+        <div className="marquee-content flex items-center w-max">
           {displayItems.map((item, index) => (
             <React.Fragment key={index}>
               <span className="text-3xl md:text-5xl font-clash font-semibold text-foreground mx-8 md:mx-16 uppercase tracking-wide">

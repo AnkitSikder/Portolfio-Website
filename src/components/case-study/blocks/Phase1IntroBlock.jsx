@@ -3,22 +3,23 @@ import ScrollReveal from '../../common/ScrollReveal';
 
 export default function Phase1IntroBlock({ content, sectionId }) {
   const kpis = [
-    { value: "80%+", label: "OF INDIA'S MAKHANA" },
-    { value: "85%+", label: "OF GLOBAL SUPPLY" },
-    { value: "4–6 FT", label: "TYPICAL WATER DEPTH MENTIONED IN THE PROJECT" },
-    { value: "6–8 HRS", label: "DAILY SUBMERSION DURING HARVESTING" }
+    { value: "80%+", label: "of India's Makhana" },
+    { value: "85%+", label: "of global supply" },
+    { value: "4–6 FT", label: "typical water depth mentioned in the project" },
+    { value: "6–8 HRS", label: "daily submersion during harvesting" }
   ];
 
   return (
     <section id={sectionId} className="py-10 md:py-16 lg:py-24 px-6 md:px-12 lg:px-24 bg-background">
-      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row gap-12 md:gap-16 items-center md:items-stretch">
+      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-stretch">
         {/* Left Column */}
         <div className="w-full md:w-[55%] flex flex-col justify-center">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-franchise uppercase tracking-wide text-foreground mb-6 leading-tight">
-              A crop grown in water, harvested by hand.
+            <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-foreground leading-tight mb-4">
+              A crop grown in water,<br/>
+              harvested by hand.
             </h2>
-            <div className="space-y-4 text-foreground/70 font-clash font-medium text-base leading-relaxed mb-10">
+            <div className="space-y-4 font-clash text-base md:text-lg font-medium tracking-wide text-foreground/70 leading-relaxed mb-10">
               <p>
                 Makhana (Euryale ferox), also known as fox nut or gorgon nut, is an aquatic cash crop cultivated in lowland ponds, particularly across Bihar and other parts of eastern India. Much of India's production comes from Bihar, making the crop deeply connected to the region's agricultural economy and traditional harvesting communities.
               </p>
@@ -33,7 +34,7 @@ export default function Phase1IntroBlock({ content, sectionId }) {
               {kpis.map((kpi, idx) => (
                 <div key={idx} className="flex flex-col gap-1 p-4 rounded-2xl bg-foreground/5 border border-foreground/10">
                   <span className="text-4xl md:text-5xl font-franchise text-primary leading-none">{kpi.value}</span>
-                  <span className="text-xs md:text-sm text-foreground font-clash font-semibold uppercase tracking-wider">{kpi.label}</span>
+                  <span className="text-xs md:text-sm text-foreground/80 font-clash font-medium tracking-wide">{kpi.label}</span>
                 </div>
               ))}
             </div>

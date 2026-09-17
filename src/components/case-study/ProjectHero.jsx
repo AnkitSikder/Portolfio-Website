@@ -134,7 +134,7 @@ export default function ProjectHero({ category, title, summary, role, duration, 
 
           {/* Summary */}
           <p
-            className="font-clash font-light text-white/70 max-w-2xl leading-relaxed mb-8"
+            className="font-clash font-medium text-white/80 max-w-2xl leading-relaxed mb-8"
             style={{ fontSize: 'clamp(0.95rem, 1.5vw, 1.2rem)' }}
           >
             {summary}

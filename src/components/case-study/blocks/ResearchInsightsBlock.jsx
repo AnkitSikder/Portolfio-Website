@@ -1,4 +1,5 @@
 import React from 'react';
+import SectionHeader from '../common/SectionHeader';
 
 export default function ResearchInsightsBlock({ content, isAlternate }) {
   const {
@@ -11,21 +12,14 @@ export default function ResearchInsightsBlock({ content, isAlternate }) {
 
   return (
     <section className={`py-10 md:py-16 lg:py-20 px-5 md:px-12 lg:px-24 ${isAlternate ? 'bg-foreground/5' : 'bg-background'} text-white w-full overflow-hidden`}>
-      <div className="max-w-[1200px] mx-auto flex flex-col gap-12 md:gap-16 lg:gap-20">
+      <div className="max-w-[1200px] mx-auto flex flex-col gap-8 md:gap-12">
         
         {/* Intro */}
-        <div className="flex flex-col gap-3 md:gap-4 max-w-4xl mx-auto text-center">
-          {heading && (
-            <h2 className="font-clash text-sm uppercase tracking-[0.2em] text-primary">
-              {heading}
-            </h2>
-          )}
-          {intro && (
-            <p className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight whitespace-pre-line">
-              {intro}
-            </p>
-          )}
-        </div>
+        <SectionHeader 
+          title={heading}
+          heading={intro}
+          className="items-center text-center mx-auto max-w-4xl"
+        />
 
         {/* Insight Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
@@ -41,7 +35,7 @@ export default function ResearchInsightsBlock({ content, isAlternate }) {
               </div>
               
               <div className="flex flex-col gap-3 mt-auto">
-                <h3 className="font-clash text-xl md:text-2xl font-medium text-white/90 leading-snug">
+                <h3 className="font-clash text-[20px] md:text-[22px] font-medium text-white/90 leading-snug">
                   {ins.title}
                 </h3>
                 <p className="font-clash text-sm md:text-[15px] font-medium tracking-wide text-white/60 leading-relaxed">

@@ -106,7 +106,7 @@ export default function LoadingScreen({ isLoaded }) {
         }}
       >
         <img 
-          src="/Logo v3.svg" 
+          src="/logos/Logo v3.svg" 
           alt="Logo" 
           className="w-16 h-16 animate-[spin_4s_linear_infinite]" 
         />
@@ -138,3 +138,4 @@ export default function LoadingScreen({ isLoaded }) {
     </div>
   );
 }
+

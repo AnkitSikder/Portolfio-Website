@@ -13,7 +13,7 @@ export default function ReframeProblemBlock({ content }) {
 
   return (
     <section className="py-10 md:py-16 lg:py-20 px-5 md:px-12 lg:px-24 bg-background text-white w-full overflow-hidden">
-      <div className="max-w-[1200px] mx-auto flex flex-col gap-12 md:gap-16 lg:gap-20">
+      <div className="max-w-[1200px] mx-auto flex flex-col gap-8 md:gap-12">
         
         {/* Intro & Statements Wrapper */}
         <div className="flex flex-col gap-3 md:gap-4 max-w-4xl">
@@ -64,7 +64,7 @@ export default function ReframeProblemBlock({ content }) {
                 </div>
               )}
               {challengeText && (
-                <h3 className="font-clash text-xl md:text-2xl font-medium text-white/90 leading-relaxed">
+                <h3 className="font-clash text-[20px] md:text-[22px] font-medium text-white/90 leading-relaxed">
                   {challengeText}
                 </h3>
               )}

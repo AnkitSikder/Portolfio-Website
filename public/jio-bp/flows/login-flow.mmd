@@ -1,0 +1,18 @@
+graph TD
+    A[Open Login] --> B{Choose Method}
+    B -->|Password Login| C[Enter Username/Email/Phone & Password]
+    B -->|Mobile OTP Login| D[Enter Mobile Number]
+    
+    C --> C1{Validate}
+    C1 -->|Invalid| C2[Show Error]
+    C2 --> C
+    C1 -->|Valid| E[Login Success]
+    
+    D --> D1[Request OTP]
+    D1 --> D2[Enter OTP]
+    D2 --> D3{Validate}
+    D3 -->|Invalid| D4[Show Error]
+    D4 --> D2
+    D3 -->|Valid| E
+    
+    E --> F[Redirect to Role Dashboard]

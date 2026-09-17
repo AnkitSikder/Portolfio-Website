@@ -51,7 +51,7 @@ export default function AuraCharge() {
           "Small business owners",
           "Smart-home integrators"
         ],
-        "image": "/AURACHARGE_PORTFOLIO_ASSETS/01_hero/hero_product.png",
+        "image": "/auracharge/01_hero/hero_product.png",
         "kpis": [
           { "title": "PRODUCT + UX", "value": "Product design & interaction" },
           { "title": "UNIFIED SYSTEM", "value": "Charge + backup + control" },
@@ -69,7 +69,7 @@ export default function AuraCharge() {
         "statements": [
           "Users juggle scattered devices for charging and backup. Cords and disconnected gadgets create visual clutter, while traditional power backup solutions remain bulky and unrefined."
         ],
-        "image": "/AURACHARGE_PORTFOLIO_ASSETS/02_intro_problem/traditional_inverter.png",
+        "image": "/auracharge/02_intro_problem/traditional_inverter.png",
         "painPoints": [
           { "title": "CLUTTER", "description": "Multiple devices, cables and power accessories compete for space." },
           { "title": "FRAGMENTATION", "description": "Charging, backup and control are handled through separate interactions." },
@@ -84,7 +84,7 @@ export default function AuraCharge() {
       "id": "aura-challenge",
       "type": "AuraChargeChallenge",
       "content": {
-        "heading": "Design Challenge",
+        "heading": "The Challenge: From Clutter to Cohesion",
         "inputs": [
           { "id": "1", "title": "Portable & Compact", "description": "Minimal footprint, maximum efficiency." },
           { "id": "2", "title": "Power Backup", "description": "Provides reliable power backup for devices." },
@@ -133,6 +133,7 @@ export default function AuraCharge() {
       "project_id": "03c6cc48-b7d6-40dc-a762-5be2ada03f69",
       "type": "ProductClassification",
       "content": {
+        "heading": "Mapping the Power Landscape to Find Our Gap",
         "items": [
           {
             "type": "Power Banks",
@@ -176,7 +177,7 @@ export default function AuraCharge() {
       "type": "AuraChargeBenchmark",
       "content": {
         "heading": "Benchmark Product",
-        "image": "/AURACHARGE_PORTFOLIO_ASSETS/Frame 1984079505.jpg",
+        "image": "/auracharge/Frame 1984079505.jpg",
         "navLabel": "Benchmark"
       },
       "order_index": 7
@@ -185,7 +186,7 @@ export default function AuraCharge() {
       "id": "aura-research",
       "type": "AuraChargeResearch",
       "content": {
-        "heading": "Primary Research",
+        "heading": "Understanding Core User Needs",
         "interviews": {
           "participants": "10 participants",
           "demographics": "6 male, 4 female · Age 24–50",
@@ -239,7 +240,8 @@ export default function AuraCharge() {
         "image": "https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/blocks/1788350276942-dm685o55t95.jpg",
         "width": "full",
         "caption": "",
-        "heading": "Mind Map",
+        "title": "MIND MAP",
+        "heading": "Connecting the Dots: Environment, Behaviors, and Features",
         "navLabel": "Mind Map"
       },
       "order_index": 9
@@ -248,12 +250,12 @@ export default function AuraCharge() {
       "id": "aura-competitor",
       "type": "AuraChargeCompetitor",
       "content": {
-        "heading": "Competitor Analysis",
+        "heading": "Evaluating the Established Players",
         "matrix": {
           "columns": [
-            { "name": "Exide", "logo": "/AURACHARGE_PORTFOLIO_ASSETS/05_competitor_personas/exide_logo.png" },
-            { "name": "Luminous", "logo": "/AURACHARGE_PORTFOLIO_ASSETS/05_competitor_personas/luminous_logo.png" },
-            { "name": "V-Guard", "logo": "/AURACHARGE_PORTFOLIO_ASSETS/05_competitor_personas/vguard_logo.png" }
+            { "name": "Exide", "logo": "/auracharge/05_competitor_personas/exide_logo.png" },
+            { "name": "Luminous", "logo": "/auracharge/05_competitor_personas/luminous_logo.png" },
+            { "name": "V-Guard", "logo": "/auracharge/99_all_embedded/embedded_12.png" }
           ],
           "rows": [
             { "feature": "Technology", "values": ["Lead-Acid batteries", "Lead-Acid, Gel, Lithium-ion", "Lead-Acid, Lithium-ion"] },
@@ -294,7 +296,7 @@ export default function AuraCharge() {
         "personas": [
           { 
             "name": "Khushboo Singh",
-            "image": "/AURACHARGE_PORTFOLIO_ASSETS/05_competitor_personas/khushboo_avatar.png",
+            "image": "/auracharge/05_competitor_personas/khushboo_avatar.png",
             "role": "Junior Assistant Researcher, Botany",
             "demographics": "Age 28 • Female • Uttarakhand",
             "expectations": [
@@ -309,7 +311,7 @@ export default function AuraCharge() {
           },
           { 
             "name": "Tapashi Reddy",
-            "image": "/AURACHARGE_PORTFOLIO_ASSETS/05_competitor_personas/tapashi_avatar.png",
+            "image": "/auracharge/05_competitor_personas/tapashi_avatar.png",
             "role": "Homemaker",
             "demographics": "Age 36 • Female • Bangalore",
             "expectations": [
@@ -331,11 +333,11 @@ export default function AuraCharge() {
       "id": "aura-ideation",
       "type": "AuraChargeGallery",
       "content": {
-        "heading": "Before deciding what Aura Charge should be, I explored what it could become.",
+        "heading": "Before deciding what the inverter should be, I explored what it could become.",
         "narrative": "The original ideation explores appliance forms, power-station form factors, handles, display placement, wheels, environmental integration and multiple body configurations, eventually moving toward an integrated, upright, compact appliance with a clear front interface.",
         "layout": "single",
         "images": [
-          "/AURACHARGE_PORTFOLIO_ASSETS/06_ideation_brand/ideation_sketches.jpg"
+          "/auracharge/06_ideation_brand/ideation_sketches.jpg"
         ],
         "navLabel": "Ideation"
       },
@@ -345,10 +347,10 @@ export default function AuraCharge() {
       "id": "aura-brand",
       "type": "AuraChargeBrand",
       "content": {
-        "heading": "Style Guide",
+        "heading": "Crafting the Visual Identity",
         "logos": [
-          "/AURACHARGE_PORTFOLIO_ASSETS/99_all_embedded/Logo Design Margin-11 2.png",
-          "/AURACHARGE_PORTFOLIO_ASSETS/99_all_embedded/highfi_mobile_overview.png"
+          "/auracharge/99_all_embedded/Logo Design Margin-11 2.png",
+          "/auracharge/99_all_embedded/highfi_mobile_overview.png"
         ],
         "typography": {
           "name": "Kumbh Sans",
@@ -364,7 +366,7 @@ export default function AuraCharge() {
           "heading": "Margin & Spacing",
           "items": [
             {
-              "image": "/AURACHARGE_PORTFOLIO_ASSETS/99_all_embedded/Group 404.png",
+              "image": "/auracharge/99_all_embedded/Group 404.png",
               "stats": [
                 { "label": "Margin", "value": "22px" },
                 { "label": "Columns", "value": "9" },
@@ -372,7 +374,7 @@ export default function AuraCharge() {
               ]
             },
             {
-              "image": "/AURACHARGE_PORTFOLIO_ASSETS/99_all_embedded/Frame 1984079519.png",
+              "image": "/auracharge/99_all_embedded/Frame 1984079519.png",
               "stats": [
                 { "label": "Column", "value": "6" },
                 { "label": "Margin", "value": "16px" },
@@ -381,36 +383,51 @@ export default function AuraCharge() {
             }
           ]
         },
-        "informationArchitecture": [
-          {
-            "heading": "Information Architecture for Inverter Display",
-            "image": "/AURACHARGE_PORTFOLIO_ASSETS/99_all_embedded/Architecture1.png"
-          },
-          {
-            "heading": "Information Architecture for Mobile App",
-            "image": "/AURACHARGE_PORTFOLIO_ASSETS/99_all_embedded/Architecture2.png"
-          }
-        ],
-        "lowFidelity": {
-          "heading": "Low-Fidelity Screens",
-          "description": "The first pass focused on information placement, navigation and task grouping rather than visual polish, establishing the core structure for the dashboard, rooms, analytics, and settings.",
-          "image": "/AURACHARGE_PORTFOLIO_ASSETS/99_all_embedded/Low Fidelity1.jpg"
-        },
         "navLabel": "Visual Language"
       },
       "order_index": 13
     },
 
     {
+      "id": "aura-ia",
+      "type": "AuraChargeIA",
+      "content": {
+        "heading": "Structuring the Ecosystem",
+        "description": "Mapping out the hierarchical navigation and feature layout to ensure a seamless experience across both the hardware display and the mobile application.",
+        "displayIA": "/auracharge/99_all_embedded/Architecture1.png",
+        "mobileIA": "/auracharge/99_all_embedded/Architecture2.png",
+        "navLabel": "Information Architecture"
+      },
+      "order_index": 14
+    },
+
+    {
+      "id": "aura-lowfi",
+      "type": "AuraChargeGallery",
+      "content": {
+        "heading": "Low-Fidelity Screens",
+        "narrative": "The first pass focused on information placement, navigation and task grouping rather than visual polish, establishing the core structure for the dashboard, rooms, analytics, and settings.",
+        "layout": "single",
+        "noBorder": true,
+        "images": [
+          "/auracharge/99_all_embedded/Low Fidelity1.jpg"
+        ],
+        "navLabel": "Low Fidelity"
+      },
+      "order_index": 15
+    },
+
+    {
       "id": "aura-highfi",
       "type": "AuraChargeGallery",
       "content": {
-        "heading": "Hi-Fidelity Screens",
+        "title": "High-Fidelity UI",
+        "heading": "Bringing the Experience to Life",
         "layout": "single",
         "images": [
-          "/AURACHARGE_PORTFOLIO_ASSETS/99_all_embedded/embedded_05.png",
-          "/AURACHARGE_PORTFOLIO_ASSETS/99_all_embedded/embedded_06.png",
-          "/AURACHARGE_PORTFOLIO_ASSETS/00_source/auracharge GIF (1).gif"
+          "/auracharge/99_all_embedded/embedded_05.png",
+          "/auracharge/99_all_embedded/embedded_06.png",
+          "/auracharge/00_source/auracharge GIF (1).gif"
         ],
         "navLabel": "High-Fi Screens"
       },
@@ -424,10 +441,10 @@ export default function AuraCharge() {
         "narrative": "A look at the final product UI embedded directly within its physical hardware and real-world environments.",
         "layout": "single",
         "images": [
-          "/AURACHARGE_PORTFOLIO_ASSETS/00_source/auracharge_infographic_v3.jpg",
-          "/AURACHARGE_PORTFOLIO_ASSETS/00_source/Screenshot 2026-09-03 045312.png",
-          "/AURACHARGE_PORTFOLIO_ASSETS/10_final_renders/context_render_06.jpg",
-          "/AURACHARGE_PORTFOLIO_ASSETS/00_source/Recording 2024-07-04 at 21.04.00.gif"
+          "/auracharge/00_source/auracharge_infographic_v3.jpg",
+          "/auracharge/00_source/Screenshot 2026-09-03 045312.png",
+          "/auracharge/10_final_renders/context_render_06.jpg",
+          "/auracharge/00_source/Recording 2024-07-04 at 21.04.00.gif"
         ],
         "navLabel": "Renders"
       },
@@ -448,7 +465,7 @@ export default function AuraCharge() {
 
   const bodySections = getSectionList(bodyBlocks);
   const navSections = [
-    { id: 'project-hero', label: 'Intro' },
+    { id: 'project-hero', label: 'Overview' },
     ...bodySections,
   ];
 
@@ -463,3 +480,4 @@ export default function AuraCharge() {
     </article>
   );
 }
+

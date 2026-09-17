@@ -22,7 +22,7 @@ export default function Phase1OpportunityBlock({ content, sectionId }) {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
           
           <div className="lg:col-span-6">
             <ScrollReveal delay={0.1}>

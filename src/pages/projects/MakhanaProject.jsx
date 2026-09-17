@@ -48,6 +48,7 @@ export default function MakhanaProject() {
           "navLabel": "Process",
           "title": "What the production system looks like.",
           "layout": "carousel",
+          "bgClass": "bg-background",
           "speed": "15s",
           "images": [
             { "url": "/assets/projects/makhana-tool/assets/02_cycle/slide_05_img_02.jpg", "caption": "Makhana Flora" },
@@ -113,7 +114,7 @@ export default function MakhanaProject() {
       // 13 TECHNICAL ASPECTS
       {
         "type": "Phase2TechnicalAspects",
-        "content": { "isAlternate": true }
+        "content": {}
       },
       // 14 PRODUCT SPECIFICATION
       {
@@ -123,7 +124,7 @@ export default function MakhanaProject() {
       // 16 DIMENSIONS
       {
         "type": "Phase2Dimensions",
-        "content": { "isAlternate": true }
+        "content": {}
       },
       // 17 FINAL RENDERS
       {
@@ -143,7 +144,7 @@ export default function MakhanaProject() {
 
   const bodySections = getSectionList(bodyBlocks);
   const navSections = [
-    { id: 'project-hero', label: 'Intro' },
+    { id: 'project-hero', label: 'Overview' },
     ...bodySections,
   ];
 

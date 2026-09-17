@@ -1,33 +1,32 @@
 import React from 'react';
 import ScrollReveal from '../../../common/ScrollReveal';
+import SectionHeader from '../../common/SectionHeader';
 
 export default function AuraChargeResearchBlock({ content, sectionId, isAlternate }) {
   const { heading, interviews, survey, callout } = content || {};
 
   return (
     <section id={sectionId} className={`py-12 md:py-20 lg:py-24 px-5 md:px-12 lg:px-24 ${isAlternate ? 'bg-foreground/5' : 'bg-background'} text-foreground w-full overflow-hidden`}>
-      <div className="max-w-[1400px] mx-auto flex flex-col gap-16 lg:gap-20">
+      <div className="max-w-[1400px] mx-auto flex flex-col gap-8 md:gap-12">
         
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-franchise uppercase tracking-wide leading-tight text-foreground text-center">
-            {heading}
-          </h2>
+          <SectionHeader title="Primary Research" heading={heading} className="!mb-0" />
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {/* Left Column: User Interviews */}
           {interviews && (
             <div className="flex flex-col gap-8">
               <ScrollReveal>
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-col gap-2 pb-6 border-b border-foreground/10">
-                    <h3 className="font-franchise text-3xl md:text-4xl uppercase tracking-widest text-primary">User Interviews</h3>
-                    <div className="flex items-center gap-4 text-sm font-clash font-medium text-foreground/60">
+                    <h3 className="font-clash text-xl md:text-2xl font-bold tracking-wide text-white">User Interviews</h3>
+                    <div className="flex items-center gap-4 text-base md:text-lg font-clash font-medium text-white/60 tracking-wide leading-relaxed">
                       <span className="font-semibold text-foreground">{interviews.participants}</span>
                       <span>{interviews.demographics}</span>
                     </div>
                   </div>
-                  <p className="text-base md:text-lg text-foreground/80 font-clash font-medium leading-relaxed">
+                  <p className="font-clash text-base md:text-lg font-medium tracking-wide text-white/70 leading-relaxed">
                     {interviews.summary}
                   </p>
                 </div>
@@ -39,11 +38,11 @@ export default function AuraChargeResearchBlock({ content, sectionId, isAlternat
                     interviews.wordCloud.map((word, idx) => {
                       let sizeClass = "";
                       switch (word.weight) {
-                        case 5: sizeClass = "text-5xl md:text-6xl lg:text-7xl font-bold"; break;
-                        case 4: sizeClass = "text-4xl md:text-5xl lg:text-6xl font-bold"; break;
-                        case 3: sizeClass = "text-2xl md:text-3xl lg:text-4xl font-semibold"; break;
-                        case 2: sizeClass = "text-lg md:text-xl lg:text-2xl font-medium"; break;
-                        default: sizeClass = "text-base font-medium"; break;
+                        case 5: sizeClass = "text-4xl md:text-5xl lg:text-6xl font-bold"; break;
+                        case 4: sizeClass = "text-3xl md:text-4xl lg:text-5xl font-bold"; break;
+                        case 3: sizeClass = "text-xl md:text-2xl lg:text-3xl font-semibold"; break;
+                        case 2: sizeClass = "text-base md:text-lg lg:text-xl font-medium"; break;
+                        default: sizeClass = "text-sm font-medium"; break;
                       }
                       return (
                         <span 
@@ -77,8 +76,8 @@ export default function AuraChargeResearchBlock({ content, sectionId, isAlternat
               <ScrollReveal>
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-col gap-2 pb-6 border-b border-foreground/10">
-                    <h3 className="font-franchise text-3xl md:text-4xl uppercase tracking-widest text-primary">Survey</h3>
-                    <div className="flex items-center gap-4 text-sm font-clash font-medium text-foreground/60">
+                    <h3 className="font-clash text-xl md:text-2xl font-bold tracking-wide text-white">Survey</h3>
+                    <div className="flex items-center gap-4 text-base md:text-lg font-clash font-medium text-white/60 tracking-wide leading-relaxed">
                       <span className="font-semibold text-foreground">{survey.participants}</span>
                       <span>{survey.demographics}</span>
                     </div>
@@ -91,7 +90,7 @@ export default function AuraChargeResearchBlock({ content, sectionId, isAlternat
                   {survey.data?.map((item, idx) => (
                     <div key={idx} className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 group">
                       <div className="w-full sm:w-[45%]">
-                        <span className="text-sm md:text-base font-clash font-medium text-foreground/80 group-hover:text-foreground transition-colors">
+                        <span className="font-clash text-sm md:text-base font-medium tracking-wide text-white/80">
                           {item.label}
                         </span>
                       </div>

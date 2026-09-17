@@ -5,13 +5,13 @@ import { gsap } from 'gsap';
 // Positioned with gaps to avoid overlap, and some placed towards the center 
 // so they appear beautifully behind the 3D character and header text.
 const stickers = [
-  { id: 1, name: 'Mountain', url: '/20230724_092824.jpg', top: '20%', left: '15%', size: '220px', rotation: 10 },
-  { id: 2, name: 'Flower', url: '/20250111_125157.jpg', top: '30%', left: '85%', size: '200px', rotation: -12 },
-  { id: 3, name: 'Crab', url: '/IMG_20230730_141813727_HDR~2.jpg', top: '65%', left: '82%', size: '210px', rotation: 8 },
-  { id: 4, name: 'Selfie', url: '/20221229_110358.jpg', top: '55%', left: '12%', size: '240px', rotation: -8 },
-  { id: 5, name: 'Feet Mountain', url: '/IMG_20230724_123719.jpg', top: '80%', left: '18%', size: '230px', rotation: 15 },
-  { id: 6, name: 'Leaf Sun', url: '/20221017_101454.jpg', top: '15%', left: '68%', size: '190px', rotation: -18 },
-  { id: 7, name: 'Notebook', url: '/202210319_094439.jpg', top: '85%', left: '72%', size: '215px', rotation: -5 },
+  { id: 1, name: 'Mountain', url: '/_archive/20230724_092824.jpg', top: '20%', left: '15%', size: '220px', rotation: 10 },
+  { id: 2, name: 'Flower', url: '/_archive/20250111_125157.jpg', top: '30%', left: '85%', size: '200px', rotation: -12 },
+  { id: 3, name: 'Crab', url: '/_archive/IMG_20230730_141813727_HDR~2.jpg', top: '65%', left: '82%', size: '210px', rotation: 8 },
+  { id: 4, name: 'Selfie', url: '/_archive/20221229_110358.jpg', top: '55%', left: '12%', size: '240px', rotation: -8 },
+  { id: 5, name: 'Feet Mountain', url: '/_archive/IMG_20230724_123719.jpg', top: '80%', left: '18%', size: '230px', rotation: 15 },
+  { id: 6, name: 'Leaf Sun', url: '/_archive/20221017_101454.jpg', top: '15%', left: '68%', size: '190px', rotation: -18 },
+  { id: 7, name: 'Notebook', url: '/_archive/202210319_094439.jpg', top: '85%', left: '72%', size: '215px', rotation: -5 },
 ];
 
 export default function HobbyStickers() {

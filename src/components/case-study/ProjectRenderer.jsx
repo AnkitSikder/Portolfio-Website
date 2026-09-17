@@ -152,12 +152,12 @@ function TextBlockRenderer({ content, sectionId, isAlternate }) {
       <div className={`max-w-[1400px] mx-auto flex flex-col gap-4 ${alignClass}`}>
         {content.eyebrow && (
           <ScrollReveal>
-            <span className="text-sm font-clash uppercase tracking-[0.2em] text-primary">{content.eyebrow}</span>
+            <span className="font-clash text-sm uppercase tracking-[0.2em] text-primary">{content.eyebrow}</span>
           </ScrollReveal>
         )}
         {content.heading && (
           <ScrollReveal delay={0.1}>
-            <h2 className="text-4xl md:text-5xl font-franchise uppercase tracking-wide text-foreground">{content.heading}</h2>
+            <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight">{content.heading}</h2>
           </ScrollReveal>
         )}
         {content.body && (
@@ -185,9 +185,20 @@ function ImageBlockRenderer({ content, sectionId, isAlternate }) {
     <section id={sectionId} className={`py-10 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 ${bgClass}`}>
       <div className={`max-w-[1400px] mx-auto`}>
         <ScrollReveal>
-          <div className={`${widthClass} flex flex-col gap-4`}>
-            {content.heading && (
-              <h2 className="text-3xl md:text-5xl font-franchise uppercase tracking-wide text-foreground text-center mb-4">{content.heading}</h2>
+          <div className={`${widthClass} flex flex-col gap-8 md:gap-12`}>
+            {(content.title || content.heading) && (
+              <div className="flex flex-col gap-3 md:gap-4 text-center items-center">
+                {content.title && (
+                  <h2 className="font-clash text-sm uppercase tracking-[0.2em] text-primary">
+                    {content.title}
+                  </h2>
+                )}
+                {content.heading && (
+                  <h3 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight">
+                    {content.heading}
+                  </h3>
+                )}
+              </div>
             )}
             <div className="w-full rounded-[2rem] overflow-hidden bg-foreground/5 border border-foreground/10 shadow-xl">
               <img src={content.image} alt={content.alt || ''} className={imgClass} />
@@ -204,7 +215,7 @@ function ImageGalleryRenderer({ content, sectionId, isAlternate }) {
   const images = content.images || [];
   if (images.length === 0) return null;
 
-  const bgClass = isAlternate ? 'bg-foreground/5' : 'bg-background';
+  const bgClass = content.bgClass || (isAlternate ? 'bg-foreground/5' : 'bg-background');
 
   if (content.layout === 'carousel') {
     // Double images array for seamless infinite marquee scroll
@@ -215,7 +226,7 @@ function ImageGalleryRenderer({ content, sectionId, isAlternate }) {
         <div className="w-full">
           {content.title && (
             <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-24 mb-10 text-left">
-              <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-foreground leading-tight">
+              <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight">
                 {content.title}
               </h2>
             </div>
@@ -227,7 +238,7 @@ function ImageGalleryRenderer({ content, sectionId, isAlternate }) {
             <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
             
             <div 
-              className="marquee-content flex gap-6 px-3 h-[220px] md:h-[280px]"
+              className="marquee-content flex gap-6 h-[220px] md:h-[280px] w-max pr-6"
               style={content.speed ? { animationDuration: content.speed } : {}}
             >
               {marqueeImages.map((img, idx) => (
@@ -271,7 +282,7 @@ function ImageGalleryRenderer({ content, sectionId, isAlternate }) {
         
         {content.title && (
           <div className="mb-10 text-left">
-            <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-foreground leading-tight">
+            <h2 className="font-franchise text-4xl md:text-5xl uppercase tracking-wide text-white leading-tight">
               {content.title}
             </h2>
           </div>
@@ -385,7 +396,7 @@ function renderBlock(block, sectionId, isAlternate) {
     case 'Image':
       return <ImageBlockRenderer content={content} sectionId={sectionId} isAlternate={isAlternate} />;
     case 'ImageGallery':
-      return <ImageGalleryRenderer content={content} sectionId={sectionId} isAlternate={isAlternate} />;
+      return <ImageGalleryRenderer content={content} sectionId={sectionId} isAlternate={isAlternate || content.isAlternate} />;
     case 'Video':
       return <VideoBlock content={content} sectionId={sectionId} isAlternate={isAlternate} />;
     case 'FormativeTesting':
@@ -417,7 +428,7 @@ function renderBlock(block, sectionId, isAlternate) {
     case 'Outcome':
       return <OutcomeBlockRenderer content={content} sectionId={sectionId} isAlternate={isAlternate} />;
     case 'ProductClassification':
-      return <section id={sectionId} className={isAlternate ? 'bg-foreground/5' : ''}><ProjectProductClassification items={content.items || []} /></section>;
+      return <section id={sectionId} className={isAlternate ? 'bg-foreground/5' : ''}><ProjectProductClassification title={content.title} heading={content.heading} items={content.items || []} /></section>;
     case 'SWOT':
       return <section id={sectionId} className={isAlternate ? 'bg-foreground/5' : ''}><ProjectSWOT strengths={content.strengths || []} weaknesses={content.weaknesses || []} opportunities={content.opportunities || []} threats={content.threats || []} marketImage={content.marketImage} /></section>;
     case 'MindMap':

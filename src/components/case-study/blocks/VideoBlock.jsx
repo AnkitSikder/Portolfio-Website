@@ -1,16 +1,18 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Play } from 'lucide-react';
+import SectionHeader from '../common/SectionHeader';
 
 export default function VideoBlock({ content, sectionId, isAlternate }) {
-  const { videoUrl, posterUrl, autoPlay = true, loop = true, muted = true, caption, heading, navLabel } = content;
+  const { videoUrl, posterUrl, autoPlay = true, loop = true, muted = true, controls, caption, heading, navLabel } = content;
   const videoRef = useRef(null);
+  const [showFacade, setShowFacade] = useState(!!posterUrl);
 
   useEffect(() => {
     if (videoRef.current && autoPlay) {
       // Attempt to play if autoPlay is true (muted is usually required for autoPlay)
       videoRef.current.play().catch(e => console.log('Autoplay prevented:', e));
     }
-  }, [autoPlay]);
+  }, [autoPlay, muted]);
 
   if (!videoUrl) return null;
 
@@ -26,20 +28,32 @@ export default function VideoBlock({ content, sectionId, isAlternate }) {
     <section id={sectionId} className={`py-10 md:py-16 lg:py-20 px-5 md:px-12 lg:px-24 ${isAlternate ? 'bg-foreground/5' : 'bg-background'} text-white w-full overflow-hidden`}>
       <div className="max-w-[1200px] mx-auto flex flex-col">
         {videoTitle && (
-          <h2 className="text-4xl md:text-5xl font-franchise uppercase text-foreground mb-8 tracking-wider">
-            {videoTitle}
-          </h2>
+          <SectionHeader heading={videoTitle} className="!mb-8" />
         )}
         <div className="rounded-[2rem] overflow-hidden bg-white/5 border border-white/10 relative group shadow-2xl">
         {gDriveId ? (
-          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-            <iframe
-              src={`https://drive.google.com/file/d/${gDriveId}/preview`}
-              className="absolute top-0 left-0 w-full h-full border-0"
-              allow="autoplay"
-              allowFullScreen
-              title="Google Drive Video"
-            ></iframe>
+          <div className="relative w-full bg-black" style={{ paddingBottom: '56.25%' }}>
+            {showFacade ? (
+              <div 
+                className="absolute inset-0 cursor-pointer group"
+                onClick={() => setShowFacade(false)}
+              >
+                <img src={posterUrl} alt={videoTitle} className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center text-background shadow-xl backdrop-blur-sm group-hover:scale-110 transition-transform">
+                    <Play className="w-6 h-6 ml-1" />
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <iframe
+                src={`https://drive.google.com/file/d/${gDriveId}/preview?autoplay=1`}
+                className="absolute top-0 left-0 w-full h-full border-0"
+                allow="autoplay"
+                allowFullScreen
+                title="Google Drive Video"
+              ></iframe>
+            )}
           </div>
         ) : (
           <>
@@ -50,7 +64,7 @@ export default function VideoBlock({ content, sectionId, isAlternate }) {
               autoPlay={autoPlay}
               loop={loop}
               muted={muted}
-              controls={!autoPlay}
+              controls={controls !== undefined ? controls : !autoPlay}
               playsInline
               className="w-full h-auto object-cover"
             />
@@ -67,7 +81,7 @@ export default function VideoBlock({ content, sectionId, isAlternate }) {
       </div>
       {caption && (
         <div className="mt-6 text-center">
-          <p className="font-clash text-sm md:text-base text-white/50 tracking-wide">{caption}</p>
+          <p className="font-clash text-sm md:text-[15px] text-white/50 tracking-wide">{caption}</p>
         </div>
       )}
       </div>
