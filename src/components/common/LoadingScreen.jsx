@@ -7,31 +7,35 @@ export default function LoadingScreen({ isLoaded }) {
   const [forceLoaded, setForceLoaded] = useState(false);
 
   useEffect(() => {
-    const failsafe = setTimeout(() => setForceLoaded(true), 2500);
+    // Increased failsafe to 8 seconds to allow Spline to actually load on slower mobile networks
+    const failsafe = setTimeout(() => setForceLoaded(true), 8000);
     return () => clearTimeout(failsafe);
   }, []);
 
   useEffect(() => {
     let interval;
     const effectivelyLoaded = isLoaded || forceLoaded;
+    
     if (!effectivelyLoaded) {
-      // Simulate loading progress
+      const startT = Date.now();
+      // Simulate loading progress based on elapsed time to prevent it from getting stuck
       interval = setInterval(() => {
         setProgress(p => {
-          // Slow down as it gets closer to 90%
-          const increment = Math.floor(Math.random() * 3) + 1;
-          const next = p + increment;
-          return next > 90 ? 90 : next;
+          const elapsed = Date.now() - startT;
+          const target = Math.floor((elapsed / 3000) * 90); // Reach ~90% in 3s
+          const next = Math.max(p, target);
+          // Also add a tiny random increment occasionally so it feels alive
+          const randomInc = Math.random() > 0.5 ? 1 : 0;
+          const finalNext = Math.max(next, p + randomInc);
+          return finalNext > 90 ? 90 : finalNext;
         });
-      }, 25);
+      }, 50);
     } else {
       // Spline is loaded, complete the progress quickly
-      clearInterval(interval);
-      
-      const finishInterval = setInterval(() => {
+      interval = setInterval(() => {
         setProgress(p => {
           if (p >= 100) {
-            clearInterval(finishInterval);
+            clearInterval(interval);
             
             // Trigger exit animation
             setTimeout(() => {
@@ -41,12 +45,15 @@ export default function LoadingScreen({ isLoaded }) {
               setTimeout(() => {
                 setIsDone(true);
               }, 1200);
-            }, 300);
+            }, 100);
             return 100;
           }
-          return p + 2;
+          // Quickly jump to 100% instead of +2 per tick
+          const remaining = 100 - p;
+          const increment = Math.max(Math.floor(remaining / 4), 3);
+          return Math.min(100, p + increment);
         });
-      }, 20);
+      }, 30);
     }
 
     return () => {
