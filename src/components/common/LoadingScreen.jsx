@@ -7,8 +7,12 @@ export default function LoadingScreen({ isLoaded }) {
   const [forceLoaded, setForceLoaded] = useState(false);
 
   useEffect(() => {
-    // Increased failsafe to 8 seconds to allow Spline to actually load on slower mobile networks
-    const failsafe = setTimeout(() => setForceLoaded(true), 8000);
+    // Determine if we are on a mobile device
+    const isMobile = window.innerWidth < 768;
+    // Desktop can wait for Spline to load, but mobile should reveal the homepage quickly
+    const failsafeTime = isMobile ? 1200 : 8000;
+    
+    const failsafe = setTimeout(() => setForceLoaded(true), failsafeTime);
     return () => clearTimeout(failsafe);
   }, []);
 
