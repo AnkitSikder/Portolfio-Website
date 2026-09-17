@@ -4,10 +4,17 @@ export default function LoadingScreen({ isLoaded }) {
   const [progress, setProgress] = useState(0);
   const [isRevealing, setIsRevealing] = useState(false);
   const [isDone, setIsDone] = useState(false);
+  const [forceLoaded, setForceLoaded] = useState(false);
+
+  useEffect(() => {
+    const failsafe = setTimeout(() => setForceLoaded(true), 2500);
+    return () => clearTimeout(failsafe);
+  }, []);
 
   useEffect(() => {
     let interval;
-    if (!isLoaded) {
+    const effectivelyLoaded = isLoaded || forceLoaded;
+    if (!effectivelyLoaded) {
       // Simulate loading progress
       interval = setInterval(() => {
         setProgress(p => {
@@ -45,7 +52,7 @@ export default function LoadingScreen({ isLoaded }) {
     return () => {
       clearInterval(interval);
     };
-  }, [isLoaded]);
+  }, [isLoaded, forceLoaded]);
 
   if (isDone) return null;
 
