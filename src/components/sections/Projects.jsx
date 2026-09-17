@@ -4,6 +4,7 @@ import StackingCards from '../projects/stacking-card';
 import ScrollReveal from '../common/ScrollReveal';
 import { projects as staticProjects } from '../../data/projectsData';
 import { getPublishedProjects } from '../../api/cmsApi';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 /**
  * Maps a CMS project to the shape expected by the StackingCards component.
@@ -86,10 +87,12 @@ export default function Projects() {
         });
 
         setProjects(mapped);
+        setTimeout(() => ScrollTrigger.refresh(), 100);
       })
       .catch(() => {
         // Supabase unreachable — fall back to static so the page isn't blank
         setProjects(staticProjects);
+        setTimeout(() => ScrollTrigger.refresh(), 100);
       });
   }, []);
 

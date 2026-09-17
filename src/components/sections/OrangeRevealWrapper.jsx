@@ -33,20 +33,20 @@ export default function OrangeRevealWrapper({ children }) {
       gsap.set(circleRef.current, { scale: 0 });
       gsap.set(contentRef.current, { autoAlpha: 0, y: 50 });
 
-      // 1. Expand the circle from the bottom center (takes up first 70% of scroll)
+      // 1. Expand the circle from the bottom center
       tl.to(circleRef.current, {
         scale: 120, 
         ease: 'power2.inOut',
         duration: 0.7
       });
 
-      // 2. Fade in and slide up content (takes remaining 30%)
+      // 2. Fade in and slide up content (Starts 0.3s before the circle expansion finishes)
       tl.to(contentRef.current, {
         autoAlpha: 1,
         y: 0,
         ease: 'power3.out',
-        duration: 0.3
-      });
+        duration: 0.4
+      }, "-=0.3");
     }, containerRef);
 
     return () => ctx.revert();
@@ -64,7 +64,7 @@ export default function OrangeRevealWrapper({ children }) {
 
       {/* The actual content that follows */}
       {/* We use -mt-[100vh] to perfectly overlap the last 100vh sticky scroll of the previous section, eliminating the gap! */}
-      <div ref={containerRef} className="orange-theme w-full relative z-30 pb-20 pt-10 -mt-[100vh] pointer-events-none">
+      <div ref={containerRef} className="orange-theme w-full relative z-30 pb-10 pt-10 -mt-[100vh] pointer-events-none">
         <div ref={contentRef} className="w-full h-full text-background invisible pointer-events-auto">
           {children}
         </div>

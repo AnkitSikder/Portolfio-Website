@@ -5,7 +5,7 @@ import ScrollReveal from "../common/ScrollReveal";
 
 export default function IntegrationHero() {
   return (
-    <section className="relative py-32 overflow-hidden text-foreground z-30">
+    <section className="relative pt-32 pb-12 overflow-hidden text-foreground z-30">
       {/* Light grid background tailored to dark theme */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:24px_24px]" />
 

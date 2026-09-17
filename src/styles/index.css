@@ -8,6 +8,7 @@
   src: url('/fonts/dtgetaigroteskdisplay-black.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
+  font-display: block;
 }
 
 @font-face {
@@ -15,6 +16,7 @@
   src: url('/fonts/Franchise-Bold-hinted.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
+  font-display: block;
 }
 
 @layer base {
