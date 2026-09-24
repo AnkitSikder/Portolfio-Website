@@ -5,7 +5,7 @@ import SectionProgressNav from '../../components/case-study/SectionProgressNav';
 import NextProjectNav from '../../components/case-study/NextProjectNav';
 import { getHeroProps, getBodyBlocks } from '../../utils/projectUtils';
 
-export default function MakhanaProject() {
+export default function MakhanaProject({ projectNumber }) {
   const project = {
     "id": "a959ad20-7411-456a-9a5a-02fb6512b88d",
     "title": "Makhana Seed Collector",
@@ -152,7 +152,7 @@ export default function MakhanaProject() {
     <article className="bg-background min-h-screen">
       <SectionProgressNav sections={navSections} />
       <div id="project-hero">
-        <ProjectHero {...heroProps} />
+        <ProjectHero {...heroProps} projectNumber={projectNumber} />
       </div>
       <ProjectRenderer blocks={bodyBlocks} />
       <NextProjectNav currentPath="/work/makhana-tool" />

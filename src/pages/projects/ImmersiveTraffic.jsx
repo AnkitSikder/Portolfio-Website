@@ -5,7 +5,7 @@ import SectionProgressNav from '../../components/case-study/SectionProgressNav';
 import NextProjectNav from '../../components/case-study/NextProjectNav';
 import { getHeroProps, getBodyBlocks } from '../../utils/projectUtils';
 
-export default function ImmersiveTraffic() {
+export default function ImmersiveTraffic({ projectNumber }) {
   const project = {
   "id": "df15c2fd-1a6a-4a50-8612-2e85c818cc49",
   "title": "Immersive Traffic Command",
@@ -429,7 +429,7 @@ export default function ImmersiveTraffic() {
     <article className="bg-background min-h-screen">
       <SectionProgressNav sections={navSections} />
       <div id="project-hero">
-        <ProjectHero {...heroProps} />
+        <ProjectHero {...heroProps} projectNumber={projectNumber} />
       </div>
       <ProjectRenderer blocks={bodyBlocks} />
       <NextProjectNav currentPath="/work/vrtraffic" />

@@ -5,7 +5,7 @@ import SectionProgressNav from '../../components/case-study/SectionProgressNav';
 import NextProjectNav from '../../components/case-study/NextProjectNav';
 import { getHeroProps, getBodyBlocks } from '../../utils/projectUtils';
 
-export default function AuraCharge() {
+export default function AuraCharge({ projectNumber }) {
   const project = {
   "id": "03c6cc48-b7d6-40dc-a762-5be2ada03f69",
   "title": "Aura Charge",
@@ -427,8 +427,7 @@ export default function AuraCharge() {
         "layout": "single",
         "images": [
           "/auracharge/99_all_embedded/embedded_05.png",
-          "/auracharge/99_all_embedded/embedded_06.png",
-          "/auracharge/00_source/auracharge GIF (1).gif"
+          "/auracharge/99_all_embedded/embedded_06.png"
         ],
         "navLabel": "High-Fi Screens"
       },
@@ -444,8 +443,7 @@ export default function AuraCharge() {
         "images": [
           "/auracharge/00_source/auracharge_infographic_v3.jpg",
           "/auracharge/00_source/Screenshot 2026-09-03 045312.png",
-          "/auracharge/10_final_renders/context_render_06.jpg",
-          "/auracharge/00_source/Recording 2024-07-04 at 21.04.00.gif"
+          "/auracharge/10_final_renders/context_render_06.jpg"
         ],
         "navLabel": "Renders"
       },
@@ -474,7 +472,7 @@ export default function AuraCharge() {
     <article className="bg-background min-h-screen">
       <SectionProgressNav sections={navSections} />
       <div id="project-hero">
-        <ProjectHero {...heroProps} />
+        <ProjectHero {...heroProps} projectNumber={projectNumber} />
       </div>
       <ProjectRenderer blocks={bodyBlocks} />
       <NextProjectNav currentPath="/work/auracharge" />

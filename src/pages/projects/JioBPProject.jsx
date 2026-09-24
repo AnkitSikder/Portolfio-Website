@@ -9,7 +9,9 @@ import KeyOpportunities from '../../components/case-study/jio-bp/KeyOpportunitie
 import HeuristicAnalysis from '../../components/case-study/jio-bp/HeuristicAnalysis';
 import NextProjectNav from '../../components/case-study/NextProjectNav';
 
-export default function JioBPProject() {
+export default function JioBPProject({ projectNumber }) {
+  const isPdfMode = typeof window !== 'undefined' && window.location.pathname === '/pdf';
+  
   const navSections = [
     { id: 'project-hero', label: 'Overview' },
     { id: 'about', label: 'The Problem' },
@@ -47,6 +49,7 @@ export default function JioBPProject() {
           duration="2.5 months"
           tools={["Figma", "Claude", "Antigravity", "Stitch", "Lottie Creator", "Procreate"]}
           heroImage="/jio-bp/Mockup_JioBP_3.jpg"
+          projectNumber={projectNumber}
         />
       </div>
 
@@ -95,31 +98,10 @@ export default function JioBPProject() {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal>
-          <div className="marquee-container overflow-hidden w-full relative mb-6 md:mb-8">
-            <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-            <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-            
-            <div 
-              className="marquee-content flex gap-6 h-[280px] md:h-[400px] w-max pr-6"
-              style={{ animationDuration: '10s' }}
-            >
+        {isPdfMode ? (
+          <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-24 mb-10">
+            <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[140px] md:auto-rows-[180px] gap-4">
               {[
-                'Screenshot 2026-06-02 110114.png',
-                'Screenshot 2026-06-02 110440.png',
-                'Screenshot 2026-06-02 110521.png',
-                'Screenshot 2026-06-02 110522.png',
-                'Screenshot 2026-06-10 120927.png',
-                'Screenshot 2026-06-10 121016.png',
-                'Screenshot 2026-06-10 121040.png',
-                'Screenshot 2026-06-10 121104.png',
-                'Screenshot 2026-06-10 121205.png',
-                'Screenshot 2026-06-10 121230.png',
-                'Screenshot 2026-06-10 122333.png',
-                'Screenshot 2026-06-10 122401.png',
-                'Screenshot 2026-06-10 122539.png',
-                'Screenshot 2026-06-10 122607.png',
-                // duplicate for infinite scroll
                 'Screenshot 2026-06-02 110114.png',
                 'Screenshot 2026-06-02 110440.png',
                 'Screenshot 2026-06-02 110521.png',
@@ -134,60 +116,129 @@ export default function JioBPProject() {
                 'Screenshot 2026-06-10 122401.png',
                 'Screenshot 2026-06-10 122539.png',
                 'Screenshot 2026-06-10 122607.png'
-              ].map((src, idx) => (
-                <div key={idx} className="relative group rounded-2xl overflow-hidden bg-foreground/5 border border-foreground/10 shadow-lg shrink-0 h-full">
-                  <img src={`/jio-bp/screens/old/${src}`} alt={`Existing Screen ${idx + 1}`} className="h-full w-auto object-cover pointer-events-none" loading="lazy" />
-                </div>
-              ))}
+              ].map((src, idx) => {
+                const bentoSpans = [
+                  // Block 1: Big Left (5 images)
+                  'col-span-2 row-span-2',
+                  'col-span-1 row-span-1',
+                  'col-span-1 row-span-1',
+                  'col-span-1 row-span-1',
+                  'col-span-1 row-span-1',
+                  // Block 2: Big Right (5 images)
+                  'col-span-1 row-span-1',
+                  'col-span-1 row-span-1',
+                  'col-span-1 row-span-1',
+                  'col-span-1 row-span-1',
+                  'col-span-2 row-span-2',
+                  // Block 3: Big Left, Wide Right (4 images)
+                  'col-span-2 row-span-2',
+                  'col-span-2 row-span-1',
+                  'col-span-1 row-span-1',
+                  'col-span-1 row-span-1'
+                ];
+                return (
+                  <div key={idx} className={`relative group rounded-2xl overflow-hidden bg-white/5 border border-white/10 shadow-lg flex items-center justify-center p-2 ${bentoSpans[idx]}`}>
+                    <img src={`/jio-bp/screens/old/${src}`} alt={`Existing Screen ${idx + 1}`} className="max-h-full max-w-full object-contain pointer-events-none rounded-xl" loading="lazy" />
+                  </div>
+                );
+              })}
             </div>
           </div>
+        ) : (
+          <ScrollReveal>
+            <div className="marquee-container overflow-hidden w-full relative mb-6 md:mb-8">
+              <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+              <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+              
+              <div 
+                className="marquee-content flex gap-6 h-[280px] md:h-[400px] w-max pr-6"
+                style={{ animationDuration: '10s' }}
+              >
+                {[
+                  'Screenshot 2026-06-02 110114.png',
+                  'Screenshot 2026-06-02 110440.png',
+                  'Screenshot 2026-06-02 110521.png',
+                  'Screenshot 2026-06-02 110522.png',
+                  'Screenshot 2026-06-10 120927.png',
+                  'Screenshot 2026-06-10 121016.png',
+                  'Screenshot 2026-06-10 121040.png',
+                  'Screenshot 2026-06-10 121104.png',
+                  'Screenshot 2026-06-10 121205.png',
+                  'Screenshot 2026-06-10 121230.png',
+                  'Screenshot 2026-06-10 122333.png',
+                  'Screenshot 2026-06-10 122401.png',
+                  'Screenshot 2026-06-10 122539.png',
+                  'Screenshot 2026-06-10 122607.png',
+                  // duplicate for infinite scroll
+                  'Screenshot 2026-06-02 110114.png',
+                  'Screenshot 2026-06-02 110440.png',
+                  'Screenshot 2026-06-02 110521.png',
+                  'Screenshot 2026-06-02 110522.png',
+                  'Screenshot 2026-06-10 120927.png',
+                  'Screenshot 2026-06-10 121016.png',
+                  'Screenshot 2026-06-10 121040.png',
+                  'Screenshot 2026-06-10 121104.png',
+                  'Screenshot 2026-06-10 121205.png',
+                  'Screenshot 2026-06-10 121230.png',
+                  'Screenshot 2026-06-10 122333.png',
+                  'Screenshot 2026-06-10 122401.png',
+                  'Screenshot 2026-06-10 122539.png',
+                  'Screenshot 2026-06-10 122607.png'
+                ].map((src, idx) => (
+                  <div key={idx} className="relative group rounded-2xl overflow-hidden bg-foreground/5 border border-foreground/10 shadow-lg shrink-0 h-full">
+                    <img src={`/jio-bp/screens/old/${src}`} alt={`Existing Screen ${idx + 1}`} className="h-full w-auto object-cover pointer-events-none" loading="lazy" />
+                  </div>
+                ))}
+              </div>
+            </div>
 
-          <div className="marquee-container overflow-hidden w-full relative">
-            <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-            <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-            
-            <div 
-              className="marquee-content flex gap-6 h-[280px] md:h-[400px] w-max pr-6"
-              style={{ animationDuration: '12s', animationDirection: 'reverse' }}
-            >
-              {[
-                'Screenshot 2026-06-10 122607.png',
-                'Screenshot 2026-06-10 122539.png',
-                'Screenshot 2026-06-10 122401.png',
-                'Screenshot 2026-06-10 122333.png',
-                'Screenshot 2026-06-10 121230.png',
-                'Screenshot 2026-06-10 121205.png',
-                'Screenshot 2026-06-10 121104.png',
-                'Screenshot 2026-06-10 121040.png',
-                'Screenshot 2026-06-10 121016.png',
-                'Screenshot 2026-06-10 120927.png',
-                'Screenshot 2026-06-02 110522.png',
-                'Screenshot 2026-06-02 110521.png',
-                'Screenshot 2026-06-02 110440.png',
-                'Screenshot 2026-06-02 110114.png',
-                // duplicate for infinite scroll
-                'Screenshot 2026-06-10 122607.png',
-                'Screenshot 2026-06-10 122539.png',
-                'Screenshot 2026-06-10 122401.png',
-                'Screenshot 2026-06-10 122333.png',
-                'Screenshot 2026-06-10 121230.png',
-                'Screenshot 2026-06-10 121205.png',
-                'Screenshot 2026-06-10 121104.png',
-                'Screenshot 2026-06-10 121040.png',
-                'Screenshot 2026-06-10 121016.png',
-                'Screenshot 2026-06-10 120927.png',
-                'Screenshot 2026-06-02 110522.png',
-                'Screenshot 2026-06-02 110521.png',
-                'Screenshot 2026-06-02 110440.png',
-                'Screenshot 2026-06-02 110114.png'
-              ].map((src, idx) => (
-                <div key={idx} className="relative group rounded-2xl overflow-hidden bg-foreground/5 border border-foreground/10 shadow-lg shrink-0 h-full">
-                  <img src={`/jio-bp/screens/old/${src}`} alt={`Existing Screen ${idx + 1}`} className="h-full w-auto object-cover pointer-events-none" loading="lazy" />
-                </div>
-              ))}
+            <div className="marquee-container overflow-hidden w-full relative">
+              <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+              <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+              
+              <div 
+                className="marquee-content flex gap-6 h-[280px] md:h-[400px] w-max pr-6"
+                style={{ animationDuration: '12s', animationDirection: 'reverse' }}
+              >
+                {[
+                  'Screenshot 2026-06-10 122607.png',
+                  'Screenshot 2026-06-10 122539.png',
+                  'Screenshot 2026-06-10 122401.png',
+                  'Screenshot 2026-06-10 122333.png',
+                  'Screenshot 2026-06-10 121230.png',
+                  'Screenshot 2026-06-10 121205.png',
+                  'Screenshot 2026-06-10 121104.png',
+                  'Screenshot 2026-06-10 121040.png',
+                  'Screenshot 2026-06-10 121016.png',
+                  'Screenshot 2026-06-10 120927.png',
+                  'Screenshot 2026-06-02 110522.png',
+                  'Screenshot 2026-06-02 110521.png',
+                  'Screenshot 2026-06-02 110440.png',
+                  'Screenshot 2026-06-02 110114.png',
+                  // duplicate for infinite scroll
+                  'Screenshot 2026-06-10 122607.png',
+                  'Screenshot 2026-06-10 122539.png',
+                  'Screenshot 2026-06-10 122401.png',
+                  'Screenshot 2026-06-10 122333.png',
+                  'Screenshot 2026-06-10 121230.png',
+                  'Screenshot 2026-06-10 121205.png',
+                  'Screenshot 2026-06-10 121104.png',
+                  'Screenshot 2026-06-10 121040.png',
+                  'Screenshot 2026-06-10 121016.png',
+                  'Screenshot 2026-06-10 120927.png',
+                  'Screenshot 2026-06-02 110522.png',
+                  'Screenshot 2026-06-02 110521.png',
+                  'Screenshot 2026-06-02 110440.png',
+                  'Screenshot 2026-06-02 110114.png'
+                ].map((src, idx) => (
+                  <div key={idx} className="relative group rounded-2xl overflow-hidden bg-foreground/5 border border-foreground/10 shadow-lg shrink-0 h-full">
+                    <img src={`/jio-bp/screens/old/${src}`} alt={`Existing Screen ${idx + 1}`} className="h-full w-auto object-cover pointer-events-none" loading="lazy" />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
+        )}
 
 
       </section>
@@ -613,16 +664,22 @@ export default function JioBPProject() {
 
                 <div className="w-full max-w-[360px] md:max-w-[480px] rounded-[2rem] md:rounded-[2.5rem] bg-white border border-foreground/10 shadow-2xl relative flex items-center justify-center p-6 md:p-10">
                   <div className="w-full max-w-[240px] md:max-w-[300px]">
-                    <video 
-                      src="/jio-bp/My%20Station.mp4" 
-                      className="w-full h-auto object-contain"
-                      autoPlay 
-                      muted 
-                      loop 
-                      playsInline 
-                      preload="auto"
-                      aria-label="My Station mobile app integration"
-                    />
+                    {!isPdfMode ? (
+                      <video 
+                        src="/jio-bp/My%20Station.mp4" 
+                        className="w-full h-auto object-contain"
+                        autoPlay 
+                        muted 
+                        loop 
+                        playsInline 
+                        preload="auto"
+                        aria-label="My Station mobile app integration"
+                      />
+                    ) : (
+                      <div className="w-full h-auto flex items-center justify-center">
+                        <img src="/jio-bp/mobile_app_static_v2.png" alt="Mobile App Demo" className="w-full h-auto object-contain" />
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -643,90 +700,94 @@ export default function JioBPProject() {
               />
             </div>
             {/* Top Row */}
-            <div className="grid grid-cols-1 md:grid-cols-[3.8fr_1fr] gap-6 md:gap-8 mb-10 md:mb-16">
-              {/* Video 1: Login RO */}
-              <div className="flex flex-col gap-5 h-full">
-                <div className="w-full rounded-2xl overflow-hidden border border-foreground/10 bg-foreground/5 shadow-sm relative group">
-                  <video 
-                    src="/jio-bp/Login RO.mp4" 
-                    className="w-full h-auto object-cover"
-                    autoPlay 
-                    muted 
-                    loop 
-                    playsInline 
-                    preload="auto"
-                    aria-label="RO Login and Access workflow"
-                  />
-                </div>
-                <div className="mt-auto">
-                  <h4 className="font-clash font-semibold text-foreground tracking-wide text-lg md:text-xl mb-1">RO Login & Access</h4>
-                  <p className="font-clash text-foreground/60 text-sm md:text-base leading-relaxed">Streamlined entry into the incident management experience.</p>
-                </div>
-              </div>
+            {!isPdfMode && (
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-[3.8fr_1fr] gap-6 md:gap-8 mb-10 md:mb-16">
+                  {/* Video 1: Login RO */}
+                  <div className="flex flex-col gap-5 h-full">
+                    <div className="w-full rounded-2xl overflow-hidden border border-foreground/10 bg-foreground/5 shadow-sm relative group">
+                      <video 
+                        src="/jio-bp/Login RO.mp4" 
+                        className="w-full h-auto object-cover"
+                        autoPlay 
+                        muted 
+                        loop 
+                        playsInline 
+                        preload="auto"
+                        aria-label="RO Login and Access workflow"
+                      />
+                    </div>
+                    <div className="mt-auto">
+                      <h4 className="font-clash font-semibold text-foreground tracking-wide text-lg md:text-xl mb-1">RO Login & Access</h4>
+                      <p className="font-clash text-foreground/60 text-sm md:text-base leading-relaxed">Streamlined entry into the incident management experience.</p>
+                    </div>
+                  </div>
 
-              {/* Video 2: RO Mobile */}
-              <div className="flex flex-col gap-5 h-full">
-                <div className="w-full rounded-2xl overflow-hidden border border-foreground/10 bg-foreground/5 shadow-sm relative group">
-                  <video 
-                    src="/jio-bp/RO Mobile.mp4" 
-                    className="w-full h-auto object-cover"
-                    autoPlay 
-                    muted 
-                    loop 
-                    playsInline 
-                    preload="auto"
-                    aria-label="RO Mobile incident management workflow"
-                  />
+                  {/* Video 2: RO Mobile */}
+                  <div className="flex flex-col gap-5 h-full">
+                    <div className="w-full rounded-2xl overflow-hidden border border-foreground/10 bg-foreground/5 shadow-sm relative group">
+                      <video 
+                        src="/jio-bp/RO Mobile.mp4" 
+                        className="w-full h-auto object-cover"
+                        autoPlay 
+                        muted 
+                        loop 
+                        playsInline 
+                        preload="auto"
+                        aria-label="RO Mobile incident management workflow"
+                      />
+                    </div>
+                    <div className="mt-auto">
+                      <h4 className="font-clash font-semibold text-foreground tracking-wide text-lg md:text-xl mb-1">RO Mobile Experience</h4>
+                      <p className="font-clash text-foreground/60 text-sm md:text-base leading-relaxed">Focused mobile workflows for reporting and tracking incidents.</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-auto">
-                  <h4 className="font-clash font-semibold text-foreground tracking-wide text-lg md:text-xl mb-1">RO Mobile Experience</h4>
-                  <p className="font-clash text-foreground/60 text-sm md:text-base leading-relaxed">Focused mobile workflows for reporting and tracking incidents.</p>
-                </div>
-              </div>
-            </div>
 
-            {/* Bottom Row */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              {/* Video 3: ASR Dashboard */}
-              <div className="flex flex-col gap-5 h-full">
-                <div className="w-full rounded-2xl overflow-hidden border border-foreground/10 bg-foreground/5 shadow-sm relative group">
-                  <video 
-                    src="/jio-bp/ASR Dashboard.mp4" 
-                    className="w-full h-auto object-cover"
-                    autoPlay 
-                    muted 
-                    loop 
-                    playsInline 
-                    preload="auto"
-                    aria-label="ASR Dashboard interaction"
-                  />
-                </div>
-                <div className="mt-auto">
-                  <h4 className="font-clash font-semibold text-foreground tracking-wide text-lg md:text-xl mb-1">ASR Dashboard</h4>
-                  <p className="font-clash text-foreground/60 text-sm md:text-base leading-relaxed">Action-focused incident review and decision-making.</p>
-                </div>
-              </div>
+                {/* Bottom Row */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                  {/* Video 3: ASR Dashboard */}
+                  <div className="flex flex-col gap-5 h-full">
+                    <div className="w-full rounded-2xl overflow-hidden border border-foreground/10 bg-foreground/5 shadow-sm relative group">
+                      <video 
+                        src="/jio-bp/ASR Dashboard.mp4" 
+                        className="w-full h-auto object-cover"
+                        autoPlay 
+                        muted 
+                        loop 
+                        playsInline 
+                        preload="auto"
+                        aria-label="ASR Dashboard interaction"
+                      />
+                    </div>
+                    <div className="mt-auto">
+                      <h4 className="font-clash font-semibold text-foreground tracking-wide text-lg md:text-xl mb-1">ASR Dashboard</h4>
+                      <p className="font-clash text-foreground/60 text-sm md:text-base leading-relaxed">Action-focused incident review and decision-making.</p>
+                    </div>
+                  </div>
 
-              {/* Video 4: HO Dashboard */}
-              <div className="flex flex-col gap-5 h-full">
-                <div className="w-full rounded-2xl overflow-hidden border border-foreground/10 bg-foreground/5 shadow-sm relative group">
-                  <video 
-                    src="/jio-bp/HO Dashboard.mp4" 
-                    className="w-full h-auto object-cover"
-                    autoPlay 
-                    muted 
-                    loop 
-                    playsInline 
-                    preload="auto"
-                    aria-label="HO Dashboard interaction"
-                  />
+                  {/* Video 4: HO Dashboard */}
+                  <div className="flex flex-col gap-5 h-full">
+                    <div className="w-full rounded-2xl overflow-hidden border border-foreground/10 bg-foreground/5 shadow-sm relative group">
+                      <video 
+                        src="/jio-bp/HO Dashboard.mp4" 
+                        className="w-full h-auto object-cover"
+                        autoPlay 
+                        muted 
+                        loop 
+                        playsInline 
+                        preload="auto"
+                        aria-label="HO Dashboard interaction"
+                      />
+                    </div>
+                    <div className="mt-auto">
+                      <h4 className="font-clash font-semibold text-foreground tracking-wide text-lg md:text-xl mb-1">HO Dashboard</h4>
+                      <p className="font-clash text-foreground/60 text-sm md:text-base leading-relaxed">Enterprise-level visibility across incidents, risk and performance.</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-auto">
-                  <h4 className="font-clash font-semibold text-foreground tracking-wide text-lg md:text-xl mb-1">HO Dashboard</h4>
-                  <p className="font-clash text-foreground/60 text-sm md:text-base leading-relaxed">Enterprise-level visibility across incidents, risk and performance.</p>
-                </div>
-              </div>
-            </div>
+              </>
+            )}
           </div>
         </ScrollReveal>
 

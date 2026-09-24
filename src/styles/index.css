@@ -244,3 +244,62 @@ html.lenis, html.lenis body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+/* ── PDF Export Mode ── */
+.pdf-mode nav,
+.pdf-mode .fixed {
+  display: none !important;
+}
+.pdf-mode a[href="/"] {
+  display: none !important;
+}
+.pdf-mode a[href*="/work/"] {
+  display: none !important;
+}
+
+@media print {
+  body.pdf-mode {
+    background-color: #171621 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .pdf-mode section,
+  .pdf-mode .bento-card,
+  .pdf-mode .grid > div,
+  .pdf-mode img,
+  .pdf-mode video,
+  .pdf-mode figure {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    height: max-content !important;
+  }
+  
+  /* Prevent Chrome from breaking elements */
+  .pdf-mode * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Force all fade-in animations to be fully visible in print mode */
+  .pdf-mode * {
+    opacity: 1 !important;
+  }
+  
+  /* Fix Chrome PDF dropping images due to mix-blend-mode */
+  .pdf-mode .mix-blend-screen {
+    mix-blend-mode: normal !important;
+  }
+  .pdf-mode .will-change-transform {
+    transform: none !important;
+  }
+  
+  /* Ensure cover pages have a reliable height for printing one A3 page */
+  .pdf-mode #project-hero section,
+  .pdf-mode > section:first-child,
+  .pdf-mode > section:nth-child(2) {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    break-after: page !important;
+    page-break-after: always !important;
+  }
+}

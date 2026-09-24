@@ -7,12 +7,14 @@ export default function VideoBlock({ content, sectionId, isAlternate }) {
   const videoRef = useRef(null);
   const [showFacade, setShowFacade] = useState(!!posterUrl);
 
+  const isPdfMode = typeof window !== 'undefined' && window.location.pathname === '/pdf';
+
   useEffect(() => {
-    if (videoRef.current && autoPlay) {
+    if (videoRef.current && autoPlay && !isPdfMode) {
       // Attempt to play if autoPlay is true (muted is usually required for autoPlay)
       videoRef.current.play().catch(e => console.log('Autoplay prevented:', e));
     }
-  }, [autoPlay, muted]);
+  }, [autoPlay, muted, isPdfMode]);
 
   if (!videoUrl) return null;
 
@@ -23,6 +25,23 @@ export default function VideoBlock({ content, sectionId, isAlternate }) {
   };
   const gDriveId = getGoogleDriveId(videoUrl);
   const videoTitle = heading || navLabel;
+
+  if (isPdfMode) {
+    const linkUrl = gDriveId ? `https://drive.google.com/file/d/${gDriveId}/view` : videoUrl;
+    return (
+      <section id={sectionId} className={`py-10 md:py-16 lg:py-20 px-5 md:px-12 lg:px-24 ${isAlternate ? 'bg-foreground/5' : 'bg-background'} text-white w-full overflow-hidden text-center`}>
+        {videoTitle && (
+          <SectionHeader heading={videoTitle} className="!mb-8 items-center text-center" />
+        )}
+        <div className="inline-block border border-white/20 p-6 md:p-10 rounded-2xl bg-white/5 shadow-xl max-w-3xl mx-auto">
+          <p className="mb-4 font-clash text-lg text-white/80">View the demo video here:</p>
+          <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="text-primary font-medium text-lg md:text-xl break-all hover:underline">
+            {linkUrl}
+          </a>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id={sectionId} className={`py-10 md:py-16 lg:py-20 px-5 md:px-12 lg:px-24 ${isAlternate ? 'bg-foreground/5' : 'bg-background'} text-white w-full overflow-hidden`}>

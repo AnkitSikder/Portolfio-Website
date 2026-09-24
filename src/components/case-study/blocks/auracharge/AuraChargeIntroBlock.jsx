@@ -17,7 +17,7 @@ export default function AuraChargeIntroBlock({ content, sectionId, isAlternate }
           />
 
           <ScrollReveal delay={0.1}>
-            <div className="space-y-4 font-clash text-base md:text-lg font-medium tracking-wide text-white/70 leading-relaxed mb-10">
+            <div className="space-y-4 font-clash text-base md:text-lg font-medium tracking-wide text-white/70 leading-relaxed mb-10 max-w-5xl">
               <p>{intro}</p>
               <p>{secondary}</p>
             </div>

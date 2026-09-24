@@ -217,7 +217,11 @@ function ImageGalleryRenderer({ content, sectionId, isAlternate }) {
 
   const bgClass = content.bgClass || (isAlternate ? 'bg-foreground/5' : 'bg-background');
 
-  if (content.layout === 'carousel') {
+  const isPdfMode = typeof window !== 'undefined' && window.location.pathname === '/pdf';
+  // Use a balanced 2x2 grid for carousels in PDF mode so all images have equal height
+  const effectiveLayout = (isPdfMode && content.layout === 'carousel') ? 'pdf-grid' : content.layout;
+
+  if (effectiveLayout === 'carousel') {
     // Double images array for seamless infinite marquee scroll
     const marqueeImages = [...images, ...images];
     
@@ -268,12 +272,14 @@ function ImageGalleryRenderer({ content, sectionId, isAlternate }) {
     );
   }
 
-  const layoutClass = content.layout === 'masonry'
+  const layoutClass = effectiveLayout === 'masonry'
     ? 'columns-2 md:columns-3 gap-4'
-    : content.layout === 'scroll'
+    : effectiveLayout === 'scroll'
     ? 'flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory'
-    : content.layout === 'bento'
+    : effectiveLayout === 'bento'
     ? 'grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6'
+    : effectiveLayout === 'pdf-grid'
+    ? 'grid grid-cols-1 md:grid-cols-2 gap-6'
     : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
 
   return (
@@ -290,18 +296,22 @@ function ImageGalleryRenderer({ content, sectionId, isAlternate }) {
 
         <div className={layoutClass}>
           {images.map((img, idx) => {
-            let itemClass = `rounded-2xl overflow-hidden bg-foreground/5 border border-foreground/10 shadow-lg ${content.layout === 'scroll' ? 'shrink-0 w-80 snap-start' : ''}`;
-            if (content.layout === 'bento') {
+            let itemClass = `rounded-2xl overflow-hidden bg-foreground/5 border border-foreground/10 shadow-lg ${effectiveLayout === 'scroll' ? 'shrink-0 w-80 snap-start' : ''}`;
+            if (effectiveLayout === 'bento') {
               itemClass += idx === 0 ? ' md:row-span-2 h-full' : ' h-full';
             }
             
             return (
-              <ScrollReveal key={idx} delay={0.05 * idx} className={content.layout === 'bento' ? (idx === 0 ? 'md:row-span-2 h-full' : 'h-full') : ''}>
-                <div className={`${itemClass} flex flex-col ${content.layout === 'bento' ? 'h-full' : ''}`}>
+              <ScrollReveal key={idx} delay={0.05 * idx} className={effectiveLayout === 'bento' ? (idx === 0 ? 'md:row-span-2 h-full' : 'h-full') : ''}>
+                <div className={`${itemClass} flex flex-col ${effectiveLayout === 'bento' ? 'h-full' : ''}`}>
                   <img 
                     src={img.url} 
                     alt={img.alt || ''} 
-                    className={`w-full ${content.layout === 'bento' ? 'h-full object-cover flex-1' : 'h-auto'}`} 
+                    className={`w-full ${
+                      effectiveLayout === 'bento' ? 'h-full object-cover flex-1' : 
+                      effectiveLayout === 'pdf-grid' ? 'aspect-[4/3] object-cover' : 
+                      'h-auto'
+                    }`} 
                     loading="lazy" 
                   />
                   {img.caption && <p className="text-xs text-center text-foreground/50 font-clash font-medium tracking-wide py-2 px-3 shrink-0">{img.caption}</p>}

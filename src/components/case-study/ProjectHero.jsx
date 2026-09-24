@@ -1,19 +1,21 @@
 import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function ProjectHero({ category, title, summary, role, duration, heroImage, tools, imageClassName = "object-center" }) {
+export default function ProjectHero({ category, title, summary, role, duration, heroImage, tools, imageClassName = "object-center", projectNumber }) {
   const imgRef = useRef(null);
+
+  const isPdfMode = typeof window !== 'undefined' && window.location.pathname === '/pdf';
 
   // Subtle parallax on scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (!imgRef.current) return;
+      if (!imgRef.current || isPdfMode) return;
       const y = window.scrollY;
       imgRef.current.style.transform = `translateY(${y * 0.35}px) scale(1.08)`;
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isPdfMode]);
 
   return (
     <section className="relative w-full h-[100svh] min-h-[600px] overflow-hidden bg-[#0a0910]">
@@ -22,15 +24,16 @@ export default function ProjectHero({ category, title, summary, role, duration, 
       {heroImage ? (
         <div
           ref={imgRef}
-          className="absolute inset-0 will-change-transform"
-          style={{ transform: 'scale(1.08)' }}
+          className={`absolute inset-0 ${!isPdfMode ? 'will-change-transform' : ''}`}
+          style={{ transform: isPdfMode ? 'none' : 'scale(1.08)' }}
         >
           <img
             src={heroImage}
             alt={title}
             className={`w-full h-full object-cover ${imageClassName}`}
-            style={{ filter: 'brightness(0.55)' }}
           />
+          {/* Fallback darkening overlay that prints better than CSS filters */}
+          <div className="absolute inset-0 bg-black/45 pointer-events-none" />
         </div>
       ) : (
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a1828] via-[#0d0c14] to-[#0a0910]" />
@@ -110,8 +113,16 @@ export default function ProjectHero({ category, title, summary, role, duration, 
       <div className="absolute bottom-0 left-0 right-0 z-10 px-8 pb-10 md:px-14 md:pb-14 lg:px-20 lg:pb-16">
         <div className="max-w-[1400px] mx-auto">
 
-          {/* Category pill */}
-          <div className="mb-5">
+          {/* Project Number & Category pill */}
+          <div className="mb-5 flex flex-col items-start gap-4">
+            {projectNumber && (
+              <span 
+                className="font-franchise text-white/20 select-none leading-none -ml-1" 
+                style={{ fontSize: 'clamp(3rem, 6vw, 5rem)' }}
+              >
+                {projectNumber}.
+              </span>
+            )}
             <span
               className="inline-block px-4 py-1.5 text-[11px] font-clash font-semibold rounded-full uppercase tracking-[0.18em] border"
               style={{
