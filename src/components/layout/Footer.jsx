@@ -50,7 +50,7 @@ export default function Footer() {
             <div className="flex justify-center md:justify-start gap-8 md:gap-16 text-[5vw] md:text-[32px] text-[#171621] font-medium tracking-tight mb-2 md:mb-0">
               <HoverButton text="Work" href="#work" className="hover:text-[#F76300] w-fit" />
               <HoverButton text="About" href="#about" className="hover:text-[#F76300] w-fit" />
-              <HoverButton text="Resume" href="https://drive.google.com/file/d/1RfFByeKvDICGWapt51O5PgBdOqusrpjO/view?usp=sharing" target="_blank" className="hover:text-[#F76300] w-fit" icon={
+              <HoverButton text="Resume" href="https://drive.google.com/file/d/1EcRWIRFtGH_v1u8DFS7OPTO4pMylfOaA/view?usp=sharing" target="_blank" className="hover:text-[#F76300] w-fit" icon={
                 <svg 
                   aria-hidden="true" 
                   xmlns="http://www.w3.org/2000/svg" 

@@ -35,7 +35,7 @@ export default function Header({ isNavVisible, isScrolled }) {
                 <HoverButton href="#work" text="Work" className="hover:text-[#ff5a00]" />
                 <HoverButton href="#about" text="About" className="hover:text-[#ff5a00]" />
                 <HoverButton 
-                  href="https://drive.google.com/file/d/1RfFByeKvDICGWapt51O5PgBdOqusrpjO/view?usp=sharing" 
+                  href="https://drive.google.com/file/d/1EcRWIRFtGH_v1u8DFS7OPTO4pMylfOaA/view?usp=sharing" 
                   target="_blank"
                   text="Resume" 
                   className="hover:text-[#ff5a00]" 
@@ -113,7 +113,7 @@ export default function Header({ isNavVisible, isScrolled }) {
         <nav className="flex flex-col gap-8 text-4xl font-franchise uppercase tracking-wider text-white">
           <Link to="/#work" onClick={() => setIsMenuOpen(false)} className="hover:text-primary transition-colors">Work</Link>
           <Link to="/#about" onClick={() => setIsMenuOpen(false)} className="hover:text-primary transition-colors">About</Link>
-          <a href="https://drive.google.com/file/d/1RfFByeKvDICGWapt51O5PgBdOqusrpjO/view?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="hover:text-primary transition-colors flex items-center gap-3">
+          <a href="https://drive.google.com/file/d/1EcRWIRFtGH_v1u8DFS7OPTO4pMylfOaA/view?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="hover:text-primary transition-colors flex items-center gap-3">
             Resume
             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <path d="M7 7h10v10"/>
