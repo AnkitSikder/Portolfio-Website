@@ -34,9 +34,11 @@ export default function HeuristicAnalysis() {
         <SectionHeader 
           title="Heuristic Analysis"
           heading="10 Usability Heuristics"
-          description="Evaluating the existing system against Jakob Nielsen's 10 general principles for interaction design to identify areas for improvement."
-          className="!mb-12"
+          className="!mb-6 items-center text-center"
         />
+        <p className="font-clash text-base md:text-lg font-medium tracking-wide text-white/70 leading-relaxed max-w-2xl mx-auto text-center mb-12">
+          Evaluating the existing system against Jakob Nielsen's 10 general principles for interaction design to identify areas for improvement.
+        </p>
       </ScrollReveal>
 
       <ScrollReveal delay={0.2}>
