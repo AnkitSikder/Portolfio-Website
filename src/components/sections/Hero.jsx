@@ -12,16 +12,6 @@ export default function Hero({ setIsSplineLoaded }) {
   const splineWrapperRef = useRef(null);
 
   const [isMobile, setIsMobile] = useState(() => window.innerWidth < 768);
-  const [loadSpline, setLoadSpline] = useState(false);
-
-  useEffect(() => {
-    // Unblock the global loading screen immediately for instant perceived performance
-    setIsSplineLoaded(true);
-    
-    // Defer the heavy WebGL download by 500ms so the initial render is silky smooth
-    const timer = setTimeout(() => setLoadSpline(true), 500);
-    return () => clearTimeout(timer);
-  }, [setIsSplineLoaded]);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -128,28 +118,30 @@ export default function Hero({ setIsSplineLoaded }) {
           }}
         >
           <Suspense fallback={null}>
-            {loadSpline && (
-              <Spline 
-                scene="https://prod.spline.design/AtW72O4zfSpbuuvx/scene.splinecode?v=fresh7" 
-                onLoad={(splineApp) => {
-                  // Refresh ScrollTrigger to recalculate layout after Spline pops in
+            <Spline 
+              scene="https://prod.spline.design/AtW72O4zfSpbuuvx/scene.splinecode?v=fresh7" 
+              onLoad={(splineApp) => {
+                // Delay removing the loader slightly to ensure Spline finishes painting the 3D canvas
+                setTimeout(() => {
+                  setIsSplineLoaded(true);
+                  // Refresh ScrollTrigger to recalculate layout after loading screen disappears
                   setTimeout(() => ScrollTrigger.refresh(), 500);
-                  
-                  // Aggressively hunt down and DESTROY the Spline logo DOM element
-                  const destroyLogo = () => {
-                    const logos = document.querySelectorAll('a[href*="spline.design"], a[href*="spline3d.com"], #logo');
-                    logos.forEach(logo => logo.remove());
-                  };
-                  
-                  destroyLogo();
-                  setTimeout(destroyLogo, 100);
-                  setTimeout(destroyLogo, 500);
-                  setTimeout(destroyLogo, 1000);
-                  setTimeout(destroyLogo, 3000);
-                }}
-                style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, background: 'transparent' }}
-              />
-            )}
+                }, 300);
+                
+                // Aggressively hunt down and DESTROY the Spline logo DOM element
+                const destroyLogo = () => {
+                  const logos = document.querySelectorAll('a[href*="spline.design"], a[href*="spline3d.com"], #logo');
+                  logos.forEach(logo => logo.remove());
+                };
+                
+                destroyLogo();
+                setTimeout(destroyLogo, 100);
+                setTimeout(destroyLogo, 500);
+                setTimeout(destroyLogo, 1000);
+                setTimeout(destroyLogo, 3000);
+              }}
+              style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, background: 'transparent' }}
+            />
           </Suspense>
         </div>
       </div>
