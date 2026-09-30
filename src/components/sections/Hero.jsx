@@ -1,16 +1,27 @@
-import React, { useEffect, useRef, useState } from 'react';
-import Spline from '@splinetool/react-spline';
+import React, { useEffect, useRef, useState, lazy, Suspense } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ConstellationGrid from '../ui/constellation-grid';
 import HobbyStickers from './HobbyStickers';
+
+const Spline = lazy(() => import('@splinetool/react-spline'));
 
 export default function Hero({ setIsSplineLoaded }) {
   const containerRef = useRef(null);
   const heroTextRef = useRef(null);
   const splineWrapperRef = useRef(null);
 
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 768);
+  const [loadSpline, setLoadSpline] = useState(false);
+
+  useEffect(() => {
+    // Unblock the global loading screen immediately for instant perceived performance
+    setIsSplineLoaded(true);
+    
+    // Defer the heavy WebGL download by 500ms so the initial render is silky smooth
+    const timer = setTimeout(() => setLoadSpline(true), 500);
+    return () => clearTimeout(timer);
+  }, [setIsSplineLoaded]);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -116,32 +127,30 @@ export default function Hero({ setIsSplineLoaded }) {
             clipPath: 'polygon(0% 0%, 100% 0%, 100% calc(100% - 60px), calc(100% - 180px) calc(100% - 60px), calc(100% - 180px) 100%, 0% 100%)',
           }}
         >
-          <Spline 
-
-            scene="https://prod.spline.design/AtW72O4zfSpbuuvx/scene.splinecode?v=fresh7" 
-            onLoad={(splineApp) => {
-              // Delay removing the loader slightly to ensure Spline finishes painting the 3D canvas
-              setTimeout(() => {
-                setIsSplineLoaded(true);
-                // Refresh ScrollTrigger to recalculate layout after loading screen disappears
-                setTimeout(() => ScrollTrigger.refresh(), 500);
-              }, 300);
-              
-              // Aggressively hunt down and DESTROY the Spline logo DOM element
-              const destroyLogo = () => {
-                const logos = document.querySelectorAll('a[href*="spline.design"], a[href*="spline3d.com"], #logo');
-                logos.forEach(logo => logo.remove());
-              };
-              
-              // Spline sometimes delays injecting the logo, so we run this multiple times
-              destroyLogo();
-              setTimeout(destroyLogo, 100);
-              setTimeout(destroyLogo, 500);
-              setTimeout(destroyLogo, 1000);
-              setTimeout(destroyLogo, 3000);
-            }}
-            style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, background: 'transparent' }}
-          />
+          <Suspense fallback={null}>
+            {loadSpline && (
+              <Spline 
+                scene="https://prod.spline.design/AtW72O4zfSpbuuvx/scene.splinecode?v=fresh7" 
+                onLoad={(splineApp) => {
+                  // Refresh ScrollTrigger to recalculate layout after Spline pops in
+                  setTimeout(() => ScrollTrigger.refresh(), 500);
+                  
+                  // Aggressively hunt down and DESTROY the Spline logo DOM element
+                  const destroyLogo = () => {
+                    const logos = document.querySelectorAll('a[href*="spline.design"], a[href*="spline3d.com"], #logo');
+                    logos.forEach(logo => logo.remove());
+                  };
+                  
+                  destroyLogo();
+                  setTimeout(destroyLogo, 100);
+                  setTimeout(destroyLogo, 500);
+                  setTimeout(destroyLogo, 1000);
+                  setTimeout(destroyLogo, 3000);
+                }}
+                style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, background: 'transparent' }}
+              />
+            )}
+          </Suspense>
         </div>
       </div>
 
