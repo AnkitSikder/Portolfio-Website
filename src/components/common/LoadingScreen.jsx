@@ -1,69 +1,53 @@
 import React, { useState, useEffect } from 'react';
 
+// shortcut: visitors never wait longer than this, even if the 3D scene is slow; raise it if the scene grows.
+const MAX_WAIT_MS = 6000;
+
 export default function LoadingScreen({ isLoaded }) {
   const [progress, setProgress] = useState(0);
+  const [target, setTarget] = useState(15); // app is running
   const [isRevealing, setIsRevealing] = useState(false);
   const [isDone, setIsDone] = useState(false);
   const [forceLoaded, setForceLoaded] = useState(false);
 
   useEffect(() => {
-    // Determine if we are on a mobile device
-    const isMobile = window.innerWidth < 768;
-    // Desktop can wait for Spline to load, but mobile should reveal the homepage quickly
-    const failsafeTime = isMobile ? 1200 : 8000;
-    
-    const failsafe = setTimeout(() => setForceLoaded(true), failsafeTime);
+    const failsafe = setTimeout(() => setForceLoaded(true), MAX_WAIT_MS);
     return () => clearTimeout(failsafe);
   }, []);
 
+  // Real milestones: Spline code downloaded -> scene file downloaded -> character rendered (isLoaded).
   useEffect(() => {
-    let interval;
-    const effectivelyLoaded = isLoaded || forceLoaded;
-    
-    if (!effectivelyLoaded) {
-      const startT = Date.now();
-      // Simulate loading progress based on elapsed time to prevent it from getting stuck
-      interval = setInterval(() => {
-        setProgress(p => {
-          const elapsed = Date.now() - startT;
-          const target = Math.floor((elapsed / 3000) * 90); // Reach ~90% in 3s
-          const next = Math.max(p, target);
-          // Also add a tiny random increment occasionally so it feels alive
-          const randomInc = Math.random() > 0.5 ? 1 : 0;
-          const finalNext = Math.max(next, p + randomInc);
-          return finalNext > 90 ? 90 : finalNext;
-        });
-      }, 50);
-    } else {
-      // Spline is loaded, complete the progress quickly
-      interval = setInterval(() => {
-        setProgress(p => {
-          if (p >= 100) {
-            clearInterval(interval);
-            
-            // Trigger exit animation
-            setTimeout(() => {
-              setIsRevealing(true);
-              
-              // Remove from DOM after animations complete
-              setTimeout(() => {
-                setIsDone(true);
-              }, 1200);
-            }, 100);
-            return 100;
-          }
-          // Quickly jump to 100% instead of +2 per tick
-          const remaining = 100 - p;
-          const increment = Math.max(Math.floor(remaining / 4), 3);
-          return Math.min(100, p + increment);
-        });
-      }, 30);
-    }
+    if (!('PerformanceObserver' in window)) return;
+    const po = new PerformanceObserver(list => {
+      for (const e of list.getEntries()) {
+        if (e.name.includes('scene.splinecode')) setTarget(t => Math.max(t, 80));
+        else if (e.name.includes('react-spline')) setTarget(t => Math.max(t, 40));
+      }
+    });
+    po.observe({ type: 'resource', buffered: true });
+    return () => po.disconnect();
+  }, []);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [isLoaded, forceLoaded]);
+  useEffect(() => {
+    const done = isLoaded || forceLoaded;
+    const goal = done ? 100 : target;
+    const tick = setInterval(() => {
+      setProgress(p => {
+        // Between milestones, creep slowly (never past 95) so the counter never looks frozen.
+        if (p >= goal) return done ? 100 : Math.min(p + (Math.random() < 0.2 ? 1 : 0), goal + 10, 95);
+        return Math.min(goal, p + Math.max(1, Math.round((goal - p) / (done ? 4 : 8))));
+      });
+    }, done ? 30 : 60);
+    return () => clearInterval(tick);
+  }, [isLoaded, forceLoaded, target]);
+
+  // At 100%: start the exit animation, then remove the overlay once it has finished.
+  useEffect(() => {
+    if (progress < 100) return;
+    const reveal = setTimeout(() => setIsRevealing(true), 100);
+    const remove = setTimeout(() => setIsDone(true), 1300);
+    return () => { clearTimeout(reveal); clearTimeout(remove); };
+  }, [progress]);
 
   if (isDone) return null;
 

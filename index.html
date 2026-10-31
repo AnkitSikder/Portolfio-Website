@@ -44,8 +44,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <!-- Loaded here instead of via @import in CSS so it downloads in parallel with the app CSS -->
     <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap" rel="stylesheet" />
-    <!-- Spline scene host: connect early so the 3D hero starts downloading sooner -->
-    <link rel="preconnect" href="https://prod.spline.design" crossorigin />
+    <!-- Start downloading the 3D hero scene immediately (Spline's fetch reuses this response).
+         Keep the URL identical to the one in src/components/sections/Hero.jsx. -->
+    <link rel="preload" href="https://prod.spline.design/AtW72O4zfSpbuuvx/scene.splinecode?v=fresh7" as="fetch" crossorigin="anonymous" />
   </head>
   <body>
     <div id="root"></div>
