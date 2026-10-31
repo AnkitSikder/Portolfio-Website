@@ -15,17 +15,31 @@ export default function AboutMe() {
   const lanyardSlotRef = useRef(null);
   const [showLanyard, setShowLanyard] = useState(false);
 
+  // Mount the card once the page has loaded and the browser is idle (so it is
+  // ready before the visitor scrolls here), or earlier if they scroll close first.
   useEffect(() => {
     const el = lanyardSlotRef.current;
     if (!el) return;
-    const io = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setShowLanyard(true);
-        io.disconnect();
-      }
-    }, { rootMargin: '800px 0px' });
-    io.observe(el);
-    return () => io.disconnect();
+    const show = () => setShowLanyard(true);
+    let idleId, timerId;
+    const whenIdle = () => {
+      if ('requestIdleCallback' in window) idleId = window.requestIdleCallback(show, { timeout: 3000 });
+      else timerId = setTimeout(show, 1500);
+    };
+    if (document.readyState === 'complete') whenIdle();
+    else window.addEventListener('load', whenIdle, { once: true });
+
+    const io = 'IntersectionObserver' in window
+      ? new IntersectionObserver(([entry]) => { if (entry.isIntersecting) show(); }, { rootMargin: '800px 0px' })
+      : null;
+    if (io) io.observe(el); else show();
+
+    return () => {
+      window.removeEventListener('load', whenIdle);
+      if (idleId) window.cancelIdleCallback(idleId);
+      clearTimeout(timerId);
+      io?.disconnect();
+    };
   }, []);
 
   return (
