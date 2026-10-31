@@ -9,9 +9,16 @@ dist/
 .env.local
 .env.production
 .env.*.local
+.env.*
+!.env.example
+
+# Keys and certificates
+*.pem
+*.key
 
 # Scratch / debug scripts
 seed.js
+scratch/
 
 # Editor files
 .vscode/

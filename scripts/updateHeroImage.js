@@ -2,8 +2,12 @@ import { createClient } from '@supabase/supabase-js';
 import fs from 'fs';
 import path from 'path';
 
-const supabaseUrl = process.env.VITE_SUPABASE_URL || 'https://qsaqptsicqthcpsqzbvx.supabase.co';
-const supabaseKey = process.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzYXFwdHNpY3F0aGNwc3F6YnZ4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc4NDc3NzcsImV4cCI6MjEwMzQyMzc3N30.DC7he9cAZOVHabXHo31-cO5Ol4DU3rQDxf2In0Y-HmI';
+const supabaseUrl = process.env.VITE_SUPABASE_URL;
+const supabaseKey = process.env.VITE_SUPABASE_ANON_KEY;
+if (!supabaseUrl || !supabaseKey) {
+  console.error('Set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in your environment before running this script.');
+  process.exit(1);
+}
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 async function updateHeroImage() {
