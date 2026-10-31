@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
-import Lanyard from '../layout/Lanyard';
+import React, { useEffect, useRef, useState, lazy, Suspense } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollReveal from '../common/ScrollReveal';
+import '../../styles/Lanyard.css';
+
+// three.js + physics (~3 MB) only download when the card is close to the viewport.
+const Lanyard = lazy(() => import('../layout/Lanyard'));
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutMe() {
   const [isHovered, setIsHovered] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const lanyardSlotRef = useRef(null);
+  const [showLanyard, setShowLanyard] = useState(false);
+
+  useEffect(() => {
+    const el = lanyardSlotRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setShowLanyard(true);
+        io.disconnect();
+      }
+    }, { rootMargin: '800px 0px' });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   return (
     <section id="about" className="relative w-full min-h-screen bg-background text-foreground flex items-center overflow-hidden z-10">
@@ -72,10 +90,9 @@ export default function AboutMe() {
               </h3>
             </ScrollReveal>
             <ul className="space-y-8 font-clash">
-              <ScrollReveal delay={0.2}>
-                <li className="flex items-start gap-4 relative">
+              <ScrollReveal as="li" delay={0.2} className="flex items-start gap-4 relative">
                 <div className="w-16 h-16 shrink-0 rounded-md bg-foreground/5 border border-foreground/10 p-1.5 flex items-center justify-center">
-                  <img src="/logos/iiitdm.png" alt="IIITDM Jabalpur" className="w-full h-full object-contain" />
+                  <img src="/logos/iiitdm.png" alt="IIITDM Jabalpur" loading="lazy" className="w-full h-full object-contain" />
                 </div>
                 <div className="flex-1">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
@@ -84,13 +101,11 @@ export default function AboutMe() {
                   </div>
                   <p className="text-foreground/60 text-lg">IIITDM Jabalpur, Jabalpur, Madhya Pradesh</p>
                 </div>
-              </li>
               </ScrollReveal>
               
-              <ScrollReveal delay={0.3}>
-                <li className="flex items-start gap-4 relative">
+              <ScrollReveal as="li" delay={0.3} className="flex items-start gap-4 relative">
                 <div className="w-16 h-16 shrink-0 rounded-md bg-foreground/5 border border-foreground/10 p-1.5 flex items-center justify-center">
-                  <img src="/logos/nirma.png" alt="Nirma University" className="w-full h-full object-contain" />
+                  <img src="/logos/nirma.png" alt="Nirma University" loading="lazy" className="w-full h-full object-contain" />
                 </div>
                 <div className="flex-1">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
@@ -99,13 +114,11 @@ export default function AboutMe() {
                   </div>
                   <p className="text-foreground/60 text-lg">IOD, Nirma University, Ahmedabad, Gujarat</p>
                 </div>
-              </li>
               </ScrollReveal>
 
-              <ScrollReveal delay={0.4}>
-                <li className="flex items-start gap-4 relative">
+              <ScrollReveal as="li" delay={0.4} className="flex items-start gap-4 relative">
                 <div className="w-16 h-16 shrink-0 rounded-md bg-foreground/5 border border-foreground/10 p-1.5 flex items-center justify-center">
-                  <img src="/logos/apeejay.png" alt="Apeejay School" className="w-full h-full object-contain rounded-sm" />
+                  <img src="/logos/apeejay.png" alt="Apeejay School" loading="lazy" className="w-full h-full object-contain rounded-sm" />
                 </div>
                 <div className="flex-1">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
@@ -114,7 +127,6 @@ export default function AboutMe() {
                   </div>
                   <p className="text-foreground/60 text-lg">Apeejay School, Kolkata, West Bengal</p>
                 </div>
-              </li>
               </ScrollReveal>
             </ul>
           </div>
@@ -144,14 +156,20 @@ export default function AboutMe() {
           {/* A subtle glowing pedestal effect under the card */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-foreground/5 blur-[100px] pointer-events-none" />
           
-          <Lanyard 
-            position={[0, 0, 20]} 
-            gravity={[0, -40, 0]} 
-            frontImage="/global/portfolio-pic-1.png"
-            backImage="/logos/logo-card.svg" 
-            imageFit="cover" 
-            lanyardWidth={1}
-          />
+          {showLanyard ? (
+            <Suspense fallback={<div className="lanyard-wrapper" />}>
+              <Lanyard
+                position={[0, 0, 20]}
+                gravity={[0, -40, 0]}
+                frontImage="/global/portfolio-pic-1.webp"
+                backImage="/logos/logo-card.svg"
+                imageFit="cover"
+                lanyardWidth={1}
+              />
+            </Suspense>
+          ) : (
+            <div ref={lanyardSlotRef} className="lanyard-wrapper" />
+          )}
         </div>
 
       </div>

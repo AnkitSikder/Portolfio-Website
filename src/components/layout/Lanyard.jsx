@@ -7,7 +7,6 @@ import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphe
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 
 import * as THREE from 'three';
-import '../../styles/Lanyard.css';
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 

@@ -42,7 +42,7 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-start justify-between h-auto md:h-full pointer-events-auto gap-8 md:gap-0">
           {/* Logo */}
           <ScrollReveal delay={0.1} direction="up">
-            <img src="/logos/logo-card.svg" alt="Logo" className="w-48 md:w-80" />
+            <img src="/logos/logo-card.svg" alt="Logo" loading="lazy" className="w-48 md:w-80" />
           </ScrollReveal>
 
           {/* Text Links */}
@@ -105,7 +105,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a href="https://behance.net/ankitsikder" target="_blank" rel="noopener noreferrer" aria-label="Behance" className="transition-transform duration-300 ease-out hover:-translate-y-1 hover:rotate-6 hover:scale-110">
-                <img src="/logos/behance.png" alt="Behance" className="w-14 h-14 md:w-[72px] md:h-[72px] rounded-[14px] md:rounded-[18px] drop-shadow-sm object-cover" />
+                <img src="/logos/behance.png" alt="Behance" loading="lazy" className="w-14 h-14 md:w-[72px] md:h-[72px] rounded-[14px] md:rounded-[18px] drop-shadow-sm object-cover" />
               </a>
             </div>
           </ScrollReveal>

@@ -6,6 +6,15 @@ import HobbyStickers from './HobbyStickers';
 
 const Spline = lazy(() => import('@splinetool/react-spline'));
 
+// If the Spline scene can't load (offline, ad blocker, CDN outage), keep the
+// rest of the page alive instead of letting the error unmount the whole app.
+class SplineBoundary extends React.Component {
+  state = { failed: false };
+  static getDerivedStateFromError() { return { failed: true }; }
+  componentDidCatch() { this.props.onError?.(); }
+  render() { return this.state.failed ? null : this.props.children; }
+}
+
 export default function Hero({ setIsSplineLoaded }) {
   const containerRef = useRef(null);
   const heroTextRef = useRef(null);
@@ -117,6 +126,7 @@ export default function Hero({ setIsSplineLoaded }) {
             clipPath: 'polygon(0% 0%, 100% 0%, 100% calc(100% - 60px), calc(100% - 180px) calc(100% - 60px), calc(100% - 180px) 100%, 0% 100%)',
           }}
         >
+          <SplineBoundary onError={() => setIsSplineLoaded(true)}>
           <Suspense fallback={null}>
             <Spline 
               scene="https://prod.spline.design/AtW72O4zfSpbuuvx/scene.splinecode?v=fresh7" 
@@ -143,6 +153,7 @@ export default function Hero({ setIsSplineLoaded }) {
               style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, background: 'transparent' }}
             />
           </Suspense>
+          </SplineBoundary>
         </div>
       </div>
 

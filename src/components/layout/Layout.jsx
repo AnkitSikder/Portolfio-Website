@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState, Suspense } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis';
 import { gsap } from 'gsap';
@@ -81,7 +81,9 @@ export default function Layout() {
         
         <div className="flex-1">
           <SplineContext.Provider value={setIsSplineLoaded}>
-            <Outlet />
+            <Suspense fallback={<div className="min-h-screen" />}>
+              <Outlet />
+            </Suspense>
           </SplineContext.Provider>
         </div>
         

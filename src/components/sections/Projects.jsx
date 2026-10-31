@@ -130,7 +130,13 @@ export default function Projects() {
           </div>
         </div>
         <div className="w-full relative z-10 pt-20 md:pt-28">
-          <StackingCards projects={projects ?? []} />
+          {projects === null ? (
+            // Reserve the cards' height while the CMS responds, so the sections
+            // below don't jump down after first paint (one card = one sticky screen).
+            <div aria-hidden="true" style={{ height: `calc(${staticProjects.length} * (100vh - var(--card-offset)))` }} className="[--card-offset:80px] md:[--card-offset:112px]" />
+          ) : (
+            <StackingCards projects={projects} />
+          )}
         </div>
       </div>
     </section>

@@ -284,6 +284,8 @@ export default function Journey() {
                     {exp.logo && (
                       <div className="absolute -top-8 right-6 h-16 rounded-xl bg-[#171621] border border-primary shadow-xl flex items-center justify-center p-2 z-20">
                         <img 
+                          loading="lazy"
+                          decoding="async"
                           src={exp.logo} 
                           alt={`${exp.company} logo`} 
                           className="h-full w-auto max-w-[140px] object-contain" 

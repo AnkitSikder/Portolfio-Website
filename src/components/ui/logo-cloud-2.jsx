@@ -74,6 +74,8 @@ function LogoCard({ logo, className, ...props }) {
       ) : (
         <div className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center">
           <img
+            loading="lazy"
+            decoding="async"
             alt={logo.name}
             className="pointer-events-none max-h-full max-w-full object-contain select-none opacity-90 mix-blend-multiply"
             src={logo.src}

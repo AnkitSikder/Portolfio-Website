@@ -11,12 +11,12 @@
     <meta name="author" content="Ankit Sikder" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://ankitsikder.com/" />
+    <!-- No static canonical: this one file serves every route, and a fixed canonical
+         would tell Google every case study is a copy of the home page. -->
 
     <!-- Open Graph (Social Sharing) -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ankitsikder.com/" />
+    <meta property="og:url" content="https://www.ankidesigns.in/" />
     <meta property="og:title" content="Ankit Sikder — Interaction & Spatial Designer" />
     <meta property="og:description" content="Crafting seamless experiences for people. Interaction Designer, Spatial Designer, and Creative Technologist." />
     <meta property="og:image" content="/og-image.jpg" />
@@ -36,11 +36,16 @@
     <meta name="theme-color" content="#171621" />
 
     <!-- Fonts: Preconnect for performance -->
-    <link rel="preload" href="/fonts/Franchise-Bold-hinted.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/Franchise-Bold-hinted.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://api.fontshare.com" />
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Loaded here instead of via @import in CSS so it downloads in parallel with the app CSS -->
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap" rel="stylesheet" />
+    <!-- Spline scene host: connect early so the 3D hero starts downloading sooner -->
+    <link rel="preconnect" href="https://prod.spline.design" crossorigin />
   </head>
   <body>
     <div id="root"></div>

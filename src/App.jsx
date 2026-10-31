@@ -6,11 +6,26 @@ import { AuthProvider } from './context/AuthContext';
 // Public layout + pages
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
-import AuraCharge from './pages/projects/AuraCharge';
-import ImmersiveTraffic from './pages/projects/ImmersiveTraffic';
-import MakhanaProject from './pages/projects/MakhanaProject';
-import JioBPProject from './pages/projects/JioBPProject';
-import PortfolioPDF from './pages/PortfolioPDF';
+
+// Case studies are split into their own chunks so the home page ships less JS.
+// They are prefetched once the browser is idle, so navigation stays instant.
+const loadAuraCharge = () => import('./pages/projects/AuraCharge');
+const loadImmersiveTraffic = () => import('./pages/projects/ImmersiveTraffic');
+const loadMakhana = () => import('./pages/projects/MakhanaProject');
+const loadJioBP = () => import('./pages/projects/JioBPProject');
+const AuraCharge = lazy(loadAuraCharge);
+const ImmersiveTraffic = lazy(loadImmersiveTraffic);
+const MakhanaProject = lazy(loadMakhana);
+const JioBPProject = lazy(loadJioBP);
+const PortfolioPDF = lazy(() => import('./pages/PortfolioPDF'));
+
+if (typeof window !== 'undefined') {
+  const prefetch = () => [loadAuraCharge, loadImmersiveTraffic, loadMakhana, loadJioBP].forEach(load => load());
+  window.addEventListener('load', () => {
+    if ('requestIdleCallback' in window) window.requestIdleCallback(prefetch, { timeout: 5000 });
+    else setTimeout(prefetch, 3000);
+  }, { once: true });
+}
 
 // Admin (lazy loaded so it never ships to public visitors unless they visit /admin)
 import ProtectedRoute from './components/admin/ProtectedRoute';
@@ -53,7 +68,7 @@ function App() {
           <Route path="work/jio-bp" element={<JioBPProject />} />
         </Route>
 
-        <Route path="/pdf" element={<PortfolioPDF />} />
+        <Route path="/pdf" element={<Suspense fallback={null}><PortfolioPDF /></Suspense>} />
 
         {/* ── Admin CMS (lazy + protected) ── */}
         <Route

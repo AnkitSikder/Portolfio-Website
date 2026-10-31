@@ -125,13 +125,13 @@ export default function Header({ isNavVisible, isScrolled }) {
         <div className="mt-auto mb-16">
           <p className="text-white/50 text-sm font-clash tracking-widest uppercase mb-6">Let's Connect</p>
           <div className="flex items-center gap-6">
-            <a href={siteConfig.socials.linkedin} target="_blank" rel="noopener noreferrer">
+            <a href={siteConfig.socials.linkedin} aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 48 48" width="48" height="48"><rect width="48" height="48" rx="12" fill="#2867B2"></rect><path fill="#fff" d="M14 19h5v15h-5V19zm2.5-8a2.9 2.9 0 1 1 0 5.8 2.9 2.9 0 0 1 0-5.8zM22 19h4.8v2.05h.07c.67-1.2 2.3-2.46 4.73-2.46 5.06 0 6 3.2 6 7.36V34h-5v-6.6c0-1.57-.03-3.6-2.3-3.6-2.3 0-2.66 1.72-2.66 3.49V34h-5V19z"></path></svg>
             </a>
             <a href={siteConfig.socials.behance} target="_blank" rel="noopener noreferrer">
               <img src="/logos/behance.png" alt="Behance" className="h-12 w-12 rounded-[12px] object-cover" />
             </a>
-            <a href={siteConfig.socials.email}>
+            <a href={siteConfig.socials.email} aria-label="Email">
               <svg viewBox="0 0 48 48" width="48" height="48"><path fill="#4caf50" d="M45 16.2l-5 2.75-5 4.75L35 40h7a3 3 0 0 0 3-3V16.2z"></path><path fill="#1e88e5" d="M3 16.2l3.614 1.71L13 23.7V40H6a3 3 0 0 1-3-3V16.2z"></path><path fill="#e53935" d="M35 11.2L24 19.45 13 11.2 12 17l1 6.7 11 8.25 11-8.25 1-6.7z"></path><path fill="#c62828" d="M3 12.298V16.2l10 7.5V11.2L9.876 8.859A4.298 4.298 0 0 0 3 12.298z"></path><path fill="#fbc02d" d="M45 12.298V16.2l-10 7.5V11.2l3.124-2.341A4.298 4.298 0 0 1 45 12.298z"></path></svg>
             </a>
             <a href={siteConfig.socials.phone} aria-label="Phone">

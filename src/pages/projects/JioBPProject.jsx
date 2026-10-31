@@ -8,6 +8,7 @@ import CompetitorAnalysis from '../../components/case-study/jio-bp/CompetitorAna
 import KeyOpportunities from '../../components/case-study/jio-bp/KeyOpportunities';
 import HeuristicAnalysis from '../../components/case-study/jio-bp/HeuristicAnalysis';
 import NextProjectNav from '../../components/case-study/NextProjectNav';
+import LazyVideo from '../../components/common/LazyVideo';
 
 export default function JioBPProject({ projectNumber }) {
   const isPdfMode = typeof window !== 'undefined' && window.location.pathname === '/pdf';
@@ -665,14 +666,14 @@ export default function JioBPProject({ projectNumber }) {
                 <div className="w-full max-w-[360px] md:max-w-[480px] rounded-[2rem] md:rounded-[2.5rem] bg-white border border-foreground/10 shadow-2xl relative flex items-center justify-center p-6 md:p-10">
                   <div className="w-full max-w-[240px] md:max-w-[300px]">
                     {!isPdfMode ? (
-                      <video 
+                      <LazyVideo 
                         src="/jio-bp/My%20Station.mp4" 
+                        style={{ aspectRatio: '778 / 1080' }}
                         className="w-full h-auto object-contain"
                         autoPlay 
                         muted 
                         loop 
                         playsInline 
-                        preload="auto"
                         aria-label="My Station mobile app integration"
                       />
                     ) : (
@@ -706,14 +707,14 @@ export default function JioBPProject({ projectNumber }) {
                   {/* Video 1: Login RO */}
                   <div className="flex flex-col gap-5 h-full">
                     <div className="w-full rounded-2xl overflow-hidden border border-foreground/10 bg-foreground/5 shadow-sm relative group">
-                      <video 
+                      <LazyVideo 
                         src="/jio-bp/Login RO.mp4" 
+                        style={{ aspectRatio: '16 / 9' }}
                         className="w-full h-auto object-cover"
                         autoPlay 
                         muted 
                         loop 
                         playsInline 
-                        preload="auto"
                         aria-label="RO Login and Access workflow"
                       />
                     </div>
@@ -726,14 +727,14 @@ export default function JioBPProject({ projectNumber }) {
                   {/* Video 2: RO Mobile */}
                   <div className="flex flex-col gap-5 h-full">
                     <div className="w-full rounded-2xl overflow-hidden border border-foreground/10 bg-foreground/5 shadow-sm relative group">
-                      <video 
+                      <LazyVideo 
                         src="/jio-bp/RO Mobile.mp4" 
+                        style={{ aspectRatio: '654 / 1080' }}
                         className="w-full h-auto object-cover"
                         autoPlay 
                         muted 
                         loop 
                         playsInline 
-                        preload="auto"
                         aria-label="RO Mobile incident management workflow"
                       />
                     </div>
@@ -749,14 +750,14 @@ export default function JioBPProject({ projectNumber }) {
                   {/* Video 3: ASR Dashboard */}
                   <div className="flex flex-col gap-5 h-full">
                     <div className="w-full rounded-2xl overflow-hidden border border-foreground/10 bg-foreground/5 shadow-sm relative group">
-                      <video 
+                      <LazyVideo 
                         src="/jio-bp/ASR Dashboard.mp4" 
+                        style={{ aspectRatio: '16 / 9' }}
                         className="w-full h-auto object-cover"
                         autoPlay 
                         muted 
                         loop 
                         playsInline 
-                        preload="auto"
                         aria-label="ASR Dashboard interaction"
                       />
                     </div>
@@ -769,14 +770,14 @@ export default function JioBPProject({ projectNumber }) {
                   {/* Video 4: HO Dashboard */}
                   <div className="flex flex-col gap-5 h-full">
                     <div className="w-full rounded-2xl overflow-hidden border border-foreground/10 bg-foreground/5 shadow-sm relative group">
-                      <video 
+                      <LazyVideo 
                         src="/jio-bp/HO Dashboard.mp4" 
+                        style={{ aspectRatio: '16 / 9' }}
                         className="w-full h-auto object-cover"
                         autoPlay 
                         muted 
                         loop 
                         playsInline 
-                        preload="auto"
                         aria-label="HO Dashboard interaction"
                       />
                     </div>

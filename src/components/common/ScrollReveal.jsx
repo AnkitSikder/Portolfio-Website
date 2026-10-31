@@ -5,7 +5,8 @@ export default function ScrollReveal({
   direction = 'up', 
   delay = 0, 
   duration = 1,
-  className = ''
+  className = '',
+  as: Tag = 'div'
 }) {
   const elemRef = useRef(null);
 
@@ -47,8 +48,8 @@ export default function ScrollReveal({
   }, [direction, delay, duration]);
 
   return (
-    <div ref={elemRef} className={`will-change-transform ${className}`}>
+    <Tag ref={elemRef} className={`will-change-transform ${className}`}>
       {children}
-    </div>
+    </Tag>
   );
 }

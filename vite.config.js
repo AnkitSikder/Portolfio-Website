@@ -26,8 +26,9 @@ export default defineConfig({
           if (id.includes('node_modules/gsap')) return 'vendor-gsap';
           if (id.includes('node_modules/lenis')) return 'vendor-lenis';
           if (id.includes('node_modules/@supabase')) return 'vendor-supabase';
-          if (id.includes('node_modules/three') || id.includes('node_modules/@react-three')) return 'vendor-three';
-          if (id.includes('node_modules/@splinetool')) return 'vendor-spline';
+          // three.js and Spline are intentionally NOT grouped here: grouping them
+          // made the entry chunk import them statically (~7 MB parsed before first
+          // paint). Left alone, they stay in the lazy chunks that need them.
         },
       },
     },

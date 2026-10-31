@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -9,7 +9,9 @@ export default function OrangeRevealWrapper({ children }) {
   const circleRef = useRef(null);
   const contentRef = useRef(null);
   
-  useEffect(() => {
+  // useLayoutEffect: create the pin (and its spacer) before the first paint,
+  // otherwise everything below jumps down by 100vh after paint (CLS ~0.7).
+  useLayoutEffect(() => {
     if (!containerRef.current || !circleRef.current || !contentRef.current) return;
 
     const ctx = gsap.context(() => {
