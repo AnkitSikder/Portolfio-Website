@@ -25,7 +25,7 @@ export default function Header({ isNavVisible, isScrolled }) {
           
           {/* Logo */}
           <Link to="/" className="flex items-center transition-transform duration-300 ease-out hover:scale-105 ml-2" onClick={() => setIsMenuOpen(false)}>
-            <img src="/logos/Logo Portfolio Dark.svg" alt="Ankit Sikder Logo" className="h-10 w-auto" />
+            <img src="/logos/Logo Portfolio Dark.svg" alt="Ankit Sikder — home" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Links */}

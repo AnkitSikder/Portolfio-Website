@@ -1,0 +1,16 @@
+# Ankit Sikder — Interaction & UI/UX Designer
+
+> Portfolio of Ankit Sikder, an interaction, UI/UX and product designer pursuing a Masters (M.Des) in Interaction Design at PDPM IIITDM Jabalpur, with a Bachelor's from the Institute of Design, Nirma University. Work spans enterprise UX, VR and spatial interaction, and physical product design.
+
+## Case studies
+
+- [Jio-bp Incident Management System](https://www.ankidesigns.in/work/jio-bp): Redesign of an enterprise incident management system into a role-based safety ecosystem — heuristic and competitor analysis, stakeholder role mapping, information architecture, design system, dashboards and mobile app.
+- [Immersive Traffic Command](https://www.ankidesigns.in/work/vrtraffic): VR training simulator where traffic personnel practise hand signals, traffic coordination and high-pressure decision-making.
+- [Makhana Seed Collection Tool](https://www.ankidesigns.in/work/makhana-tool): Ergonomic hand-tool concept for makhana (fox nut) harvesting that reduces awkward postures, thorn exposure and repetitive effort.
+- [Aura Charge Smart Inverter](https://www.ankidesigns.in/work/auracharge): Product concept that turns home power backup into a smart energy hub with device charging and smart home features.
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/ankit-sikder-531388187/)
+- [Behance](https://www.behance.net/ankitsikder)
+- Email: raj19june2001@gmail.com

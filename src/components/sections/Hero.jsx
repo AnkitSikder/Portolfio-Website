@@ -84,8 +84,11 @@ export default function Hero({ setIsSplineLoaded }) {
 
       {/* Giant Hero Text (Typing Effect) */}
       <div className="absolute top-[calc(20%-10px)] w-full z-10 pointer-events-none flex justify-center text-center">
-        <div ref={heroTextRef}>
+        <h1 ref={heroTextRef} className="m-0">
+          {/* Stable heading for search engines and screen readers; the typed text below cycles roles visually. */}
+          <span className="sr-only">Ankit Sikder — Interaction Designer and UI/UX Designer</span>
           <TypeAnimation
+            aria-hidden="true"
             sequence={[
               'Ankit Sikder', 5000,
               'Interaction Designer', 2500,
@@ -97,14 +100,14 @@ export default function Hero({ setIsSplineLoaded }) {
               'Systems Thinker', 2500,
               'Visual Designer', 2500,
             ]}
-            wrapper="h1"
+            wrapper="span"
             speed={1}
             deletionSpeed={1}
             repeat={Infinity}
-            className="font-franchise text-[13vw] leading-[0.8] uppercase tracking-normal whitespace-nowrap text-[#f5f0e6]"
+            className="block font-franchise text-[13vw] leading-[0.8] uppercase tracking-normal whitespace-nowrap text-[#f5f0e6]"
             cursor={true}
           />
-        </div>
+        </h1>
       </div>
 
       {/* 3D Spline Character — pointer-events-none on mobile/tablet, auto on desktop to restore look-at effect */}

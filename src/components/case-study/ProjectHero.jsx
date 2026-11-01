@@ -29,7 +29,7 @@ export default function ProjectHero({ category, title, summary, role, duration, 
         >
           <img
             src={heroImage}
-            alt={title}
+            alt={`${title} — project hero image`}
             className={`w-full h-full object-cover ${imageClassName}`}
           />
           {/* Fallback darkening overlay that prints better than CSS filters */}

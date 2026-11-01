@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.ankidesigns.in/</loc><lastmod>2026-10-31</lastmod></url>
-  <url><loc>https://www.ankidesigns.in/work/jio-bp</loc><lastmod>2026-10-31</lastmod></url>
-  <url><loc>https://www.ankidesigns.in/work/auracharge</loc><lastmod>2026-10-31</lastmod></url>
-  <url><loc>https://www.ankidesigns.in/work/vrtraffic</loc><lastmod>2026-10-31</lastmod></url>
-  <url><loc>https://www.ankidesigns.in/work/makhana-tool</loc><lastmod>2026-10-31</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.ankidesigns.in/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <image:image><image:loc>https://www.ankidesigns.in/og/home.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.ankidesigns.in/work/jio-bp</loc>
+    <lastmod>2026-11-01</lastmod>
+    <image:image><image:loc>https://www.ankidesigns.in/og/jio-bp.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.ankidesigns.in/work/vrtraffic</loc>
+    <lastmod>2026-11-01</lastmod>
+    <image:image><image:loc>https://www.ankidesigns.in/og/vrtraffic.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.ankidesigns.in/work/makhana-tool</loc>
+    <lastmod>2026-11-01</lastmod>
+    <image:image><image:loc>https://www.ankidesigns.in/og/makhana-tool.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.ankidesigns.in/work/auracharge</loc>
+    <lastmod>2026-11-01</lastmod>
+    <image:image><image:loc>https://www.ankidesigns.in/og/auracharge.jpg</image:loc></image:image>
+  </url>
 </urlset>

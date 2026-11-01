@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ProjectHero from '../../components/case-study/ProjectHero';
 import ProjectRenderer, { getSectionList } from '../../components/case-study/ProjectRenderer';
 import SectionProgressNav from '../../components/case-study/SectionProgressNav';
@@ -133,10 +133,6 @@ export default function MakhanaProject({ projectNumber }) {
       }
     ]
   };
-
-  useEffect(() => {
-    document.title = `${project.title} — Ankit Sikder`;
-  }, []);
 
   const blocks = project.blocks || [];
   const heroProps = getHeroProps(project, blocks);

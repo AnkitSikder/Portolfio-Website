@@ -109,7 +109,7 @@ export default function LoadingScreen({ isLoaded }) {
       >
         <img 
           src="/logos/Logo v3.svg" 
-          alt="Logo" 
+          alt="" 
           className="w-16 h-16 animate-[spin_4s_linear_infinite]" 
         />
       </div>

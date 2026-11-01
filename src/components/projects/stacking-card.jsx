@@ -54,7 +54,7 @@ export const Card = ({
               {icon && (
                 <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-white/5 rounded-2xl mb-6 shadow-sm border border-white/10 shrink-0">
                   {typeof icon === 'string' 
-                    ? <img src={icon} alt="Icon" className="w-6 h-6 md:w-8 md:h-8 object-contain" />
+                    ? <img src={icon} alt="" className="w-6 h-6 md:w-8 md:h-8 object-contain" />
                     : React.cloneElement(icon, { className: 'w-6 h-6 md:w-8 md:h-8 text-white' })
                   }
                 </div>
@@ -83,7 +83,7 @@ export const Card = ({
               <motion.div
                 className="w-full h-full relative rounded-xl md:rounded-2xl overflow-hidden border-[1px] border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.3)] group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] z-10"
               >
-                <img src={url} alt={title} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src={url} alt={`${title} case study preview`} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500 pointer-events-none" />
                 
                 {/* Cloud Tags */}

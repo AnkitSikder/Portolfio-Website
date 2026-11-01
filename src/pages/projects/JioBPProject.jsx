@@ -656,7 +656,7 @@ export default function JioBPProject({ projectNumber }) {
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-foreground/10 to-transparent p-[1px] shadow-sm overflow-hidden shrink-0">
                       <div className="w-full h-full bg-background/80 backdrop-blur-sm rounded-xl p-1.5 flex items-center justify-center">
-                        <img src="/jio-bp/My%20station%20logo%20app.jpg" alt="My Station Logo" className="w-full h-full rounded-md object-cover" />
+                        <img src="/jio-bp/My%20station%20logo%20app.jpg" alt="My Station app icon" className="w-full h-full rounded-md object-cover" />
                       </div>
                     </div>
                     <span className="font-clash font-semibold tracking-wide text-foreground text-sm md:text-base">My Station App</span>
@@ -678,7 +678,7 @@ export default function JioBPProject({ projectNumber }) {
                       />
                     ) : (
                       <div className="w-full h-auto flex items-center justify-center">
-                        <img src="/jio-bp/mobile_app_static_v2.png" alt="Mobile App Demo" className="w-full h-auto object-contain" />
+                        <img src="/jio-bp/mobile_app_static_v2.png" alt="Jio-bp IMS mobile app screens for retail outlet incident reporting" className="w-full h-auto object-contain" />
                       </div>
                     )}
                   </div>
@@ -799,23 +799,23 @@ export default function JioBPProject({ projectNumber }) {
           <div className="max-w-[1400px] mx-auto text-center mt-10 md:mt-16">
             <div className="space-y-12">
               <div className="w-full rounded-[2rem] overflow-hidden bg-foreground/5 border border-foreground/10 shadow-2xl">
-                <img src="/jio-bp/Mockup%20JioBP%202.jpg" alt="Mockup JioBP 2" className="w-full h-auto" />
+                <img src="/jio-bp/Mockup%20JioBP%202.jpg" alt="Tilted grid of Jio-bp IMS screens: login, dashboard and incident lists" className="w-full h-auto" />
               </div>
               <div className="w-full rounded-[2rem] overflow-hidden bg-foreground/5 border border-foreground/10 shadow-2xl">
-                <img src="/jio-bp/Mockup%20JioBP%208.jpg" alt="Mockup JioBP 8" className="w-full h-auto" />
+                <img src="/jio-bp/Mockup%20JioBP%208.jpg" alt="Grid of Jio-bp IMS mobile screens: login, dashboard, analytics and safety badges" className="w-full h-auto" />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <div className="w-full rounded-[2rem] overflow-hidden bg-foreground/5 border border-foreground/10 shadow-2xl">
-                  <img src="/jio-bp/Mockup_JioBP_3.jpg" alt="Mockup JioBP 3" className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500" />
+                  <img src="/jio-bp/Mockup_JioBP_3.jpg" alt="Jio-bp IMS dashboard on a laptop showing incident counts and safety badges" className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500" />
                 </div>
                 <div className="w-full rounded-[2rem] overflow-hidden bg-foreground/5 border border-foreground/10 shadow-2xl">
-                  <img src="/jio-bp/Mockup%20JioBP%204.jpg" alt="Mockup JioBP 4" className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500" />
+                  <img src="/jio-bp/Mockup%20JioBP%204.jpg" alt="Incident list table view of the Jio-bp IMS on a laptop" className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500" />
                 </div>
                 <div className="w-full rounded-[2rem] overflow-hidden bg-foreground/5 border border-foreground/10 shadow-2xl">
-                  <img src="/jio-bp/Mockup%20JioBP%205.jpg" alt="Mockup JioBP 5" className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500" />
+                  <img src="/jio-bp/Mockup%20JioBP%205.jpg" alt="Jio-bp IMS mobile app: welcome dashboard with incident counts and login screen" className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500" />
                 </div>
                 <div className="w-full rounded-[2rem] overflow-hidden bg-foreground/5 border border-foreground/10 shadow-2xl">
-                  <img src="/jio-bp/Mockup%20JioBP%206.jpg" alt="Mockup JioBP 6" className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500" />
+                  <img src="/jio-bp/Mockup%20JioBP%206.jpg" alt="Head office analytics view with an India incident map and category charts on a desktop monitor" className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500" />
                 </div>
               </div>
             </div>

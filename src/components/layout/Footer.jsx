@@ -42,7 +42,7 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-start justify-between h-auto md:h-full pointer-events-auto gap-8 md:gap-0">
           {/* Logo */}
           <ScrollReveal delay={0.1} direction="up">
-            <img src="/logos/logo-card.svg" alt="Logo" loading="lazy" className="w-48 md:w-80" />
+            <img src="/logos/logo-card.svg" alt="Anki Designs logo" loading="lazy" className="w-48 md:w-80" />
           </ScrollReveal>
 
           {/* Text Links */}

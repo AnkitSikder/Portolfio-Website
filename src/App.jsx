@@ -2,6 +2,8 @@ import React, { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { AuthProvider } from './context/AuthContext';
+import { useSeo } from './seo/useSeo';
+import NotFound from './pages/NotFound';
 
 // Public layout + pages
 import Layout from './components/layout/Layout';
@@ -41,6 +43,8 @@ function AdminFallback() {
 }
 
 function App() {
+  useSeo();
+
   return (
     <AuthProvider>
       <Toaster
@@ -66,6 +70,7 @@ function App() {
           <Route path="work/vrtraffic" element={<ImmersiveTraffic />} />
           <Route path="work/makhana-tool" element={<MakhanaProject />} />
           <Route path="work/jio-bp" element={<JioBPProject />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
 
         <Route path="/pdf" element={<Suspense fallback={null}><PortfolioPDF /></Suspense>} />

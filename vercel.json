@@ -1,7 +1,26 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "ankidesigns.in"
+        }
+      ],
+      "destination": "https://www.ankidesigns.in/:path",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
-      "source": "/((?!api/.*).*)",
+      "source": "/admin",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/admin/(.*)",
       "destination": "/index.html"
     }
   ],

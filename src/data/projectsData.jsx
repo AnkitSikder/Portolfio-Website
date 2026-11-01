@@ -22,7 +22,7 @@ export const projects = [
     link: '/jio-bp/Mockup_JioBP_3.jpg',
     pageLink: '/work/jio-bp',
     color: '#3b2f2f',
-    icon: <img src="/jio-bp/Dashboard.png" alt="Dashboard Icon" className="w-6 h-6 object-contain" />,
+    icon: <img src="/jio-bp/Dashboard.png" alt="" className="w-6 h-6 object-contain" />,
   },
   {
     title: 'Makhana Seed Collector',
@@ -35,7 +35,7 @@ export const projects = [
     link: 'https://qsaqptsicqthcpsqzbvx.supabase.co/storage/v1/object/public/portfolio-media/thumbnails/1788343323821-di1b8asa1ml.png',
     pageLink: '/work/makhana-tool',
     color: '#2a1a0a',
-    icon: <img src="/makhana/Makhana logo.png" alt="Makhana Logo" className="w-6 h-6 object-contain" />,
+    icon: <img src="/makhana/Makhana logo.png" alt="" className="w-6 h-6 object-contain" />,
   },
   {
     title: 'Aura Charge Smart Inverter',
